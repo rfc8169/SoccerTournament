@@ -4,9 +4,7 @@ public abstract class State {
     public final static String HELP_MSG = "";
     private Role userRole;
 
-    public State(){
-
-    }
+    public State(){}
 
     public abstract void exec();
 
