@@ -1,14 +1,18 @@
-package States.User;
+package States.Public;
 
 import States.Role;
+import States.State;
 import States.StateType;
 
-public class FindGame extends States.State {
-    final String pathAppend = "FindGame/";
+/**
+ * Created by User on 3/27/2018.
+ */
+public class End extends States.State {
 
-    public FindGame(Role role) {
+    public End(Role role) {
         super(role);
     }
+    final String pathAppend = "End/";
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
@@ -17,22 +21,16 @@ public class FindGame extends States.State {
             //temporarily using to track state path as example
             modifiableData.append(pathAppend);
 
-            System.out.println("CreateUser: ");
-            input = System.console().readLine();
-
-
             //potentially do some work or actions:
             //todo
 
             //determine appropriate return type:
-            if (input.equals("")) return null;
-            else return StateType.LOGGEDIN;
+            return null;
         }
     }
 
     @Override
     public void undoDataWrite(StringBuilder modifiableData) {
-        modifiableData.reverse().delete(0, pathAppend.length()).reverse();
     }
 
     @Override

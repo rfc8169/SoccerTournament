@@ -1,13 +1,23 @@
 package States;
+
 public abstract class State {
 
     private State last;
     public final static String HELP_MSG = "";
-    private States.Public.Role userRole;
 
-    public State(){}
+    private Role userRole;
 
-    public abstract void exec();
+    public State(Role role){
+        this.userRole = role;
+    }
+
+    public abstract StateType exec(StringBuilder modifiableData);
+
+    public abstract void undoDataWrite(StringBuilder modifiableData);
 
     public abstract void help();
+
+    public Role getRole(){
+        return userRole;
+    }
 }
