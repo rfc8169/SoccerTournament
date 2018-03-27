@@ -1,4 +1,6 @@
-public class FindTeam extends State {
+package States.User;
+
+public class FindTeam extends States.State {
     @Override
     public void exec() {
 

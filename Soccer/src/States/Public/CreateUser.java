@@ -1,4 +1,9 @@
-public class Create extends State {
+package States.Public;
+
+/**
+ * Created by User on 3/27/2018.
+ */
+public class CreateUser extends States.State {
     @Override
     public void exec() {
 

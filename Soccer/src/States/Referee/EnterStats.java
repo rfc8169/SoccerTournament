@@ -1,4 +1,6 @@
-public class EnterStats extends State {
+package States.Referee;
+
+public class EnterStats extends States.State {
     @Override
     public void exec() {
 

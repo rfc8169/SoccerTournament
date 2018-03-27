@@ -1,4 +1,6 @@
-public class SelectedGame extends State {
+package States.User;
+
+public class SelectedGame extends States.State {
     @Override
     public void exec() {
 

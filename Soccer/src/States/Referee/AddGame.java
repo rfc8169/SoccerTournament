@@ -1,4 +1,6 @@
-public class AddGame extends State {
+package States.Referee;
+
+public class AddGame extends States.State {
     @Override
     public void exec() {
 

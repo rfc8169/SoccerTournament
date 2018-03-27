@@ -1,4 +1,6 @@
-public class FindPlayer extends State {
+package States.User;
+
+public class FindPlayer extends States.State {
     @Override
     public void exec() {
 

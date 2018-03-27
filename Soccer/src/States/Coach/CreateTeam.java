@@ -1,4 +1,6 @@
-public class CreateTeam extends State {
+package States.Coach;
+
+public class CreateTeam extends States.State {
     @Override
     public void exec() {
 

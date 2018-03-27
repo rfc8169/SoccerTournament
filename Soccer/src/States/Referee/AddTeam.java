@@ -1,4 +1,6 @@
-public class AddTeam extends State {
+package States.Referee;
+
+public class AddTeam extends States.State {
     @Override
     public void exec() {
 
