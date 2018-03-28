@@ -23,16 +23,29 @@ public class CreateUser extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.print("CreateUser: ");
-            input = scanner.nextLine();
-
+            System.out.println("CreateUser: ");
 
             //potentially do some work or actions:
             //todo
+            System.out.println("Make an Account\n\tUsername: ");
+            String username = scanner.next();
+            System.out.println("\tFirst Name: ");
+            String fName = scanner.next();
+            System.out.println("\tLast Name: ");
+            String lName = scanner.next();
+            System.out.println("\tGender (Male/Female/Other):");
+            String gender = scanner.next();
+            System.out.println("\tBirth Date (MM/DD/YYYY): ");
+            String birthDate = scanner.next();
+            System.out.println("\tHome Town: ");
+            String homeTown = scanner.next();
+            System.out.println("\tPhone Number (##########): ");
+            String phone = scanner.next();
+            System.out.println("\tRole (Player (P)/Coach (C)/Referee (R)): ");
+            String role = scanner.next();
 
             //determine appropriate return type:
-            if (input.equals("")) return null;
-            else return StateType.LOGGEDIN;
+            return StateType.LOGGEDIN;
         }
     }
 
