@@ -25,7 +25,7 @@ public class LoggedIn extends States.State{
 
             System.out.println("LoggedIn: ");
             System.out.println("\nfto- find tournament\nfte - find team\nfp - find player");
-            System.out.print("cto- find tournament\ncte - find team\nh - for help\n: ");
+            System.out.print("cto- create tournament\ncte - create team\nh - for help\n: ");
             input = scanner.nextLine();
 
             //potentially do some work or actions:
