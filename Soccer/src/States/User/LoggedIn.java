@@ -3,11 +3,14 @@ package States.User;
 import States.Role;
 import States.StateType;
 
+import java.util.Scanner;
+
 /**
  * Created by User on 3/27/2018.
  */
 public class LoggedIn extends States.State{
     final String pathAppend = "LoggedIn/";
+    Scanner scanner = new Scanner(System.in);
 
     public LoggedIn(Role role) {
         super(role);
@@ -16,20 +19,22 @@ public class LoggedIn extends States.State{
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input;
+        //temporarily using to track state path as example
+        modifiableData.append(pathAppend);
         while (true) {
-            //temporarily using to track state path as example
-            modifiableData.append(pathAppend);
 
-            System.out.println("CreateUser: ");
+            System.out.println("LoggedIn: ");
             System.out.println("\nfto- find tournament\nfte - find team\nfp - find player");
-            System.out.println("\ncto- find tournament\ncte - find team\n: ");
-            input = System.console().readLine();
+            System.out.print("cto- find tournament\ncte - find team\nh - for help\n: ");
+            input = scanner.nextLine();
 
             //potentially do some work or actions:
             //todo
 
             //determine appropriate return type:
             if (input.equals("")) return null;
+            else if(input.equals("h")) help();
+            else if(input.equals("e"))return StateType.END;
             else if(input.equals("fto")) return StateType.FINDTOURNAMENT;
             else if(input.equals("fte")) return StateType.FINDTEAM;
             else if(input.equals("fp")) return StateType.FINDPLAYER;
@@ -46,6 +51,7 @@ public class LoggedIn extends States.State{
 
     @Override
     public void help() {
+        System.out.println("use 'e' to exit");
 
     }
 }

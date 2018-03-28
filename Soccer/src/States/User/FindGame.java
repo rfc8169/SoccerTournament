@@ -3,8 +3,11 @@ package States.User;
 import States.Role;
 import States.StateType;
 
+import java.util.Scanner;
+
 public class FindGame extends States.State {
     final String pathAppend = "FindGame/";
+    Scanner scanner = new Scanner(System.in);
 
     public FindGame(Role role) {
         super(role);
@@ -13,12 +16,12 @@ public class FindGame extends States.State {
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input;
+        //temporarily using to track state path as example
+        modifiableData.append(pathAppend);
         while (true) {
-            //temporarily using to track state path as example
-            modifiableData.append(pathAppend);
 
-            System.out.println("CreateUser: ");
-            input = System.console().readLine();
+            System.out.println("FindGame ");
+            input = scanner.nextLine();
 
 
             //potentially do some work or actions:
@@ -26,7 +29,9 @@ public class FindGame extends States.State {
 
             //determine appropriate return type:
             if (input.equals("")) return null;
-            else return StateType.LOGGEDIN;
+            else if(input.equals("h")) help();
+            else if(input.equals("e"))return StateType.END;
+            else return StateType.SELECTEDGAME;
         }
     }
 
@@ -37,6 +42,7 @@ public class FindGame extends States.State {
 
     @Override
     public void help() {
+        System.out.println("use 'e' to exit");
 
     }
 }

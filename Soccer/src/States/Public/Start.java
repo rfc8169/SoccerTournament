@@ -3,8 +3,11 @@ package States.Public;
 import States.Role;
 import States.StateType;
 
+import java.util.Scanner;
+
 public class Start extends States.State {
     final String pathAppend = "Start/";
+    Scanner scanner = new Scanner(System.in);
 
     public Start(Role role) {
         super(role);
@@ -13,14 +16,14 @@ public class Start extends States.State {
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input;
+        //temporarily using to track state path as example
+        modifiableData.append(pathAppend);
         while (true) {
-            //temporarily using to track state path as example
-            modifiableData.append(pathAppend);
 
             //retrieve input from user:
             System.out.println("Welcome to the Soccer Tournament DB.");
-            System.out.println("\nEnter 'l' for login or 'c' to create a new profile Enter to exit the program: ");
-            input = System.console().readLine();
+            System.out.print("\nEnter 'l' for login or 'c' to create a new profile Enter to exit the program: ");
+            input = scanner.nextLine();
 
             //potentially do some work or actions:
             //todo

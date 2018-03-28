@@ -1,15 +1,15 @@
-package States.Coach;
+package States.Referee;
 
 import States.Role;
 import States.StateType;
 
 import java.util.Scanner;
 
-public class CreateTeam extends States.State {
-    final String pathAppend = "CreateTeam/";
+public class CreateTournament extends States.State {
+    final String pathAppend = "AddTournament/";
     Scanner scanner = new Scanner(System.in);
 
-    public CreateTeam(Role role) {
+    public CreateTournament(Role role) {
         super(role);
     }
 
@@ -20,7 +20,7 @@ public class CreateTeam extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("CreateTeam: ");
+            System.out.println("CreateTournament: ");
             input = scanner.nextLine();
 
 
@@ -41,6 +41,7 @@ public class CreateTeam extends States.State {
 
     @Override
     public void help() {
+        System.out.println("use 'e' to exit");
 
     }
 }

@@ -32,9 +32,10 @@ public class main{
             //if no next state was requested, revert to the previous state we were in
             if (response == null){
                 currentState.undoDataWrite(modifiableData);
-                currentState = statePath.get(depth);
-                statePath.remove(depth);
                 depth--;
+                currentState = statePath.get(depth);
+                currentState.undoDataWrite(modifiableData);
+                statePath.remove(depth);
             }
             //else, store the current state and load the next state it requested for the next iteration
             else {
@@ -43,5 +44,7 @@ public class main{
                 currentState = stateGenerator.makeState(response, currentRole);
             }
         }
+        System.out.println(modifiableData);
+        System.out.println("Exiting...");
     }
 }

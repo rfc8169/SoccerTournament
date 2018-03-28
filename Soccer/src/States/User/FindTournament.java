@@ -3,8 +3,11 @@ package States.User;
 import States.Role;
 import States.StateType;
 
+import java.util.Scanner;
+
 public class FindTournament extends States.State {
     final String pathAppend = "FindTournament/";
+    Scanner scanner = new Scanner(System.in);
 
     public FindTournament(Role role) {
         super(role);
@@ -13,12 +16,12 @@ public class FindTournament extends States.State {
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input;
+        //temporarily using to track state path as example
+        modifiableData.append(pathAppend);
         while (true) {
-            //temporarily using to track state path as example
-            modifiableData.append(pathAppend);
 
             System.out.println("FindTournament: ");
-            input = System.console().readLine();
+            input = scanner.nextLine();
 
 
             //potentially do some work or actions:
@@ -26,6 +29,8 @@ public class FindTournament extends States.State {
 
             //determine appropriate return type:
             if (input.equals("")) return null;
+            else if(input.equals("h")) help();
+            else if(input.equals("e"))return StateType.END;
             else return StateType.SELECTEDTOURNAMENT;
         }
     }
@@ -37,6 +42,7 @@ public class FindTournament extends States.State {
 
     @Override
     public void help() {
+        System.out.println("use 'e' to exit");
 
     }
 }

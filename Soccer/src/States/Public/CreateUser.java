@@ -3,11 +3,14 @@ package States.Public;
 import States.Role;
 import States.StateType;
 
+import java.util.Scanner;
+
 /**
  * Created by User on 3/27/2018.
  */
 public class CreateUser extends States.State {
     final String pathAppend = "CreateUser/";
+    Scanner scanner = new Scanner(System.in);
 
     public CreateUser(Role role) {
         super(role);
@@ -16,12 +19,12 @@ public class CreateUser extends States.State {
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input;
+        //temporarily using to track state path as example
+        modifiableData.append(pathAppend);
         while (true) {
-            //temporarily using to track state path as example
-            modifiableData.append(pathAppend);
 
-            System.out.println("CreateUser: ");
-            input = System.console().readLine();
+            System.out.print("CreateUser: ");
+            input = scanner.nextLine();
 
 
             //potentially do some work or actions:

@@ -3,23 +3,25 @@ package States.Referee;
 import States.Role;
 import States.StateType;
 
+import java.util.Scanner;
+
 public class AddGame extends States.State {
 
     public AddGame(Role role) {
         super(role);
     }
-
     final String pathAppend = "AddGame/";
+    Scanner scanner = new Scanner(System.in);
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input;
+        //temporarily using to track state path as example
+        modifiableData.append(pathAppend);
         while (true) {
-            //temporarily using to track state path as example
-            modifiableData.append(pathAppend);
 
-            System.out.println("CreateUser: ");
-            input = System.console().readLine();
+            System.out.println("AddGame: ");
+            input = scanner.nextLine();
 
 
             //potentially do some work or actions:
@@ -27,7 +29,8 @@ public class AddGame extends States.State {
 
             //determine appropriate return type:
             if (input.equals("")) return null;
-            else return StateType.LOGGEDIN;
+            else if(input.equals("h")) help();
+            else if(input.equals("e"))return StateType.END;
         }
     }
 
@@ -38,6 +41,7 @@ public class AddGame extends States.State {
 
     @Override
     public void help() {
+        System.out.println("use 'e' to exit");
 
     }
 }
