@@ -19,7 +19,7 @@ public enum StateType {
     //Referee:
     ADDGAME,
     ADDTEAM,
-    ADDTOURNAMENT,
+    CREATETOURNAMENT,
     ENTERSTATS,
     SETTEAM,
 

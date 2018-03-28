@@ -17,7 +17,7 @@ public class FindTournament extends States.State {
             //temporarily using to track state path as example
             modifiableData.append(pathAppend);
 
-            System.out.println("CreateUser: ");
+            System.out.println("FindTournament: ");
             input = System.console().readLine();
 
 
@@ -26,7 +26,7 @@ public class FindTournament extends States.State {
 
             //determine appropriate return type:
             if (input.equals("")) return null;
-            else return StateType.LOGGEDIN;
+            else return StateType.SELECTEDTOURNAMENT;
         }
     }
 

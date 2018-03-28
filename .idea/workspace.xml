@@ -2,33 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7f11bca-13a3-4612-be56-29e1957cf31b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Soccer/src/StateGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Soccer/src/States/Public/End.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Soccer/src/States/StateType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Soccer/src/States/Public/Role.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Role.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/AddTournament.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SoccerTournament.iml" afterPath="$PROJECT_DIR$/.idea/SoccerTournament.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/CreateAssignPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Coach/CreateAssignPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Public/Login.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Public/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Public/Start.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Public/Start.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/AddTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/AddTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/AddTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/AddTournament.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/SetTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/SetTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/State.java" afterPath="$PROJECT_DIR$/Soccer/src/States/State.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/StateGenerator.java" afterPath="$PROJECT_DIR$/Soccer/src/StateGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/StateType.java" afterPath="$PROJECT_DIR$/Soccer/src/States/StateType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/main.java" afterPath="$PROJECT_DIR$/Soccer/src/main.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,47 +24,37 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FindTeam.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FindTournament.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            <state relative-caret-position="323">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#206#207#0" expanded="false" />
+                <element signature="e#233#234#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectedTournament.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoggedIn.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoggedIn.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            <state relative-caret-position="374">
+              <caret line="24" column="67" lean-forward="false" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+              <folding>
+                <element signature="e#228#229#0" expanded="false" />
+                <element signature="e#255#256#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectedTournament.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,74 +62,88 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectedGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java">
+      <file leaf-file-name="CreateTournament.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            <state relative-caret-position="238">
+              <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#212#213#0" expanded="false" />
+                <element signature="e#239#240#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectedPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java">
+      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/State.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+            <state relative-caret-position="221">
+              <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#174#175#0" expanded="false" />
+                <element signature="e#210#211#0" expanded="false" />
+                <element signature="e#410#411#0" expanded="false" />
+                <element signature="e#441#442#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectedTeam.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java">
+      <file leaf-file-name="StateType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/StateType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            <state relative-caret-position="527">
+              <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/StateGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Public/Start.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#181#182#0" expanded="false" />
+                <element signature="e#208#209#0" expanded="false" />
+                <element signature="e#1187#1188#0" expanded="false" />
+                <element signature="e#1250#1251#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SetTeam.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/SetTeam.java">
+      <file leaf-file-name="AddGame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            <state relative-caret-position="153">
+              <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#146#147#0" expanded="false" />
+                <element signature="e#173#174#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindGame.java">
+      <file leaf-file-name="CreateUser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FindPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -187,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Soccer/src/Main.java" />
         <option value="$PROJECT_DIR$/Soccer/src/StateNode.java" />
         <option value="$PROJECT_DIR$/Soccer/src/Start.java" />
         <option value="$PROJECT_DIR$/Soccer/src/LoginNode.java" />
@@ -212,9 +196,7 @@
         <option value="$PROJECT_DIR$/Soccer/src/AddPlayer.java" />
         <option value="$PROJECT_DIR$/Soccer/src/State.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Public/Role.java" />
-        <option value="$PROJECT_DIR$/Soccer/src/States/StateType.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Role.java" />
-        <option value="$PROJECT_DIR$/Soccer/src/StateGenerator.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/State.java" />
         <option value="$PROJECT_DIR$/Soccer/src/main.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java" />
@@ -232,17 +214,21 @@
         <option value="$PROJECT_DIR$/Soccer/src/States/User/FindGame.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java" />
-        <option value="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" />
-        <option value="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" />
+        <option value="$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java" />
+        <option value="$PROJECT_DIR$/Soccer/src/States/StateType.java" />
+        <option value="$PROJECT_DIR$/Soccer/src/StateGenerator.java" />
+        <option value="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" />
+        <option value="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="22" />
+    <option name="y" value="34" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -264,7 +250,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -437,8 +424,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -447,7 +433,7 @@
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -474,7 +460,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Soccer">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -692,6 +678,24 @@
       <setting name="rowsRange" value="" />
       <method />
     </configuration>
+    <configuration default="false" name="Soccer" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SoccerTournament" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.Soccer" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -728,12 +732,19 @@
       <option name="project" value="LOCAL" />
       <updated>1522174277407</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added allot of structure for this state based application.">
+      <created>1522193780837</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1522193780837</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <frame x="22" y="34" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -749,8 +760,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26928896" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27760968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -762,6 +772,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -771,18 +782,25 @@
     <MESSAGE value="Organised classes into folders by permission level and set project source (though idk if that sets it for everyone else so... yeah)" />
     <MESSAGE value="Just added the package path to classes." />
     <MESSAGE value="Left out a few classes from git... fixed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Left out a few classes from git... fixed." />
+    <MESSAGE value="Added allot of structure for this state based application." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added allot of structure for this state based application." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -790,9 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,7 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,7 +838,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -832,7 +848,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -840,7 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,23 +865,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="e#174#175#0" expanded="false" />
+            <element signature="e#210#211#0" expanded="false" />
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#441#442#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Coach/AddCreatePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Coach/AddCreatePlayer.java" />
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -872,9 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,7 +912,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -934,7 +950,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -942,7 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,7 +967,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#174#175#0" expanded="false" />
+            <element signature="e#210#211#0" expanded="false" />
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#441#442#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -958,9 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -972,14 +991,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Coach/AddCreatePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Coach/AddCreatePlayer.java" />
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/Role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -988,39 +1000,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/StateGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="44" column="81" lean-forward="true" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/StateType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Soccer/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="33" column="57" lean-forward="false" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1028,9 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,9 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1048,19 +1025,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Public/Start.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1068,9 +1032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1078,8 +1039,86 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/AddTeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/SetTeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1088,146 +1127,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
+        <state relative-caret-position="153">
           <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#146#147#0" expanded="false" />
+            <element signature="e#173#174#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/AddTeam.java">
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Public/Start.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        <state relative-caret-position="323">
+          <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#181#182#0" expanded="false" />
+            <element signature="e#208#209#0" expanded="false" />
+            <element signature="e#1187#1188#0" expanded="false" />
+            <element signature="e#1250#1251#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/AddTournament.java">
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="6" column="44" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        <state relative-caret-position="238">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#212#213#0" expanded="false" />
+            <element signature="e#239#240#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java">
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        <state relative-caret-position="221">
+          <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#174#175#0" expanded="false" />
+            <element signature="e#210#211#0" expanded="false" />
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#441#442#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/SetTeam.java">
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/StateType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="527">
+          <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindGame.java">
+    <entry file="file://$PROJECT_DIR$/Soccer/src/StateGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java">
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        <state relative-caret-position="374">
+          <caret line="24" column="67" lean-forward="false" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#228#229#0" expanded="false" />
+            <element signature="e#255#256#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="323">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#206#207#0" expanded="false" />
+            <element signature="e#233#234#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        <state relative-caret-position="238">
+          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1291,7 +1284,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

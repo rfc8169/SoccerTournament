@@ -17,16 +17,17 @@ public class SelectedTournament extends States.State {
             //temporarily using to track state path as example
             modifiableData.append(pathAppend);
 
-            System.out.println("CreateUser: ");
+            System.out.println("SelectedTournament: a - add game, f find game");
+            System.out.println("\n: ");
             input = System.console().readLine();
-
 
             //potentially do some work or actions:
             //todo
 
             //determine appropriate return type:
             if (input.equals("")) return null;
-            else return StateType.LOGGEDIN;
+            else if (super.getRole() == Role.REFEREE && input.equals("a")) return StateType.ADDGAME;
+            else if (input.equals("f")) return StateType.FINDGAME;
         }
     }
 
