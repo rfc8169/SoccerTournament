@@ -22,7 +22,7 @@ public class Start extends States.State {
 
             //retrieve input from user:
             System.out.println("Welcome to the Soccer Tournament DB.");
-            System.out.print("\nEnter 'l' for login or 'c' to create a new profile Enter to exit the program: ");
+            System.out.print("\nEnter 'l' for login or 'c' to create a new profile, hit Enter to exit the program: ");
             input = scanner.nextLine();
 
             //potentially do some work or actions:
