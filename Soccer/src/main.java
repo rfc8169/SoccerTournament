@@ -44,7 +44,6 @@ public class main{
                 currentState = stateGenerator.makeState(response, currentRole);
             }
         }
-        System.out.println(modifiableData);
         System.out.println("Exiting...");
     }
 }
