@@ -38,9 +38,7 @@ public class main{
         //State currentState = stateGenerator.makeState(response, currentRole);
 
         //database initialization
-        System.out.println("k");
         try{
-            System.out.println("checl");
             Class.forName(JDBC_DRIVER);
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
             statement = connection.createStatement();
@@ -50,8 +48,8 @@ public class main{
             statement.close();
             connection.close();
         }
-        catch(SQLException e){}
-        catch (Exception e){}
+        catch(SQLException e){e.printStackTrace();}
+        catch (Exception e){e.printStackTrace();}
 
 
         //while we have not been returned an end state:
