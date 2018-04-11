@@ -1,14 +1,12 @@
 package States.Coach;
 
-import States.Public.Login;
 import States.Role;
 import States.StateType;
 
-import java.io.Console;
 import java.util.Scanner;
 
 public class AssignPlayer extends States.State {
-    final String pathAppend = "AssignPlayer/";
+    String pathAppend = "AssignPlayer/";
     Scanner scanner = new Scanner(System.in);
 
     public AssignPlayer(Role role) {
@@ -22,7 +20,9 @@ public class AssignPlayer extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("AssignPlayer: ");
+            System.out.println(modifiableData);
+            System.out.println("try 'h' for help");
+            System.out.print("Assign player to team: ");
             input = scanner.nextLine();
 
 

@@ -6,7 +6,7 @@ import States.StateType;
 import java.util.Scanner;
 
 public class SelectedTeam extends States.State {
-    final String pathAppend = "SelectedTeam/";
+    final String pathAppend = "";
     Scanner scanner = new Scanner(System.in);
 
     public SelectedTeam(Role role) {
@@ -20,7 +20,8 @@ public class SelectedTeam extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("SelectedTeam: ");
+            System.out.println(modifiableData);
+            System.out.println("try 'h' for help");
             input = scanner.nextLine();
 
 
@@ -31,6 +32,8 @@ public class SelectedTeam extends States.State {
             if (input.equals("")) return null;
             else if(input.equals("h")) help();
             else if(input.equals("e"))return StateType.END;
+            else if(input.equals("add player") && super.getRole() == Role.COACH)
+                return StateType.CREATEASSIGNPLAYER;
         }
     }
 
@@ -41,7 +44,7 @@ public class SelectedTeam extends States.State {
 
     @Override
     public void help() {
-        System.out.println("use 'e' to exit");
+        System.out.println("try:\n'add player'\n'e' - to exit");
 
     }
 }

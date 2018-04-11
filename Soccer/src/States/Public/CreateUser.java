@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Created by User on 3/27/2018.
  */
 public class CreateUser extends States.State {
-    final String pathAppend = "CreateUser/";
+    StringBuilder pathAppend = new StringBuilder("CreateUser/");
     Scanner scanner = new Scanner(System.in);
 
     public CreateUser(Role role) {
@@ -41,10 +41,17 @@ public class CreateUser extends States.State {
             String homeTown = scanner.next();
             System.out.println("\tPhone Number (##########): ");
             String phone = scanner.next();
-            System.out.println("\tRole (Player (P)/Coach (C)/Referee (R)): ");
+            System.out.println("\tRole (Player (p)/Coach (c)/Referee (r)): ");
             String role = scanner.next();
 
             //determine appropriate return type:
+            input = username;
+            input = "<"+input+">/";
+            pathAppend.append(input);
+            modifiableData.append(input);
+            if(role.equals("c")) super.setRole(Role.COACH);
+            else if(role.equals("r")) super.setRole(Role.REFEREE);
+            else super.setRole(Role.USER);
             return StateType.LOGGEDIN;
         }
     }

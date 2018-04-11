@@ -20,7 +20,9 @@ public class SetTeam extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("SetTeam: ");
+            System.out.println(modifiableData);
+            System.out.println("try 'h' for help");
+            System.out.print("enter team: ");
             input = scanner.nextLine();
 
 

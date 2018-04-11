@@ -23,7 +23,9 @@ public class CreateAssignPlayer extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("CreateAssignPlayer: ");
+            System.out.println(modifiableData);
+            System.out.println("try 'h' for help");
+            System.out.print("Create/assign player to team: ");
             input = scanner.nextLine();
 
 

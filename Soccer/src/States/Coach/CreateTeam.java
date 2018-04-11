@@ -20,7 +20,9 @@ public class CreateTeam extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("CreateTeam: ");
+            System.out.println(modifiableData);
+            System.out.println("try 'h' for help");
+            System.out.print("Create team: ");
             input = scanner.nextLine();
 
 

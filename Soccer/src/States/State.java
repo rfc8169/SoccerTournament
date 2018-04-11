@@ -2,7 +2,8 @@ package States;
 
 public abstract class State {
 
-    private State last;
+    public static String pathAppend;
+
     public final static String HELP_MSG = "";
 
     private Role userRole;
@@ -19,5 +20,9 @@ public abstract class State {
 
     public Role getRole(){
         return userRole;
+    }
+
+    protected void setRole(Role role){
+        this.userRole = role;
     }
 }

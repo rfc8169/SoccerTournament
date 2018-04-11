@@ -20,7 +20,9 @@ public class AddGame extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("AddGame: ");
+            System.out.println(modifiableData);
+            System.out.println("try 'h' for help");
+            System.out.print("Add game to tournament: ");
             input = scanner.nextLine();
 
 
