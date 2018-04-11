@@ -1,0 +1,1156 @@
+2018-03-05 09:04:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TABLE" not found; SQL statement:
+DELETE TABLE USER [42102-196]
+2018-03-05 09:04:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+DROP TABLE USERS [42102-196]
+2018-03-05 09:32:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USER" not found; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach int NOT NULL CHECK (
+		Coach IN (SELECT * FROM User WHERE ROlE = 1)
+	),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES USER(Uid)
+) [42102-196]
+2018-03-05 09:33:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "START_DATE" not found; SQL statement:
+CREATE TABLE Tournament(
+	Name VARCHAR(25) NOT NULL,
+	Location VARCHAR(25) NOT NULL,
+	Start_Date DATE NOT NULL,
+	End_Date DATE NULL CHECK (End_Date >= Start_Date),
+	PRIMARY KEY (Name)
+) [42122-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.table.Column.addCheckConstraint(Column.java:629)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:6219)
+	at org.h2.command.Parser.parseCreate(Parser.java:4351)
+	at org.h2.command.Parser.parsePrepared(Parser.java:366)
+	at org.h2.command.Parser.parse(Parser.java:321)
+	at org.h2.command.Parser.parse(Parser.java:293)
+	at org.h2.command.Parser.prepareCommand(Parser.java:258)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-05 09:34:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TOURNAMENT(
+	NAME VARCHAR(25) NOT NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	START_DATE DATE NOT NULL,
+	END_DATE DATE NULL,
+	PRIMARY KEY (NAME)
+	CHECK[*] (END_DATE >= START_DATE)
+) "; expected "INDEX, ,, )"; SQL statement:
+CREATE TABLE Tournament(
+	Name VARCHAR(25) NOT NULL,
+	Location VARCHAR(25) NOT NULL,
+	Start_Date DATE NOT NULL,
+	End_Date DATE NULL,
+	PRIMARY KEY (Name)
+	CHECK (End_Date >= Start_Date)
+) [42001-196]
+2018-03-05 09:34:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TOURNAMENT(
+	NAME VARCHAR(25) NOT NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	START_DATE DATE NOT NULL,
+	END_DATE DATE NULL,
+	PRIMARY KEY (NAME)
+	CHECK[*] (END_DATE >= START_DATE)
+) "; expected "INDEX, ,, )"; SQL statement:
+CREATE TABLE Tournament(
+	Name VARCHAR(25) NOT NULL,
+	Location VARCHAR(25) NOT NULL,
+	Start_Date DATE NOT NULL,
+	End_Date DATE NULL,
+	PRIMARY KEY (Name)
+	CHECK (End_Date >= Start_Date)
+) [42001-196]
+2018-03-05 09:35:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TOURNAMENT(
+	NAME VARCHAR(25) NOT NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	START_DATE DATE NOT NULL,
+	END_DATE DATE NULL,
+	PRIMARY KEY (NAME)
+	CHECK[*] (END_DATE => START_DATE)
+) "; expected "INDEX, ,, )"; SQL statement:
+CREATE TABLE Tournament(
+	Name VARCHAR(25) NOT NULL,
+	Location VARCHAR(25) NOT NULL,
+	Start_Date DATE NOT NULL,
+	End_Date DATE NULL,
+	PRIMARY KEY (Name)
+	CHECK (End_Date => Start_Date)
+) [42001-196]
+2018-03-05 09:35:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TOURNAMENT(
+	NAME VARCHAR(25) NOT NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	START_DATE DATE NOT NULL,
+	END_DATE DATE NULL,
+	PRIMARY KEY (NAME),
+	CHECK (END_DATE[*] => START_DATE)
+) "; SQL statement:
+CREATE TABLE Tournament(
+	Name VARCHAR(25) NOT NULL,
+	Location VARCHAR(25) NOT NULL,
+	Start_Date DATE NOT NULL,
+	End_Date DATE NULL,
+	PRIMARY KEY (Name),
+	CHECK (End_Date => Start_Date)
+) [42000-196]
+2018-03-05 09:37:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL),[*]
+	PRIMARY KEY (NAME),
+	FOREIGN KEY (COACH) REFERENCES USER(UID),
+	CHECK (COACH IN (SELECT * FROM USER WHERE ROLE = 1)
+) "; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach int NOT NULL),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES USER(Uid),
+	CHECK (Coach IN (SELECT * FROM User WHERE ROlE = 1)
+) [42000-196]
+2018-03-05 09:37:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL),[*]
+	PRIMARY KEY (NAME),
+	FOREIGN KEY (COACH) REFERENCES USER(UID),
+	CHECK (COACH IN (SELECT * FROM USER WHERE ROLE == 1)
+) "; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach int NOT NULL),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES USER(Uid),
+	CHECK (Coach IN (SELECT * FROM User WHERE Role == 1)
+) [42000-196]
+2018-03-05 09:37:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL),[*]
+	PRIMARY KEY (NAME),
+	FOREIGN KEY (COACH) REFERENCES USER(UID),
+	CHECK (COACH IN (SELECT * FROM USER WHERE ROLE = 1)
+) "; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach int NOT NULL),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES USER(Uid),
+	CHECK (Coach IN (SELECT * FROM User WHERE Role = 1)
+) [42000-196]
+2018-03-05 09:41:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL),[*]
+	PRIMARY KEY (NAME),
+	FOREIGN KEY (COACH) REFERENCES USER(UID),
+	CHECK (COACH IN (SELECT UID FROM USER WHERE ROLE = 1)
+) "; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach int NOT NULL),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES USER(Uid),
+	CHECK (Coach IN (SELECT Uid FROM User WHERE Role = 1)
+) [42000-196]
+2018-03-05 09:41:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL),[*]
+	PRIMARY KEY (NAME),
+	FOREIGN KEY (COACH) REFERENCES USER(UID),
+	                                                       
+) "; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach int NOT NULL),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES USER(Uid),
+	--CHECK (Coach IN (SELECT Uid FROM User WHERE Role = 1)
+) [42000-196]
+2018-03-05 09:41:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL),[*]
+	PRIMARY KEY (NAME),
+	FOREIGN KEY (COACH) REFERENCES USER(UID),
+) "; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach int NOT NULL),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES USER(Uid),
+) [42000-196]
+2018-03-05 09:42:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL),[*]
+	PRIMARY KEY (NAME),
+	FOREIGN KEY (COACH) REFERENCES USER (UID)
+) "; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach int NOT NULL),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES USER (Uid)
+) [42000-196]
+2018-03-05 09:42:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL),[*]
+	PRIMARY KEY (NAME),
+	FOREIGN KEY (COACH) REFERENCES USER(UID)
+) "; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach int NOT NULL),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES User(Uid)
+) [42000-196]
+2018-03-05 09:43:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL),[*]
+	PRIMARY KEY (NAME),
+	FOREIGN KEY (COACH) REFERENCES USER(UID)
+) "; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach INT NOT NULL),
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES User(Uid)
+) [42000-196]
+2018-03-05 09:43:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL),[*]
+	PRIMARY KEY (NAME),
+) "; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach INT NOT NULL),
+	PRIMARY KEY (Name),
+) [42000-196]
+2018-03-05 09:44:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE TEAM(
+	NAME VARCHAR(25) NOT NULL,
+	MASCOT VARCHAR(25) NULL,
+	LOCATION VARCHAR(25) NOT NULL,
+	COACH INT NOT NULL,
+	PRIMARY KEY (NAME),
+	FOREIGN KEY (COACH) REFERENCES USER(UID),
+	CHECK (COACH IN (SELECT UID FROM USER WHERE ROLE = 1)
+) [*]"; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, NOCHECK, CHECK, ,, )"; SQL statement:
+CREATE TABLE Team(
+	Name VARCHAR(25) NOT NULL,
+	Mascot VARCHAR(25) NULL,
+	Location VARCHAR(25) NOT NULL,
+	Coach int NOT NULL,
+	PRIMARY KEY (Name),
+	FOREIGN KEY (Coach) REFERENCES USER(Uid),
+	CHECK (Coach IN (SELECT Uid FROM User WHERE Role = 1)
+) [42001-196]
+2018-03-05 09:53:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM *[*]"; expected "identifier"; SQL statement:
+SELECT * FROM * [42001-196]
+2018-03-07 09:23:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+CREATE TABLE Game(
+Game_id int NOT NULL,
+Start_Time DATETIME NOT NULL,
+End_Time DATETIME NULL,
+Field_no int NOT NULL,
+Location VARCHAR(25) NOT NULL,
+Home_Team VARCHAR(25) NOT NULL,
+Away_Team VARCHAR(25) NOT NULL,
+Tournament VARCHAR(25) NOT NULL,
+PRIMARY KEY (Game_id),
+FOREIGN KEY (Home_Team, Away_Team) REFERENCES Team(Name),
+FOREIGN KEY (Tournament) REFERENCES Tournament(Name),
+CHECK (End_Time >= Start_Time),
+) [21002-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:226)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:77)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:178)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:101)
+	at org.h2.command.Command.executeUpdate(Command.java:260)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:192)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-07 09:31:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO TOURNAMENT VALUES('RIT' TOURNAMENT[*],'Henrietta, NY','May 7 2018',NULL) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO Tournament VALUES('RIT' Tournament,'Henrietta, NY','May 7 2018',NULL) [42001-196]
+2018-03-07 09:32:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "May 7 2018"; SQL statement:
+INSERT INTO Tournament VALUES('RIT Tournament','Henrietta, NY','May 7 2018',NULL) -- ('RIT Tournament', 'Henrietta, NY', 'May 7 2018', NULL) [22007-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueDate.parse(ValueDate.java:81)
+	at org.h2.value.Value.convertTo(Value.java:948)
+	at org.h2.table.Column.convert(Column.java:167)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:143)
+	at org.h2.command.dml.Insert.update(Insert.java:114)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:101)
+	at org.h2.command.Command.executeUpdate(Command.java:260)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:192)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: May 7 2018
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:313)
+	at org.h2.value.ValueDate.parse(ValueDate.java:79)
+	... 15 more
+2018-03-07 09:32:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "180307"; SQL statement:
+INSERT INTO Tournament VALUES('RIT Tournament','Henrietta, NY','180307',NULL) -- ('RIT Tournament', 'Henrietta, NY', '180307', NULL) [22007-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueDate.parse(ValueDate.java:81)
+	at org.h2.value.Value.convertTo(Value.java:948)
+	at org.h2.table.Column.convert(Column.java:167)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:143)
+	at org.h2.command.dml.Insert.update(Insert.java:114)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:101)
+	at org.h2.command.Command.executeUpdate(Command.java:260)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:192)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 180307
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:313)
+	at org.h2.value.ValueDate.parse(ValueDate.java:79)
+	... 15 more
+2018-03-07 09:32:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "03/07/18"; SQL statement:
+INSERT INTO Tournament VALUES('RIT Tournament','Henrietta, NY','03/07/18',NULL) -- ('RIT Tournament', 'Henrietta, NY', '03/07/18', NULL) [22007-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueDate.parse(ValueDate.java:81)
+	at org.h2.value.Value.convertTo(Value.java:948)
+	at org.h2.table.Column.convert(Column.java:167)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:143)
+	at org.h2.command.dml.Insert.update(Insert.java:114)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:101)
+	at org.h2.command.Command.executeUpdate(Command.java:260)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:192)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 03/07/18
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:313)
+	at org.h2.value.ValueDate.parse(ValueDate.java:79)
+	... 15 more
+2018-03-07 09:33:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "2008"; SQL statement:
+INSERT INTO Tournament VALUES('RIT Tournament','Henrietta, NY',2018-03-07,NULL) -- ('RIT Tournament', 'Henrietta, NY', 2008, NULL) [22007-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueDate.parse(ValueDate.java:81)
+	at org.h2.value.Value.convertTo(Value.java:948)
+	at org.h2.table.Column.convert(Column.java:167)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:143)
+	at org.h2.command.dml.Insert.update(Insert.java:114)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:101)
+	at org.h2.command.Command.executeUpdate(Command.java:260)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:192)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 2008
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:313)
+	at org.h2.value.ValueDate.parse(ValueDate.java:79)
+	... 15 more
+2018-03-07 09:36:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO Game VALUES(0,'2018-03-07 15:00:00','2018-03-07 17:00:00','Henrietta, NY','RIT','RIT','RIT Tournament') [21002-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:265)
+	at org.h2.command.Parser.prepareCommand(Parser.java:263)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-07 09:37:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT FROM GAME WHERE[*] GAME_ID=0 "; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+SELECT FROM Game WHERE Game_id=0 [42001-196]
+2018-03-07 09:43:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "G" not found; SQL statement:
+SELECT Name,G,Home_Team FROM Team JOIN Game AS G WHERE G.Home_Team=Name [42122-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.command.dml.Select.prepare(Select.java:839)
+	at org.h2.command.Parser.prepareCommand(Parser.java:263)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-07 09:47:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE GAME_REF(
+GAME_ID INT NOT NULL,
+REF_ID INT NOT NULL,
+PRIMARY KEY (GAME_ID,REF_ID)
+FOREIGN[*] KEY (GAME_ID) REFERENCES GAME(GAME_ID),
+FOREIGN KEY (REF_ID) REFERENCES USER(UID),
+CHECK (REF_ID IN (SELECT UID FROM USER WHERE ROLE = 2))
+) "; expected "INDEX, ,, )"; SQL statement:
+CREATE TABLE Game_Ref(
+Game_id int NOT NULL,
+Ref_id int NOT NULL,
+PRIMARY KEY (Game_id,Ref_id)
+FOREIGN KEY (Game_id) REFERENCES Game(Game_id),
+FOREIGN KEY (Ref_id) REFERENCES User(Uid),
+CHECK (Ref_id in (SELECT Uid FROM User WHERE Role = 2))
+) [42001-196]
+2018-03-07 09:56:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Unknown data type: ","; SQL statement:
+CREATE TABLE Statistics(
+Game_id INT NOT NULL,
+Time, FLOAT NOT NULL,
+Uid int NOT NULL,
+Team VARCHAR(25) NOT NULL,
+Event VARCHAR(15) NOT NULL,
+PRIMARY KEY (Game_id,Time),
+FOREIGN KEY (Game_id) REFERENCES Game(Game_id),
+FOREIGN KEY (Uid)  REFERENCES Player(Uid),
+FOREIGN KEY (Team) REFERENCES Team(Name),
+CHECK (Event in ('Goal','Assist','Save','Penalty','Yellow Card','Red Card')),
+CHECK (Time >= 0)
+) [50004-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:4169)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:4012)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:6155)
+	at org.h2.command.Parser.parseCreate(Parser.java:4351)
+	at org.h2.command.Parser.parsePrepared(Parser.java:366)
+	at org.h2.command.Parser.parse(Parser.java:321)
+	at org.h2.command.Parser.parse(Parser.java:293)
+	at org.h2.command.Parser.prepareCommand(Parser.java:258)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-28 18:32:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "USERS" not found; SQL statement:
+SELECT * FROM Users [42102-196]
+2018-03-28 18:52:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TOURNAMETN" not found; SQL statement:
+DROP TABLE tournametn [42102-196]
+2018-03-28 19:02:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO user VALUES('arsenalfan82','George','Smith','M','12-15-1994',Mexico City, Mexico[*]',0)"; SQL statement:
+INSERT INTO user VALUES('arsenalfan82','George','Smith','M','12-15-1994',Mexico City, Mexico',0) [42000-196]
+2018-03-28 19:04:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO user VALUES('arsenalfan82','George','Smith','M','12-15-1994',Mexico City, Mexico[*]',0)"; SQL statement:
+INSERT INTO user VALUES('arsenalfan82','George','Smith','M','12-15-1994',Mexico City, Mexico',0) [42000-196]
+2018-03-28 19:04:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "12-15-1994"; SQL statement:
+INSERT INTO user VALUES('arsenalfan82','George','Smith','M','12-15-1994','Mexico City, Mexico',0) -- ('arsenalfan82', 'George', 'Smith', 'M', '12-15-1994', 'Mexico City, Mexico', 0) [22007-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueDate.parse(ValueDate.java:81)
+	at org.h2.value.Value.convertTo(Value.java:948)
+	at org.h2.table.Column.convert(Column.java:167)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:143)
+	at org.h2.command.dml.Insert.update(Insert.java:114)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:101)
+	at org.h2.command.Command.executeUpdate(Command.java:260)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:192)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 12-15-1994
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:319)
+	at org.h2.value.ValueDate.parse(ValueDate.java:79)
+	... 15 more
+2018-03-28 19:08:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "DATE" constant "1999-03-38"; SQL statement:
+INSERT INTO user VALUES('soccerlover98','Willam','Jacobs','M','1999-03-38','London, Englad',0) -- ('soccerlover98', 'Willam', 'Jacobs', 'M', '1999-03-38', 'London, Englad', 0) [22007-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueDate.parse(ValueDate.java:81)
+	at org.h2.value.Value.convertTo(Value.java:948)
+	at org.h2.table.Column.convert(Column.java:167)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:143)
+	at org.h2.command.dml.Insert.update(Insert.java:114)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:101)
+	at org.h2.command.Command.executeUpdate(Command.java:260)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:192)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 1999-3-38
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:319)
+	at org.h2.value.ValueDate.parse(ValueDate.java:79)
+	... 15 more
+2018-03-28 19:14:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "WILLIAM" not found; SQL statement:
+DELETE FROM user where first_name = William [42122-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Comparison.optimize(Comparison.java:180)
+	at org.h2.command.dml.Delete.prepare(Delete.java:131)
+	at org.h2.command.Parser.prepareCommand(Parser.java:263)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-28 19:18:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO TEAM VALUES('Manchester United','Fred the Red','Manchester, United Kingdom','Jmourinho);
+INSERT INTO team VALUES('ARSENAL[*]','CANNON','LONDON','AWENGER) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO team VALUES('Manchester United','Fred the Red','Manchester, United Kingdom','Jmourinho);
+INSERT INTO team VALUES('Arsenal','Cannon','London','Awenger) [42001-196]
+2018-03-28 19:18:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO team VALUES('Mexican National Team','Eagle','Mexico City, Mexico',[*]'Jcarlos);"; SQL statement:
+INSERT INTO team VALUES('Mexican National Team','Eagle','Mexico City, Mexico','Jcarlos); [42000-196]
+2018-03-28 19:20:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO TEAM VALUES('Manchester United','Fred the Red','Manchester, United Kingdom','Jmourinho);
+INSERT INTO team VALUES('ARSENAL[*]','CANNON','LONDON, UNITED KINGDOM','AWENGER) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO team VALUES('Manchester United','Fred the Red','Manchester, United Kingdom','Jmourinho);
+INSERT INTO team VALUES('Arsenal','Cannon','London, United Kingdom','Awenger) [42001-196]
+2018-03-28 19:20:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO team VALUES('Mexican National Team','Eagle','Mexico City, Mexico',[*]'Jcarlos);"; SQL statement:
+INSERT INTO team VALUES('Mexican National Team','Eagle','Mexico City, Mexico','Jcarlos); [42000-196]
+2018-03-28 19:21:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "LOCATION VARCHAR(25) NOT NULL": "'Manchester, United Kingdom' (26)"; SQL statement:
+INSERT INTO team VALUES('Manchester United','Fred the Red','Manchester, United Kingdom','Jmourinho') [22001-196]
+2018-03-28 19:33:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "POSITION" not found; SQL statement:
+INSERT INTO position VALUES('arsenalfan82','goaly') [42102-196]
+2018-03-28 19:33:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "POSITION" not found; SQL statement:
+INSERT INTO position VALUES('soccerlover98','defender') [42102-196]
+2018-03-28 19:33:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "POSITION" not found; SQL statement:
+INSERT INTO position VALUES('soccerdad29','striker') [42102-196]
+2018-03-28 19:33:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "POSITION" not found; SQL statement:
+SELECT * FROM Position [42102-196]
+2018-03-28 19:44:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'2017-07-07' (PLAYER: NUMBER INT NOT NULL)"; SQL statement:
+INSERT INTO player VALUES('2007 FIFA World Cup','Tokyo, Japan','2017-07-07') -- ('2007 FIFA World Cup', 'Tokyo, Japan', '2017-07-07') [22018-196]
+2018-03-28 19:44:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'2009-08-07' (PLAYER: NUMBER INT NOT NULL)"; SQL statement:
+INSERT INTO player VALUES('UEFA Champians League 2008','Madrid, Spain','2009-08-07') -- ('UEFA Champians League 2008', 'Madrid, Spain', '2009-08-07') [22018-196]
+2018-03-28 19:46:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO player VALUES('2007 FIFA World Cup','Tokyo, Japan','2017-07-07','2017-07-16') [21002-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:265)
+	at org.h2.command.Parser.prepareCommand(Parser.java:263)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-28 19:46:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO player VALUES('UEFA Champians League 2008','Madrid, Spain','2009-08-07','2009-08-21') [21002-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:265)
+	at org.h2.command.Parser.prepareCommand(Parser.java:263)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-28 19:47:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TOURNAMNET" not found; SQL statement:
+INSERT INTO tournamnet VALUES('2007 FIFA World Cup','Tokyo, Japan','2017-07-07','2017-07-16') [42102-196]
+2018-03-28 19:47:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TOURNAMNET" not found; SQL statement:
+INSERT INTO tournamnet VALUES('UEFA Champians League 2008','Madrid, Spain','2009-08-07','2009-08-21') [42102-196]
+2018-03-28 19:47:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TOURNAMET" not found; SQL statement:
+INSERT INTO tournamet VALUES('2007 FIFA World Cup','Tokyo, Japan','2017-07-07','2017-07-16') [42102-196]
+2018-03-28 19:47:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TOURNAMET" not found; SQL statement:
+INSERT INTO tournamet VALUES('UEFA Champians League 2008','Madrid, Spain','2009-08-07','2009-08-21') [42102-196]
+2018-03-28 20:10:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO team VALUES(1,'3:00:00 PM','5:00:00 PM','Western NY','Manchester United','Chelsea','2007 FIFA World Cup','soccerdad28') [21002-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:265)
+	at org.h2.command.Parser.prepareCommand(Parser.java:263)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-28 20:10:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO team VALUES(2,'2:00:00 PM','5:00:00 PM'','Southern MA','Arsenal','Manchester United','2007 FIFA World Cup','soccerdad28');
+INSERT INTO team VALUES(3,'6:00:00 PM','8:00:00 PM','Eastern CN','Mexican National Team','Arsenal','2007 FIFA World Cup','soccerdad28[*]');"; SQL statement:
+INSERT INTO team VALUES(2,'2:00:00 PM','5:00:00 PM'','Southern MA','Arsenal','Manchester United','2007 FIFA World Cup','soccerdad28');
+INSERT INTO team VALUES(3,'6:00:00 PM','8:00:00 PM','Eastern CN','Mexican National Team','Arsenal','2007 FIFA World Cup','soccerdad28'); [42000-196]
+2018-03-28 20:12:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO team VALUES(1,'3:00:00 PM','5:00:00 PM',1,'Western NY','Manchester United','Chelsea','2007 FIFA World Cup') [21002-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:265)
+	at org.h2.command.Parser.prepareCommand(Parser.java:263)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-28 20:12:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO team VALUES(2,'2:00:00 PM','5:00:00 PM'',2,'Southern MA','Arsenal','Manchester United','2007 FIFA World Cup');
+INSERT INTO team VALUES(3,'6:00:00 PM','8:00:00 PM',3,'Eastern CN','Mexican National Team','Arsenal','2007 FIFA World Cup[*]');"; SQL statement:
+INSERT INTO team VALUES(2,'2:00:00 PM','5:00:00 PM'',2,'Southern MA','Arsenal','Manchester United','2007 FIFA World Cup');
+INSERT INTO team VALUES(3,'6:00:00 PM','8:00:00 PM',3,'Eastern CN','Mexican National Team','Arsenal','2007 FIFA World Cup'); [42000-196]
+2018-03-28 20:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "3:00:00 PM"; SQL statement:
+INSERT INTO game VALUES(1,'3:00:00 PM','5:00:00 PM',1,'Tokyo, Japan','Manchester United','Chelsea','2007 FIFA World Cup') -- (1, '3:00:00 PM', '5:00:00 PM', 1, 'Tokyo, Japan', 'Manchester United', 'Chelsea', '2007 FIFA World Cup') [22007-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:122)
+	at org.h2.value.Value.convertTo(Value.java:950)
+	at org.h2.table.Column.convert(Column.java:167)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:143)
+	at org.h2.command.dml.Insert.update(Insert.java:114)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:101)
+	at org.h2.command.Command.executeUpdate(Command.java:260)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:192)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: 3:00:00 PM
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:313)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:140)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:120)
+	... 15 more
+2018-03-28 20:13:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO game VALUES(2,'2:00:00 PM','5:00:00 PM'',2,'Tokyo, Japan','Arsenal','Manchester United','2007 FIFA World Cup');
+INSERT INTO game VALUES(3,'6:00:00 PM','8:00:00 PM',3,'Tokyo, Japan','Mexican National Team','Arsenal','2007 FIFA World Cup[*]');"; SQL statement:
+INSERT INTO game VALUES(2,'2:00:00 PM','5:00:00 PM'',2,'Tokyo, Japan','Arsenal','Manchester United','2007 FIFA World Cup');
+INSERT INTO game VALUES(3,'6:00:00 PM','8:00:00 PM',3,'Tokyo, Japan','Mexican National Team','Arsenal','2007 FIFA World Cup'); [42000-196]
+2018-03-28 20:21:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "POSITION" not found; SQL statement:
+SELECT * FROM Position [42102-196]
+2018-03-28 20:21:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TOURNAMEN" not found; SQL statement:
+SELECT * FROM tournamen [42102-196]
+2018-03-28 20:27:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STATISTCS" not found; SQL statement:
+SELECT * FROM Statistcs [42102-196]
+2018-03-28 20:29:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM USER
+SELECT[*] * FROM PLAYER
+SELECT * FROM TEAM "; SQL statement:
+SELECT * FROM user
+SELECT * FROM player
+SELECT * FROM team [42000-196]
+2018-03-28 20:32:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Feature not supported: "VARCHAR +"; SQL statement:
+SELECT 'Player: '+first_name+' '+last_name, 'Position: '+position, 'Number: '+number FROM user
+JOIN player on user.uid = player.uid
+JOIN positions on user.uid = positions.uid [50100-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:216)
+	at org.h2.value.Value.throwUnsupportedExceptionForType(Value.java:1185)
+	at org.h2.value.Value.add(Value.java:481)
+	at org.h2.expression.Operation.getValue(Operation.java:145)
+	at org.h2.expression.Operation.getValue(Operation.java:110)
+	at org.h2.expression.Operation.getValue(Operation.java:110)
+	at org.h2.command.dml.Select$LazyResultQueryFlat.fetchNextRow(Select.java:1459)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:79)
+	at org.h2.result.LazyResult.next(LazyResult.java:59)
+	at org.h2.command.dml.Select.queryFlat(Select.java:519)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:625)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:113)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:186)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-28 20:36:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CONCAT('Team: ;,team), CONCAT('Player: ',first_name,' ',last_name), CONCAT('Position: ',position), CONCAT('Number: [*]',number) FROM user
+JOIN player on user.uid = player.uid
+JOIN positions on user.uid = positions.uid"; SQL statement:
+SELECT CONCAT('Team: ;,team), CONCAT('Player: ',first_name,' ',last_name), CONCAT('Position: ',position), CONCAT('Number: ',number) FROM user
+JOIN player on user.uid = player.uid
+JOIN positions on user.uid = positions.uid [42000-196]
+2018-03-28 20:36:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "FIRST_NAME" must be in the GROUP BY list; SQL statement:
+SELECT CONCAT('Team: ',team), CONCAT('Player: ',first_name,' ',last_name), CONCAT('Position: ',position), CONCAT('Number: ',number) FROM user
+JOIN player on user.uid = player.uid
+JOIN positions on user.uid = positions.uid
+GROUP BY Team
+ORDER BY number [90016-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:169)
+	at org.h2.expression.Function.updateAggregate(Function.java:2668)
+	at org.h2.command.dml.Select$LazyResultGroupSorted.fetchNextRow(Select.java:1514)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:79)
+	at org.h2.result.LazyResult.next(LazyResult.java:59)
+	at org.h2.command.dml.Select.queryGroupSorted(Select.java:176)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:618)
+	at org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:114)
+	at org.h2.command.dml.Query.query(Query.java:371)
+	at org.h2.command.dml.Query.query(Query.java:333)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:113)
+	at org.h2.command.Command.executeQuery(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:186)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-28 20:42:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT COUNT(EVENT) FROM STATISTICS WHERE AND EVENT[*] = 'Goal' "; SQL statement:
+SELECT COUNT(event) FROM statistics WHERE AND event = 'Goal' [42000-196]
+2018-03-28 20:42:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT COUNT(EVENT) FROM STATISTICS WHERE AND EVENT[*] = 'Goal' "; SQL statement:
+SELECT COUNT(event) FROM statistics WHERE AND event = 'Goal' [42000-196]
+2018-03-28 20:46:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Goal' AND UID = @UID [*]"; expected ":=, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Goal' AND uid = @uid [42001-196]
+2018-03-28 20:46:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement ")[*],
+SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Assist' AND UID = @UID "; SQL statement:
+),
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Assist' AND uid = @uid [42000-196]
+2018-03-28 20:46:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement ")[*],
+SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Penalty' AND UID = @UID "; SQL statement:
+),
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Penalty' AND uid = @uid [42000-196]
+2018-03-28 20:46:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement ")[*],
+SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Save' AND UID = @UID "; SQL statement:
+),
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Save' AND uid = @uid [42000-196]
+2018-03-28 20:46:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement ")[*],
+SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Red Card' AND UID = @UID "; SQL statement:
+),
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Red Card' AND uid = @uid [42000-196]
+2018-03-28 20:46:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement ")[*],
+SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Yellow Card' AND UID = @UID "; SQL statement:
+),
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Yellow Card' AND uid = @uid [42000-196]
+2018-03-28 20:46:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement ")[*],"; SQL statement:
+), [42000-196]
+2018-03-28 20:47:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Goal' AND UID = @UID ), [*]"; expected "*, NOT, EXISTS, INTERSECTS"; SQL statement:
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Goal' AND uid = @uid ), [42001-196]
+2018-03-28 20:47:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Goal' AND UID = @UID )
+SELECT[*] CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Assist' AND UID = @UID ),
+SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Penalty' AND UID = @UID ),
+SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Save' AND UID = @UID ),
+SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Red Card' AND UID = @UID ),
+SELECT CONCAT('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Yellow Card' AND UID = @UID ) "; SQL statement:
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Goal' AND uid = @uid )
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Assist' AND uid = @uid ),
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Penalty' AND uid = @uid ),
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Save' AND uid = @uid ),
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Red Card' AND uid = @uid ),
+SELEct CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Yellow Card' AND uid = @uid ) [42000-196]
+2018-03-28 20:49:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CONCAT[*]('Goals: ',
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Assist' AND UID = @UID ) "; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT, {"; SQL statement:
+CONCAT('Goals: ',
+SELECT COUNT(event) FROM statistics WHERE event = 'Assist' AND uid = @uid ) [42001-196]
+2018-03-28 20:49:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CONCAT[*]('Goals: ',(
+SELECT COUNT(EVENT) FROM STATISTICS WHERE EVENT = 'Assist' AND UID = @UID 
+)) "; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT, {"; SQL statement:
+CONCAT('Goals: ',(
+SELECT COUNT(event) FROM statistics WHERE event = 'Assist' AND uid = @uid 
+)) [42001-196]
+2018-03-28 20:55:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "Penalty"; SQL statement:
+SELECT COUNT(event) FROM statistics WHERE game_id = event = 'Goal' [22018-196]
+2018-03-28 21:00:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "GAME_ID"; SQL statement:
+SELECT team FROM statistics 
+JOIN game on game_id = @gameid
+WHERE event = 'Goal' [90059-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:124)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:94)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:492)
+	at org.h2.table.TableFilter$3.accept(TableFilter.java:681)
+	at org.h2.table.TableFilter.visit(TableFilter.java:1194)
+	at org.h2.table.TableFilter.addJoin(TableFilter.java:678)
+	at org.h2.command.Parser.readJoin(Parser.java:1613)
+	at org.h2.command.Parser.parseJoinTableFilter(Parser.java:1991)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1947)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2095)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1940)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1755)
+	at org.h2.command.Parser.parseSelect(Parser.java:1743)
+	at org.h2.command.Parser.parsePrepared(Parser.java:449)
+	at org.h2.command.Parser.parse(Parser.java:321)
+	at org.h2.command.Parser.parse(Parser.java:293)
+	at org.h2.command.Parser.prepareCommand(Parser.java:258)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-28 21:01:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Ambiguous column name "GAME_ID"; SQL statement:
+SELECT team FROM statistics 
+JOIN game on statistics.game_id = game.game_id
+WHERE event = 'Goal' AND game_id = @gameid [90059-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:124)
+	at org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:94)
+	at org.h2.expression.Comparison.mapColumns(Comparison.java:492)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:262)
+	at org.h2.expression.ConditionAndOr.mapColumns(ConditionAndOr.java:261)
+	at org.h2.command.dml.Select.mapColumns(Select.java:1233)
+	at org.h2.command.dml.Select.init(Select.java:814)
+	at org.h2.command.Parser.parseSelect(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:449)
+	at org.h2.command.Parser.parse(Parser.java:321)
+	at org.h2.command.Parser.parse(Parser.java:293)
+	at org.h2.command.Parser.prepareCommand(Parser.java:258)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
+2018-03-28 21:02:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM
+(
+SELECT TEAM FROM STATISTICS 
+JOIN GAME ON STATISTICS.GAME_ID = GAME.GAME_ID
+WHERE EVENT = 'Goal' AND GAME.GAME_ID = @GAMEID [*]"; expected ":=, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, GROUP, HAVING, UNION, MINUS, EXCEPT, INTERSECT, ORDER, OFFSET, FETCH, LIMIT, FOR, )"; SQL statement:
+SELECT * FROM
+(
+SELECT team FROM statistics 
+JOIN game on statistics.game_id = game.game_id
+WHERE event = 'Goal' AND game.game_id = @gameid [42001-196]
+2018-03-28 21:02:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement ")[*]"; SQL statement:
+) [42000-196]
+2018-03-28 21:03:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT COUNT(TEAM)
+([*]
+SELECT TEAM FROM STATISTICS 
+JOIN GAME ON STATISTICS.GAME_ID = GAME.GAME_ID
+WHERE EVENT = 'Goal' AND GAME.GAME_ID = @GAMEID
+) "; SQL statement:
+SELECT COUNT(team)
+(
+SELECT team FROM statistics 
+JOIN game on statistics.game_id = game.game_id
+WHERE event = 'Goal' AND game.game_id = @gameid
+) [42000-196]
+2018-03-28 21:06:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT COUNT(
+(
+SELECT TEAM FROM STATISTICS 
+JOIN GAME ON STATISTICS.GAME_ID = GAME.GAME_ID
+WHERE EVENT = 'Goal' AND GAME.GAME_ID = @GAMEID AND TEAM = HOME_TEAM
+)) AS HOME_TEAM SCORE[*] "; SQL statement:
+SELECT COUNT(
+(
+SELECT team FROM statistics 
+JOIN game on statistics.game_id = game.game_id
+WHERE event = 'Goal' AND game.game_id = @gameid AND team = home_team
+)) as home_team score [42000-196]
+2018-03-28 21:07:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT COUNT(
+(
+SELECT TEAM FROM STATISTICS 
+JOIN GAME ON STATISTICS.GAME_ID = GAME.GAME_ID
+WHERE EVENT = 'Goal' AND GAME.GAME_ID = @GAMEID AND TEAM = HOME_TEAM
+)) AS HOME_TEAM_SCORE:[*] "; SQL statement:
+SELECT COUNT(
+(
+SELECT team FROM statistics 
+JOIN game on statistics.game_id = game.game_id
+WHERE event = 'Goal' AND game.game_id = @gameid AND team = home_team
+)) as home_team_score: [42000-196]
+2018-03-28 21:11:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM STATISTICS
+SELECT[*] * FROM GAME "; SQL statement:
+SELECT * FROM Statistics
+SELECT * FROM game [42000-196]
+2018-03-28 21:12:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "HTEAM" not found; SQL statement:
+SELECT CONCAT( hteam, ' : ', COUNT(
+(
+SELECT team FROM statistics 
+JOIN game on statistics.game_id = game.game_id
+WHERE event = 'Goal' AND game.game_id = @gameid AND team = home_team
+))) as home,
+COUNT(
+(
+SELECT team FROM statistics 
+JOIN game on statistics.game_id = game.game_id
+WHERE event = 'Goal' AND game.game_id = @gameid AND team = away_team
+)) as away [42122-196]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:147)
+	at org.h2.expression.Function.optimize(Function.java:2311)
+	at org.h2.expression.Alias.optimize(Alias.java:51)
+	at org.h2.command.dml.Select.prepare(Select.java:839)
+	at org.h2.command.Parser.prepareCommand(Parser.java:263)
+	at org.h2.engine.Session.prepareLocal(Session.java:578)
+	at org.h2.engine.Session.prepareCommand(Session.java:519)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:164)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1380)
+	at org.h2.server.web.WebApp.query(WebApp.java:1053)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1015)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1002)
+	at org.h2.server.web.WebThread.process(WebThread.java:164)
+	at org.h2.server.web.WebThread.run(WebThread.java:89)
+	at java.lang.Thread.run(Unknown Source)
