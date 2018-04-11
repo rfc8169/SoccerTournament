@@ -2,12 +2,25 @@ import States.Public.*;
 import States.Role;
 import States.State;
 import States.StateType;
-
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
+
+
 public class main{
+
+    static final String JDBC_DRIVER = "org.h2.Driver";
+    static final String DB_URL = "jdbc:h2:~/test";
+    static final String USER = "sa";
+    static final String PASS = "";
+
     public static void main(String args[]){
         //initialize:
+        Connection connection = null;
+        Statement statement = null;
         final int MAX_STATE_DEPTH = 10;
         int depth = 0;
         //holds the current path of states:
@@ -23,6 +36,18 @@ public class main{
         StateType response = StateType.START;
         //state we are currently in:
         State currentState = stateGenerator.makeState(response, currentRole);
+
+        //database initialization
+        try{
+            Class.forName(JDBC_DRIVER);
+            connection = DriverManager.getConnection(DB_URL, USER, PASS);
+            statement = connection.createStatement();
+            
+        }
+        catch(SQLException e){}
+        catch (Exception e){}
+
+
         //while we have not been returned an end state:
         while (!(currentState instanceof End)){
             //set response (the next states type) after having executed the current state
