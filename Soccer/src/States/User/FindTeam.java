@@ -6,7 +6,7 @@ import States.StateType;
 import java.util.Scanner;
 
 public class FindTeam extends States.State {
-    final String pathAppend = "FindTeam/";
+    StringBuilder pathAppend = new StringBuilder("FindTeam/");
     Scanner scanner = new Scanner(System.in);
 
     public FindTeam(Role role) {
@@ -20,9 +20,10 @@ public class FindTeam extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("FindTeam: ");
+            System.out.println(modifiableData);
+            System.out.println("try 'h' for help");
+            System.out.print("enter team: ");
             input = scanner.nextLine();
-
 
             //potentially do some work or actions:
             //todo
@@ -31,12 +32,20 @@ public class FindTeam extends States.State {
             if (input.equals("")) return null;
             else if(input.equals("h")) help();
             else if(input.equals("e"))return StateType.END;
+            else {
+                input = "<"+input+">/";
+                pathAppend.append(input);
+                modifiableData.append(input);
+                return StateType.SELECTEDTEAM;
+            }
         }
     }
 
     @Override
     public void undoDataWrite(StringBuilder modifiableData) {
         modifiableData.reverse().delete(0, pathAppend.length()).reverse();
+        pathAppend = new StringBuilder("FindTeam/");
+
     }
 
     @Override

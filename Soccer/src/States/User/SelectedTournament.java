@@ -6,7 +6,7 @@ import States.StateType;
 import java.util.Scanner;
 
 public class SelectedTournament extends States.State {
-    final String pathAppend = "SelectedTournament/";
+    final String pathAppend = "";
     Scanner scanner = new Scanner(System.in);
 
     public SelectedTournament(Role role) {
@@ -20,8 +20,8 @@ public class SelectedTournament extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("SelectedTournament: a - add game, f find game");
-            System.out.print("\n: ");
+            System.out.println(modifiableData);
+            System.out.println("try 'h' for help");
             input = scanner.nextLine();
 
             //potentially do some work or actions:
@@ -31,8 +31,8 @@ public class SelectedTournament extends States.State {
             if (input.equals("")) return null;
             else if(input.equals("h")) help();
             else if(input.equals("e"))return StateType.END;
-            else if (super.getRole() == Role.REFEREE && input.equals("a")) return StateType.ADDGAME;
-            else if (input.equals("f")) return StateType.FINDGAME;
+            else if (super.getRole() == Role.REFEREE && input.equals("add game")) return StateType.ADDGAME;
+            else if (input.equals("find game")) return StateType.FINDGAME;
         }
     }
 
@@ -43,7 +43,7 @@ public class SelectedTournament extends States.State {
 
     @Override
     public void help() {
-        System.out.println("use 'e' to exit");
+        System.out.println("try:\n'add game'\n'find game'\n'e' - to exit");
 
     }
 }

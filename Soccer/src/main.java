@@ -34,6 +34,7 @@ public class main{
                 currentState.undoDataWrite(modifiableData);
                 depth--;
                 currentState = statePath.get(depth);
+                currentState.undoDataWrite(modifiableData);
                 statePath.remove(depth);
             }
             //else, store the current state and load the next state it requested for the next iteration

@@ -26,7 +26,6 @@ public class StateGenerator {
 
             //Referee:
             case ADDGAME: return new AddGame(role);
-            case ADDTEAM: return new AddTeam(role);
             case CREATETOURNAMENT: return new CreateTournament(role);
             case ENTERSTATS: return new EnterStats(role);
             case SETTEAM: return new SetTeam(role);

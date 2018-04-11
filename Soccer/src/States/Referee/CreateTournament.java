@@ -6,7 +6,7 @@ import States.StateType;
 import java.util.Scanner;
 
 public class CreateTournament extends States.State {
-    final String pathAppend = "AddTournament/";
+    final String pathAppend = "CreateTournament/";
     Scanner scanner = new Scanner(System.in);
 
     public CreateTournament(Role role) {
@@ -20,7 +20,9 @@ public class CreateTournament extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("CreateTournament: ");
+            System.out.println(modifiableData);
+            System.out.println("try 'h' for help");
+            System.out.print("Create tournament: ");
             input = scanner.nextLine();
 
 

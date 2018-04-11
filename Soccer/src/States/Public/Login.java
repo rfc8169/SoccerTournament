@@ -6,7 +6,7 @@ import States.StateType;
 import java.util.Scanner;
 
 public class Login extends States.State {
-    final String pathAppend = "Login/";
+    StringBuilder pathAppend = new StringBuilder("Login/");
     Scanner scanner = new Scanner(System.in);
 
     public Login(Role role) {
@@ -15,21 +15,31 @@ public class Login extends States.State {
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
-        String input;
+        String inputName;
+        String inputRole;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.print("Login: ");
-            input = scanner.nextLine();
-
+            System.out.print("Login name: ");
+            inputName = scanner.nextLine();
+            System.out.println("{enter role for testing (u/c/r)");
+            inputRole = scanner.nextLine();
 
             //potentially do some work or actions:
             //todo
 
             //determine appropriate return type:
-            if (input.equals("")) return null;
-            else return StateType.LOGGEDIN;
+            if (inputName.equals("") || inputRole.equals("")) return null;
+            else{
+                inputName = "<"+inputName+">/";
+                pathAppend.append(inputName);
+                modifiableData.append(inputName);
+                if(inputRole.equals("c")) super.setRole(Role.COACH);
+                else if(inputRole.equals("r")) super.setRole(Role.REFEREE);
+                else super.setRole(Role.USER);
+                return StateType.LOGGEDIN;
+            }
         }
     }
 

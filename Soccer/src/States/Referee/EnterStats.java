@@ -20,9 +20,10 @@ public class EnterStats extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("EnterStats: ");
+            System.out.println(modifiableData);
+            System.out.println("try 'h' for help");
+            System.out.print("enter statistics: ");
             input = scanner.nextLine();
-
 
             //potentially do some work or actions:
             //todo
