@@ -4,6 +4,7 @@ import States.Role;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.Statement;
 import java.util.Scanner;
 
 /**
@@ -12,6 +13,7 @@ import java.util.Scanner;
 public class CreateUser extends States.State {
     StringBuilder pathAppend = new StringBuilder("CreateUser/");
     Scanner scanner = new Scanner(System.in);
+    Statement statement;
 
     public CreateUser(Role role, Connection connection) {
         super(role, connection);
@@ -44,6 +46,8 @@ public class CreateUser extends States.State {
             String phone = scanner.next();
             System.out.println("\tRole (Player (p)/Coach (c)/Referee (r)): ");
             String role = scanner.next();
+
+            statement = connection.createStatement();
 
             //determine appropriate return type:
             input = username;

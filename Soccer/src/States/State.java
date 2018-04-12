@@ -29,4 +29,8 @@ public abstract class State {
     protected void setRole(Role role){
         this.userRole = role;
     }
+
+    public Connection getConnection() {
+        return connection;
+    }
 }
