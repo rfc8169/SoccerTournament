@@ -3,14 +3,15 @@ package States.Coach;
 import States.Role;
 import States.StateType;
 
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class AssignPlayer extends States.State {
     String pathAppend = "AssignPlayer/";
     Scanner scanner = new Scanner(System.in);
 
-    public AssignPlayer(Role role) {
-        super(role);
+    public AssignPlayer(Role role, Connection connection) {
+        super(role, connection);
     }
 
     @Override

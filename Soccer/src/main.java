@@ -35,12 +35,40 @@ public class main{
         //response from the current stater:
         StateType response = StateType.START;
         //state we are currently in:
-        //State currentState = stateGenerator.makeState(response, currentRole);
+        State currentState;
 
         //database initialization
         try{
             Class.forName(JDBC_DRIVER);
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
+            currentState = stateGenerator.makeState(response, currentRole, connection);
+
+
+            while (!(currentState instanceof End)){
+                //set response (the next states type) after having executed the current state
+                response = currentState.exec(modifiableData);
+                //role for next state is determined by the current state's role after being executed
+                currentRole = currentState.getRole();
+                //if no next state was requested, revert to the previous state we were in
+                if (response == null){
+                    currentState.undoDataWrite(modifiableData);
+                    depth--;
+                    currentState = statePath.get(depth);
+                    currentState.undoDataWrite(modifiableData);
+                    statePath.remove(depth);
+                }
+                //else, store the current state and load the next state it requested for the next iteration
+                else {
+                    statePath.add(currentState);
+                    depth++;
+                    currentState = stateGenerator.makeState(response, currentRole, connection);
+                }
+            }
+
+
+
+
+
             statement = connection.createStatement();
             String sql = "";
             statement.executeUpdate(sql);
@@ -52,26 +80,6 @@ public class main{
 
 
         //while we have not been returned an end state:
-//        while (!(currentState instanceof End)){
-//            //set response (the next states type) after having executed the current state
-//            response = currentState.exec(modifiableData);
-//            //role for next state is determined by the current state's role after being executed
-//            currentRole = currentState.getRole();
-//            //if no next state was requested, revert to the previous state we were in
-//            if (response == null){
-//                currentState.undoDataWrite(modifiableData);
-//                depth--;
-//                currentState = statePath.get(depth);
-//                currentState.undoDataWrite(modifiableData);
-//                statePath.remove(depth);
-//            }
-//            //else, store the current state and load the next state it requested for the next iteration
-//            else {
-//                statePath.add(currentState);
-//                depth++;
-//                currentState = stateGenerator.makeState(response, currentRole);
-//            }
-//        }
         System.out.println("Exiting...");
     }
 }

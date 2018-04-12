@@ -3,14 +3,15 @@ package States.Referee;
 import States.Role;
 import States.StateType;
 
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class CreateTournament extends States.State {
     final String pathAppend = "CreateTournament/";
     Scanner scanner = new Scanner(System.in);
 
-    public CreateTournament(Role role) {
-        super(role);
+    public CreateTournament(Role role, Connection connection) {
+        super(role, connection);
     }
 
     @Override

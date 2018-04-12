@@ -3,14 +3,15 @@ package States.User;
 import States.Role;
 import States.StateType;
 
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class FindTeam extends States.State {
     StringBuilder pathAppend = new StringBuilder("FindTeam/");
     Scanner scanner = new Scanner(System.in);
 
-    public FindTeam(Role role) {
-        super(role);
+    public FindTeam(Role role, Connection connection) {
+        super(role, connection);
     }
 
     @Override

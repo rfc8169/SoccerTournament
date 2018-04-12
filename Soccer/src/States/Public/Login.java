@@ -3,14 +3,15 @@ package States.Public;
 import States.Role;
 import States.StateType;
 
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class Login extends States.State {
     StringBuilder pathAppend = new StringBuilder("Login/");
     Scanner scanner = new Scanner(System.in);
 
-    public Login(Role role) {
-        super(role);
+    public Login(Role role, Connection connection) {
+        super(role, connection);
     }
 
     @Override

@@ -4,13 +4,15 @@ import States.Role;
 import States.State;
 import States.StateType;
 
+import java.sql.Connection;
+
 /**
  * Created by User on 3/27/2018.
  */
 public class End extends States.State {
 
-    public End(Role role) {
-        super(role);
+    public End(Role role, Connection connection) {
+        super(role, connection);
     }
     final String pathAppend = "End/";
 

@@ -1,5 +1,7 @@
 package States;
 
+import java.sql.Connection;
+
 public abstract class State {
 
     public static String pathAppend;
@@ -7,9 +9,11 @@ public abstract class State {
     public final static String HELP_MSG = "";
 
     private Role userRole;
+    private Connection connection;
 
-    public State(Role role){
+    public State(Role role, Connection connection){
         this.userRole = role;
+        this.connection = connection;
     }
 
     public abstract StateType exec(StringBuilder modifiableData);

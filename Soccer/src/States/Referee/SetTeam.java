@@ -3,14 +3,15 @@ package States.Referee;
 import States.Role;
 import States.StateType;
 
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class SetTeam extends States.State {
     final String pathAppend = "SetTeam/";
     Scanner scanner = new Scanner(System.in);
 
-    public SetTeam(Role role) {
-        super(role);
+    public SetTeam(Role role, Connection connection) {
+        super(role, connection);
     }
 
     @Override

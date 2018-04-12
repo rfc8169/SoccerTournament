@@ -3,14 +3,15 @@ package States.Public;
 import States.Role;
 import States.StateType;
 
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class Start extends States.State {
     final String pathAppend = "Start/";
     Scanner scanner = new Scanner(System.in);
 
-    public Start(Role role) {
-        super(role);
+    public Start(Role role, Connection connection) {
+        super(role, connection);
     }
 
     @Override

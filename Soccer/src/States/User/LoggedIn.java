@@ -3,6 +3,7 @@ package States.User;
 import States.Role;
 import States.StateType;
 
+import java.sql.Connection;
 import java.util.Scanner;
 
 /**
@@ -12,8 +13,8 @@ public class LoggedIn extends States.State{
     final String pathAppend = "";
     Scanner scanner = new Scanner(System.in);
 
-    public LoggedIn(Role role) {
-        super(role);
+    public LoggedIn(Role role, Connection connection) {
+        super(role, connection);
     }
 
     @Override
