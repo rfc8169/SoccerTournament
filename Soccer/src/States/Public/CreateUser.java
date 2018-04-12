@@ -36,22 +36,21 @@ public class CreateUser extends States.State {
             String fName = scanner.next();
             System.out.println("\tLast Name: ");
             String lName = scanner.next();
-            System.out.println("\tGender (Male/Female/Other):");
+            System.out.println("\tGender (Male(M)/Female(F)/Other(O)):");
             String gender = scanner.next();
-            System.out.println("\tBirth Date (MM/DD/YYYY): ");
+            System.out.println("\tBirth Date (YYYY-MM-DD): ");
             String birthDate = scanner.next();
             System.out.println("\tHome Town: ");
             String homeTown = scanner.next();
-            System.out.println("\tPhone Number (##########): ");
-            String phone = scanner.next();
             System.out.println("\tRole (Player (p)/Coach (c)/Referee (r)): ");
             String role = scanner.next();
 
             try {
                 statement = connection.createStatement();
                 String sql = "INSERT INTO USER VALUES "+
-                        "("+username+", "+fName+", "+lName+", "+gender+", "+birthDate+", "+homeTown+", "+phone+", "+
-                        role+")";
+                        "(\'"+username+"\', \'"+fName+"\', \'"+lName+"\', \'"+gender+"\', \'"+birthDate+"\', \'"+homeTown+"\', \'"
+                        +role+"\')";
+                System.out.print(sql);
                 statement.executeUpdate(sql);
                 statement.close();
             }
