@@ -4,6 +4,8 @@ import States.Role;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class Login extends States.State {
@@ -18,6 +20,7 @@ public class Login extends States.State {
     public StateType exec(StringBuilder modifiableData) {
         String inputName;
         String inputRole;
+        Statement statement;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
@@ -26,6 +29,24 @@ public class Login extends States.State {
             inputName = scanner.nextLine();
             System.out.println("{enter role for testing (u/c/r)");
             inputRole = scanner.nextLine();
+
+            try{
+                statement = connection.createStatement();
+                String sql = "SELECT * FROM USER";// WHERE UID == \'"+inputName+"\'";
+                ResultSet resultSet = statement.executeQuery(sql);
+                if(resultSet != null){
+                    System.out.println("Hello "+inputName+" you are in the system!");
+                }
+                else{
+                    System.out.println("The name, "+inputName+", is not in the system."+
+                    "If you would like to try again type \'l' and if you would like to create an account type 'c'");
+                }
+
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+
 
             //potentially do some work or actions:
             //todo

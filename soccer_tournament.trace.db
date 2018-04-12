@@ -1154,3 +1154,37 @@ WHERE event = 'Goal' AND game.game_id = @gameid AND team = away_team
 	at org.h2.server.web.WebThread.process(WebThread.java:164)
 	at org.h2.server.web.WebThread.run(WebThread.java:89)
 	at java.lang.Thread.run(Unknown Source)
+2018-04-12 15:47:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT UID FROM USER WHERE UID[*] == 'arsenalfan82'"; SQL statement:
+SELECT UID FROM USER WHERE UID == 'arsenalfan82' [42000-197]
+2018-04-12 15:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT UID FROM USER WHERE UID[*] == AWENGER "; SQL statement:
+SELECT UID FROM USER WHERE UID == Awenger [42000-197]
+2018-04-12 15:48:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT UID FROM USER WHERE UID[*[*]] == AWENGER "; expected "NOT, EXISTS, INTERSECTS, SELECT, FROM, WITH"; SQL statement:
+SELECT UID FROM USER WHERE UID[*] == Awenger [42001-197]
+2018-04-12 15:49:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "AWENGER" not found; SQL statement:
+SELECT UID FROM USER WHERE UID = Awenger [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2018-04-12 15:49:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT UID FROM USER WHERE UID IN AWENGER[*] "; expected "("; SQL statement:
+SELECT UID FROM USER WHERE UID IN Awenger [42001-197]
