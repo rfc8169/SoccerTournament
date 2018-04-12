@@ -49,6 +49,11 @@ public class CreateUser extends States.State {
 
             try {
                 statement = connection.createStatement();
+                String sql = "INSERT INTO USER VALUES "+
+                        "("+username+", "+fName+", "+lName+", "+gender+", "+birthDate+", "+homeTown+", "+phone+", "+
+                        role+")";
+                statement.executeUpdate(sql);
+                statement.close();
             }
             catch(Exception e){
                 e.printStackTrace();

@@ -69,10 +69,10 @@ public class main{
 
 
 
-            statement = connection.createStatement();
-            String sql = "";
-            statement.executeUpdate(sql);
-            statement.close();
+//            statement = connection.createStatement();
+//            String sql = "";
+//            statement.executeUpdate(sql);
+//            statement.close();
             connection.close();
         }
         catch(SQLException e){e.printStackTrace();}
