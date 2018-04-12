@@ -8,8 +8,8 @@ public abstract class State {
 
     public final static String HELP_MSG = "";
 
-    private Role userRole;
-    private Connection connection;
+    protected Role userRole;
+    protected Connection connection;
 
     public State(Role role, Connection connection){
         this.userRole = role;

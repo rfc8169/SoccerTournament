@@ -47,7 +47,12 @@ public class CreateUser extends States.State {
             System.out.println("\tRole (Player (p)/Coach (c)/Referee (r)): ");
             String role = scanner.next();
 
-            statement = connection.createStatement();
+            try {
+                statement = connection.createStatement();
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
 
             //determine appropriate return type:
             input = username;
