@@ -4,11 +4,13 @@ import States.Role;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class CreateTeam extends States.State {
     final String pathAppend = "CreateTeam/";
     Scanner scanner = new Scanner(System.in);
+    Statement statement;
 
     public CreateTeam(Role role, Connection connection) {
         super(role, connection);
@@ -16,24 +18,43 @@ public class CreateTeam extends States.State {
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
-        String input;
+        String input, teamName, mascot, loc, coach;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
             System.out.println(modifiableData);
             System.out.println("try 'h' for help");
-            System.out.print("Create team: ");
-            input = scanner.nextLine();
+            System.out.println("Create team");
+            System.out.println("Team name: ");
+            teamName = scanner.nextLine();
 
+            if (teamName.equals("")) return null;
+            else if(teamName.equals("h")) help();
+            else if(teamName.equals("e"))return StateType.END;
 
+            System.out.println("Mascot: ");
+            mascot = scanner.nextLine();
+            System.out.println("Location: ");
+            loc = scanner.nextLine();
+            System.out.println("Coach: ");
+            coach = scanner.nextLine();
+
+            try {
+                statement = connection.createStatement();
+                String sql = "INSERT INTO TEAM VALUES(\'"+teamName+"\', \'"+mascot+"\', \'"+loc+"\', \'"+coach+"\')";
+                statement.executeUpdate(sql);
+                statement.close();
+                return StateType.LOGGEDIN;
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
             //potentially do some work or actions:
             //todo
 
             //determine appropriate return type:
-            if (input.equals("")) return null;
-            else if(input.equals("h")) help();
-            else if(input.equals("e"))return StateType.END;
+
         }
     }
 

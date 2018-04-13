@@ -4,6 +4,7 @@ import States.Role;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class AddGame extends States.State {
@@ -13,49 +14,53 @@ public class AddGame extends States.State {
     }
     final String pathAppend = "AddGame/";
     Scanner scanner = new Scanner(System.in);
+    Statement statement;
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
-        String name;
-        String location;
-        String startDate;
-        String endDate;
+        String input, id, loc, start, end, fieldNo, home, away, tournament;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help, 'a' to add a game to this tournament' or hit enter to go back");
-            //determine appropriate return type:
-            String input = scanner.nextLine();
-            if(input.equals("h")){
-                help();
-                continue;
-            }
-            else if(input.equals("e"))return StateType.END;
-            else if (!input.equals("a")) return null;
+            //System.out.println("try 'h' for help");
+            //input = scanner.nextLine();
+            System.out.print("Add game to tournament");
+            System.out.println("Game ID: ");
+            id = scanner.nextLine();
+            System.out.println("Start Time: ");
+            start = scanner.nextLine();
+            System.out.println("End Time: ");
+            end = scanner.nextLine();
+            System.out.println("Field Number: ");
+            fieldNo = scanner.nextLine();
+            System.out.println("Location: ");
+            loc = scanner.nextLine();
+            System.out.println("Home Team: ");
+            home = scanner.nextLine();
+            System.out.println("Away Team: ");
+            away = scanner.nextLine();
+            System.out.println("Tournament Name: ");
+            tournament = scanner.nextLine();
 
-            System.out.print("Enter tournament name: ");
-            name = scanner.nextLine();
-            System.out.print("Enter tournament location: ");
-            location = scanner.nextLine();
-            System.out.print("Enter tournament start date (YYYY-MM-DD): ");
-            startDate = scanner.nextLine();
-            System.out.print("Enter tournament end date (YYYY-MM-DD): ");
-            endDate = scanner.nextLine();
-
-            String sql = "INSERT INTO TOURNAMENT VALUES"+
-                    "('"+name+"','"+location+"','"+startDate+"','"+endDate+"')";
-            System.out.println(sql);
-            try {
+            try{
                 statement = connection.createStatement();
+                String sql = "INSERT INTO GAME VALUES (\'"+id+"\', \'"+start+"\', \'"+end+"\', \'"+fieldNo+"\', \'"+
+                        loc+"\', \'"+home+"\', \'"+away+"\', \'"+tournament+"\')";
                 statement.executeUpdate(sql);
                 statement.close();
             }
             catch(Exception e){
-                e.printStackTrace();
-            }
 
+            }
+            //potentially do some work or actions:
+            //todo
+
+            //determine appropriate return type:
+//            if (input.equals("")) return null;
+//            else if(input.equals("h")) help();
+//            else if(input.equals("e"))return StateType.END;
         }
     }
 
