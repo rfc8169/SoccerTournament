@@ -1,5 +1,6 @@
 import States.Public.*;
 import States.Role;
+import States.SQLstateInfo;
 import States.State;
 import States.StateType;
 import java.sql.Connection;
@@ -29,6 +30,8 @@ public class main{
         StringBuilder modifiableData = new StringBuilder("Path:");
         //used to build new states:
         StateGenerator stateGenerator = new StateGenerator();
+        //holds selected state info:
+        SQLstateInfo selected = new SQLstateInfo();
 
         //role of user:
         Role currentRole = Role.USER;
@@ -41,7 +44,7 @@ public class main{
         try{
             Class.forName(JDBC_DRIVER);
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
-            currentState = stateGenerator.makeState(response, currentRole, connection);
+            currentState = stateGenerator.makeState(response, currentRole, connection, selected);
 
 
             while (!(currentState instanceof End)){
@@ -60,8 +63,9 @@ public class main{
                 //else, store the current state and load the next state it requested for the next iteration
                 else {
                     statePath.add(currentState);
+                    selected = currentState.getSelectedInfo();
                     depth++;
-                    currentState = stateGenerator.makeState(response, currentRole, connection);
+                    currentState = stateGenerator.makeState(response, currentRole, connection, selected.deepCopy());
                 }
             }
 

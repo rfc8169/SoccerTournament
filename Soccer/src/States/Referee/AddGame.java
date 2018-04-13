@@ -16,24 +16,46 @@ public class AddGame extends States.State {
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
-        String input;
+        String name;
+        String location;
+        String startDate;
+        String endDate;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help");
-            System.out.print("Add game to tournament: ");
-            input = scanner.nextLine();
-
-
-            //potentially do some work or actions:
-            //todo
-
+            System.out.println("try 'h' for help, 'a' to add a game to this tournament' or hit enter to go back");
             //determine appropriate return type:
-            if (input.equals("")) return null;
-            else if(input.equals("h")) help();
+            String input = scanner.nextLine();
+            if(input.equals("h")){
+                help();
+                continue;
+            }
             else if(input.equals("e"))return StateType.END;
+            else if (!input.equals("a")) return null;
+
+            System.out.print("Enter tournament name: ");
+            name = scanner.nextLine();
+            System.out.print("Enter tournament location: ");
+            location = scanner.nextLine();
+            System.out.print("Enter tournament start date (YYYY-MM-DD): ");
+            startDate = scanner.nextLine();
+            System.out.print("Enter tournament end date (YYYY-MM-DD): ");
+            endDate = scanner.nextLine();
+
+            String sql = "INSERT INTO TOURNAMENT VALUES"+
+                    "('"+name+"','"+location+"','"+startDate+"','"+endDate+"')";
+            System.out.println(sql);
+            try {
+                statement = connection.createStatement();
+                statement.executeUpdate(sql);
+                statement.close();
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+
         }
     }
 
