@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class main{
 
     static final String JDBC_DRIVER = "org.h2.Driver";
-    static final String DB_URL = "jdbc:h2:tcp://localhost/~/soccer_tournament";
+    static final String DB_URL = "jdbc:h2:tcp://localhost/~/SoccerTournament/soccer_tournament";
     static final String USER = "sa";
     static final String PASS = "";
 
