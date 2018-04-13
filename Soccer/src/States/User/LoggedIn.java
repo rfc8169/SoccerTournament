@@ -38,7 +38,8 @@ public class LoggedIn extends States.State{
             else if(input.equals("e"))return StateType.END;
             else if(input.equals("find tournament")) return StateType.FINDTOURNAMENT;
             else if(input.equals("find team")) return StateType.FINDTEAM;
-            else if(input.equals("finds player")) return StateType.FINDPLAYER;
+            else if(input.equals("find player")) return StateType.FINDPLAYER;
+            else if(input.equals("find game")) return StateType.FINDGAME;
             else if(input.equals("create tournament") && super.getRole() == Role.REFEREE)
                 return StateType.CREATETOURNAMENT;
             else if(input.equals("create team") && super.getRole() == Role.COACH)
@@ -54,7 +55,7 @@ public class LoggedIn extends States.State{
 
     @Override
     public void help() {
-        System.out.println("try using:\n'find tournament'\n'find team'\n'find player'");
+        System.out.println("try using:\n'find tournament'\n'find team'\n'find player'\n'find game'");
         System.out.println("'create tournament'\n'create team'\n'e' - to exit");
 
     }
