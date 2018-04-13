@@ -42,7 +42,7 @@ public class CreateUser extends States.State {
             String birthDate = scanner.next();
             System.out.println("\tHome Town: ");
             String homeTown = scanner.next();
-            System.out.println("\tRole (Player (p)/Coach (c)/Referee (r)): ");
+            System.out.println("\tRole (Player (0)/Coach (1)/Referee (2)): ");
             String role = scanner.next();
 
             try {
@@ -63,8 +63,8 @@ public class CreateUser extends States.State {
             input = "<"+input+">/";
             pathAppend.append(input);
             modifiableData.append(input);
-            if(role.equals("c")) super.setRole(Role.COACH);
-            else if(role.equals("r")) super.setRole(Role.REFEREE);
+            if(role.equals("1")) super.setRole(Role.COACH);
+            else if(role.equals("2")) super.setRole(Role.REFEREE);
             else super.setRole(Role.USER);
             return StateType.LOGGEDIN;
         }
