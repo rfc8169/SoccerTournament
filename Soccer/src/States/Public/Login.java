@@ -1,6 +1,7 @@
 package States.Public;
 
 import States.Role;
+import States.State;
 import States.StateType;
 
 import java.sql.Connection;
@@ -11,6 +12,7 @@ import java.util.Scanner;
 public class Login extends States.State {
     StringBuilder pathAppend = new StringBuilder("Login/");
     Scanner scanner = new Scanner(System.in);
+    Statement statement;
 
     public Login(Role role, Connection connection) {
         super(role, connection);
@@ -20,7 +22,6 @@ public class Login extends States.State {
     public StateType exec(StringBuilder modifiableData) {
         String inputName;
         String inputRole;
-        Statement statement;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
@@ -32,14 +33,22 @@ public class Login extends States.State {
 
             try{
                 statement = connection.createStatement();
-                String sql = "SELECT * FROM USER";// WHERE UID == \'"+inputName+"\'";
+                String sql = "SELECT UID FROM USER WHERE UID = \'"+inputName+"\'";
                 ResultSet resultSet = statement.executeQuery(sql);
-                if(resultSet != null){
+                if(resultSet.next()){
                     System.out.println("Hello "+inputName+" you are in the system!");
                 }
                 else{
-                    System.out.println("The name, "+inputName+", is not in the system."+
-                    "If you would like to try again type \'l' and if you would like to create an account type 'c'");
+                    while(true) {
+                        System.out.println("The name, " + inputName + ", is not in the system. " +
+                                "If you would like to try again type \'l' and if you would like to create an account type 'c'");
+                        String state = scanner.nextLine();
+                        if (state.equals("l")) {
+                            return StateType.LOGIN;
+                        } else if (state.equals("c")) {
+                            return StateType.CREATEUSER;
+                        }
+                    }
                 }
 
             }

@@ -1188,3 +1188,9 @@ SELECT UID FROM USER WHERE UID = Awenger [42122-197]
 2018-04-12 15:49:38 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT UID FROM USER WHERE UID IN AWENGER[*] "; expected "("; SQL statement:
 SELECT UID FROM USER WHERE UID IN Awenger [42001-197]
+2018-04-12 20:11:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT UID FROM USER WHERE UID[*] == 'arsenalfan82'"; SQL statement:
+SELECT UID FROM USER WHERE UID == 'arsenalfan82' [42000-197]
+2018-04-12 20:11:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT UID FROM USER WHERE 'arsenalfan82' IN UID[*] "; expected "("; SQL statement:
+SELECT UID FROM USER WHERE 'arsenalfan82' in UID [42001-197]
