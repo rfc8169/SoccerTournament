@@ -1194,3 +1194,28 @@ SELECT UID FROM USER WHERE UID == 'arsenalfan82' [42000-197]
 2018-04-12 20:11:57 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT UID FROM USER WHERE 'arsenalfan82' IN UID[*] "; expected "("; SQL statement:
 SELECT UID FROM USER WHERE 'arsenalfan82' in UID [42001-197]
+2018-04-13 12:23:20 jdbc[37]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-197]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:197)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:137)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:733)
+	at org.h2.server.web.WebApp.login(WebApp.java:954)
+	at org.h2.server.web.WebApp.process(WebApp.java:211)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
+	at org.h2.server.web.WebThread.process(WebThread.java:134)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 14 more
+2018-04-13 12:23:22 jdbc[37]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CONCAT(GAME_ID, ', ' LOCATION[*], ', ' HOME_TEAM, ', ' AWAY_TEAM, ', ' TOURNAMENT) FROM GAME"; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+SELECT CONCAT(GAME_ID, ', ' LOCATION, ', ' HOME_TEAM, ', ' AWAY_TEAM, ', ' TOURNAMENT) FROM GAME [42001-197]
+2018-04-13 12:23:42 jdbc[37]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CONCAT(GAME_ID ', '[*], LOCATION ', ', HOME_TEAM ', ', AWAY_TEAM ', ', TOURNAMENT) FROM GAME"; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+SELECT CONCAT(GAME_ID ', ', LOCATION ', ', HOME_TEAM ', ', AWAY_TEAM ', ', TOURNAMENT) FROM GAME [42001-197]

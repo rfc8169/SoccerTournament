@@ -10,10 +10,13 @@ public abstract class State {
 
     protected Role userRole;
     protected Connection connection;
+    protected SQLstateInfo selectedInfo;
 
-    public State(Role role, Connection connection){
+    public State(Role role, Connection connection, SQLstateInfo selectedInfo){
         this.userRole = role;
         this.connection = connection;
+        this.selectedInfo = selectedInfo;
+
     }
 
     public abstract StateType exec(StringBuilder modifiableData);
@@ -24,6 +27,10 @@ public abstract class State {
 
     public Role getRole(){
         return userRole;
+    }
+
+    public SQLstateInfo getSelectedInfo(){
+      return this.selectedInfo;
     }
 
     protected void setRole(Role role){

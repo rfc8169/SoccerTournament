@@ -1,6 +1,7 @@
 import States.Coach.*;
 import States.Public.*;
 import States.Referee.*;
+import States.SQLstateInfo;
 import States.State;
 import States.StateType;
 import States.Role;
@@ -13,7 +14,7 @@ import java.sql.Connection;
  */
 public class StateGenerator {
 
-    public State makeState(StateType type, Role role, Connection connection){
+    public State makeState(StateType type, Role role, Connection connection, SQLstateInfo info){
         switch (type) {
             //Coach:
             case ASSIGNPLAYER: return new AssignPlayer(role, connection);
