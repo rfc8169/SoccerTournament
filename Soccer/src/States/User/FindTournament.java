@@ -4,11 +4,14 @@ import States.Role;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class FindTournament extends States.State {
     StringBuilder pathAppend = new StringBuilder("FindTournament/");
     Scanner scanner = new Scanner(System.in);
+    Statement statement;
 
     public FindTournament(Role role, Connection connection) {
         super(role, connection);
@@ -22,10 +25,38 @@ public class FindTournament extends States.State {
         while (true) {
 
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help");
-            System.out.print("enter tournament: ");
+            System.out.println("try 'h' for help\n");
+
+
+            try{
+                statement = connection.createStatement();
+                String sql = "SELECT CONCAT(NAME,', ', LOCATION) FROM TOURNAMENT";
+                ResultSet rs = statement.executeQuery(sql);
+                while(rs.next()){
+                    System.out.println(rs.getString(1));
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+
+
+            System.out.print("\nEnter the name of a specific tournament for more information: ");
             input = scanner.nextLine();
 
+
+            try{
+                statement = connection.createStatement();
+                String sql = "SELECT CONCAT(NAME,', ', LOCATION,', ', START_DATE,', ', END_DATE) " +
+                        "FROM TOURNAMENT WHERE \'"+input+"\' = NAME";
+                ResultSet rs = statement.executeQuery(sql);
+                while(rs.next()){
+                    System.out.println(rs.getString(1));
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
             //potentially do some work or actions:
             //todo
 

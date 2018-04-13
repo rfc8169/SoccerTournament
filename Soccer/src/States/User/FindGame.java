@@ -3,6 +3,7 @@ package States.User;
 import States.Role;
 import States.StateType;
 
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -25,18 +26,52 @@ public class FindGame extends States.State {
         while (true) {
 
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help");
-            System.out.println("Search for a game");
-            System.out.println("Enter the first team: ");
-            input = scanner.nextLine();
-            System.out.println("Enter the second team: ");
-            secondTeam = scanner.nextLine();
+            System.out.println("try 'h' for help\n");
 
+            try{
+                statement = connection.createStatement();
+                String sql = "SELECT CONCAT(GAME_ID,', ', LOCATION,', ', HOME_TEAM,', ', AWAY_TEAM, ', ', TOURNAMENT) FROM GAME";
+                ResultSet rs = statement.executeQuery(sql);
+                while(rs.next()){
+                    System.out.println(rs.getString(1));
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+
+            System.out.println("\nIf you would like to find a specific game enter its game id: ");
+            input = scanner.nextLine();
 
             //potentially do some work or actions:
             //todo
 
-            //determine appropriate return type:
+//            if(input.equals("h")){
+//                help();
+//                return StateType.FINDGAME;
+//            }
+//            else if(input.equals("e"))return StateType.END;
+//            else{
+//                input = "<"+input+">/";
+//                pathAppend.append(input);
+//                modifiableData.append(input);
+//                return StateType.SELECTEDGAME;
+//            }
+
+
+            try{
+                statement = connection.createStatement();
+                String sql = "SELECT CONCAT(GAME_ID,', ', START_TIME,', ', END_TIME,', ', FIELD_NO,', ', LOCATION,', '," +
+                        " HOME_TEAM,', ', AWAY_TEAM, ', ', TOURNAMENT) FROM GAME WHERE \'"+input+"\' = GAME_ID";
+                ResultSet rs = statement.executeQuery(sql);
+                while(rs.next()){
+                    System.out.println(rs.getString(1));
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+
 //            if (input.equals("")) return null;
 //            else if(input.equals("h")) help();
 //            else if(input.equals("e"))return StateType.END;
@@ -46,32 +81,6 @@ public class FindGame extends States.State {
 //                modifiableData.append(input);
 //                return StateType.SELECTEDGAME;
 //            }
-
-            try{
-                statement = connection.createStatement();
-                String sql = "SELECT * FROM GAME WHERE \'"+input+"\' = HOME_TEAM "+
-                        "AND \'"+secondTeam+"\' = AWAY_TEAM";
-                System.out.println(sql);
-                ResultSet rs = statement.executeQuery(sql);
-                while(rs.next()){
-                    System.out.println("Found stuff: "+rs.getString(1)+", "+rs.getString(2)+", "
-                    +rs.getString(3)+", "+rs.getString(4)+", "+rs.getString(5)+", "+
-                    rs.getString(6)+", "+rs.getString(7)+", "+rs.getString(8));
-                }
-            }
-            catch(Exception e){
-                e.printStackTrace();
-            }
-
-            if (input.equals("")) return null;
-            else if(input.equals("h")) help();
-            else if(input.equals("e"))return StateType.END;
-            else{
-                input = "<"+input+">/";
-                pathAppend.append(input);
-                modifiableData.append(input);
-                return StateType.SELECTEDGAME;
-            }
         }
     }
 
