@@ -19,13 +19,12 @@ public class FindTournament extends States.State {
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
-        String input;
+        String input, name;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help\n");
 
 
             try{
@@ -35,6 +34,7 @@ public class FindTournament extends States.State {
                 while(rs.next()){
                     System.out.println(rs.getString(1));
                 }
+                statement.close();
             }
             catch(Exception e){
                 e.printStackTrace();
@@ -42,17 +42,18 @@ public class FindTournament extends States.State {
 
 
             System.out.print("\nEnter the name of a specific tournament for more information: ");
-            input = scanner.nextLine();
+            name = scanner.nextLine();
 
 
             try{
                 statement = connection.createStatement();
                 String sql = "SELECT CONCAT(NAME,', ', LOCATION,', ', START_DATE,', ', END_DATE) " +
-                        "FROM TOURNAMENT WHERE \'"+input+"\' = NAME";
+                        "FROM TOURNAMENT WHERE \'"+name+"\' = NAME";
                 ResultSet rs = statement.executeQuery(sql);
                 while(rs.next()){
                     System.out.println(rs.getString(1));
                 }
+                statement.close();
             }
             catch(Exception e){
                 e.printStackTrace();
@@ -60,11 +61,13 @@ public class FindTournament extends States.State {
             //potentially do some work or actions:
             //todo
 
+            System.out.println("try 'h' for help, 'e' to end or another command");
+            input = scanner.nextLine();
             //determine appropriate return type:
             if (input.equals("")) return null;
             else if(input.equals("h")) help();
             else if(input.equals("e"))return StateType.END;
-            else{
+            else if(input.equals("details")){
                 input = "<"+input+">/";
                 pathAppend.append(input);
                 modifiableData.append(input);
@@ -82,7 +85,6 @@ public class FindTournament extends States.State {
 
     @Override
     public void help() {
-        System.out.println("use 'e' to exit");
 
     }
 }

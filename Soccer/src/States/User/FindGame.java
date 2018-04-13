@@ -20,13 +20,12 @@ public class FindGame extends States.State {
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
-        String input, secondTeam;
+        String id, input;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help\n");
 
             try{
                 statement = connection.createStatement();
@@ -35,13 +34,14 @@ public class FindGame extends States.State {
                 while(rs.next()){
                     System.out.println(rs.getString(1));
                 }
+                statement.close();
             }
             catch(Exception e){
                 e.printStackTrace();
             }
 
             System.out.println("\nIf you would like to find a specific game enter its game id: ");
-            input = scanner.nextLine();
+            id = scanner.nextLine();
 
             //potentially do some work or actions:
             //todo
@@ -62,25 +62,29 @@ public class FindGame extends States.State {
             try{
                 statement = connection.createStatement();
                 String sql = "SELECT CONCAT(GAME_ID,', ', START_TIME,', ', END_TIME,', ', FIELD_NO,', ', LOCATION,', '," +
-                        " HOME_TEAM,', ', AWAY_TEAM, ', ', TOURNAMENT) FROM GAME WHERE \'"+input+"\' = GAME_ID";
+                        " HOME_TEAM,', ', AWAY_TEAM, ', ', TOURNAMENT) FROM GAME WHERE \'"+id+"\' = GAME_ID";
                 ResultSet rs = statement.executeQuery(sql);
                 while(rs.next()){
                     System.out.println(rs.getString(1));
                 }
+                statement.close();
             }
             catch(Exception e){
                 e.printStackTrace();
             }
 
-//            if (input.equals("")) return null;
-//            else if(input.equals("h")) help();
-//            else if(input.equals("e"))return StateType.END;
-//            else{
-//                input = "<"+input+">/";
-//                pathAppend.append(input);
-//                modifiableData.append(input);
-//                return StateType.SELECTEDGAME;
-//            }
+            System.out.println("try 'h' for help, 'e' to end or another command");
+            input = scanner.nextLine();
+
+            if (input.equals("")) return null;
+            else if(input.equals("h")) help();
+            else if(input.equals("e"))return StateType.END;
+            else{
+                input = "<"+input+">/";
+                pathAppend.append(input);
+                modifiableData.append(input);
+                return StateType.SELECTEDGAME;
+            }
         }
     }
 
@@ -93,7 +97,5 @@ public class FindGame extends States.State {
 
     @Override
     public void help() {
-        System.out.println("use 'e' to exit");
-
     }
 }
