@@ -4,11 +4,14 @@ import States.Role;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class FindTeam extends States.State {
     StringBuilder pathAppend = new StringBuilder("FindTeam/");
     Scanner scanner = new Scanner(System.in);
+    Statement statement;
 
     public FindTeam(Role role, Connection connection) {
         super(role, connection);
@@ -22,6 +25,18 @@ public class FindTeam extends States.State {
         while (true) {
 
             System.out.println(modifiableData);
+            try{
+                statement = connection.createStatement();
+                String sql = "SELECT NAME FROM TEAM;";
+                ResultSet rs = statement.executeQuery(sql);
+                System.out.println("Teams");
+                while(rs.next()){
+                    System.out.println(rs.getString(1));
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
             System.out.println("try 'h' for help");
             System.out.print("enter team: ");
             input = scanner.nextLine();

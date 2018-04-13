@@ -38,27 +38,29 @@ public class FindPlayer extends States.State {
                 e.printStackTrace();
             }
             System.out.println("try 'h' for help");
-            System.out.print("enter player (LName FName): \n");
-            input = scanner.nextLine();
-
+            System.out.print("enter player First Name: ");
+            String fname = scanner.nextLine();
+            System.out.print("enter player Last Name: ");
+            String lname = scanner.nextLine();
+            try{
+                statement = connection.createStatement();
+                String sql = "SELECT UID FROM user WHERE First_Name='"+fname+
+                        "' AND Last_Name='"+lname+"';";
+                ResultSet rs = statement.executeQuery(sql);
+                while(rs.next()){
+                    input = rs.getString(1);
+                }
+                input = "<"+input+">/";
+            }
+            catch(Exception e){
+                e.printStackTrace();
+                return StateType.FINDPLAYER;
+            }
             //determine appropriate return type:
             if (input.equals("")) return null;
             else if(input.equals("h")) help();
             else if(input.equals("e"))return StateType.END;
             else{
-                try{
-                    statement = connection.createStatement();
-                    String sql = "SELECT UID FROM user WHERE First_Name='"+input.split(" ")[0]+
-                            "' AND Last_Name='"+input.split(" ")+"';";
-                    ResultSet rs = statement.executeQuery(sql);
-                    while(rs.next()){
-                        input = rs.getString(1);
-                    }
-                }
-                catch(Exception e){
-                    e.printStackTrace();
-                }
-                input = "<"+input+">/";
                 pathAppend.append(input);
                 modifiableData.append(input);
                 return StateType.SELECTEDPLAYER;
