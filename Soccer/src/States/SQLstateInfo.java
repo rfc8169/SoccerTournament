@@ -37,4 +37,20 @@ public class SQLstateInfo {
         assert (team != null);
         return team;
     }
+
+    public void setTournament(String tournament){
+        this.tournament = tournament;
+    }
+
+    public void setGame(String game){
+        this.game = game;
+    }
+
+    public void setPlayer(String player){
+        this.player = player;
+    }
+
+    public void setTeam(String team){
+        this.team = team;
+    }
 }
