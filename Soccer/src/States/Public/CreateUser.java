@@ -1,6 +1,7 @@
 package States.Public;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
@@ -15,8 +16,8 @@ public class CreateUser extends States.State {
     Scanner scanner = new Scanner(System.in);
     Statement statement;
 
-    public CreateUser(Role role, Connection connection) {
-        super(role, connection);
+    public CreateUser(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
 
     @Override

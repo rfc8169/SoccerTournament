@@ -1,6 +1,7 @@
 package States.Referee;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
@@ -9,8 +10,8 @@ import java.util.Scanner;
 
 public class AddGame extends States.State {
 
-    public AddGame(Role role, Connection connection) {
-        super(role, connection);
+    public AddGame(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
     final String pathAppend = "AddGame/";
     Scanner scanner = new Scanner(System.in);

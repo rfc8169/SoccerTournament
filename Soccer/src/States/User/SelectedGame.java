@@ -1,6 +1,7 @@
 package States.User;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
@@ -10,8 +11,9 @@ public class SelectedGame extends States.State {
     final String pathAppend = "";
     Scanner scanner = new Scanner(System.in);
 
-    public SelectedGame(Role role, Connection connection) {
-        super(role, connection);
+    public SelectedGame(Role role, Connection connection, SQLstateInfo selectedInfo)
+    {
+        super(role, connection, selectedInfo);
     }
 
     @Override

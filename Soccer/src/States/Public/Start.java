@@ -1,6 +1,7 @@
 package States.Public;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
@@ -10,8 +11,8 @@ public class Start extends States.State {
     final String pathAppend = "Start/";
     Scanner scanner = new Scanner(System.in);
 
-    public Start(Role role, Connection connection) {
-        super(role, connection);
+    public Start(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package States.Public;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.State;
 import States.StateType;
 
@@ -11,8 +12,8 @@ import java.sql.Connection;
  */
 public class End extends States.State {
 
-    public End(Role role, Connection connection) {
-        super(role, connection);
+    public End(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
     final String pathAppend = "End/";
 

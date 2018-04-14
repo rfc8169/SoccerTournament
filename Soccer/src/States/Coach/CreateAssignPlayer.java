@@ -1,6 +1,7 @@
 package States.Coach;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
@@ -13,8 +14,8 @@ public class CreateAssignPlayer extends States.State {
     final String pathAppend = "CreateAssignPlayer/";
     Scanner scanner = new Scanner(System.in);
 
-    public CreateAssignPlayer(Role role, Connection connection) {
-        super(role, connection);
+    public CreateAssignPlayer(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
 
     @Override

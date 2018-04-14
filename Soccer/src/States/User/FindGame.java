@@ -1,6 +1,7 @@
 package States.User;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import javax.xml.transform.Result;
@@ -14,8 +15,8 @@ public class FindGame extends States.State {
     Scanner scanner = new Scanner(System.in);
     Statement statement;
 
-    public FindGame(Role role, Connection connection) {
-        super(role, connection);
+    public FindGame(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
 
     @Override

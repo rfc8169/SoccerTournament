@@ -1,6 +1,7 @@
 package States.Referee;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
@@ -10,8 +11,8 @@ public class SetTeam extends States.State {
     final String pathAppend = "SetTeam/";
     Scanner scanner = new Scanner(System.in);
 
-    public SetTeam(Role role, Connection connection) {
-        super(role, connection);
+    public SetTeam(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
 
     @Override
