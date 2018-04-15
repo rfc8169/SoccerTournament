@@ -5,11 +5,14 @@ import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class SelectedGame extends States.State {
     final String pathAppend = "";
     Scanner scanner = new Scanner(System.in);
+    Statement statement;
 
     public SelectedGame(Role role, Connection connection, SQLstateInfo selectedInfo)
     {
@@ -24,6 +27,26 @@ public class SelectedGame extends States.State {
         while (true) {
 
             System.out.println(modifiableData);
+            try{
+                statement = connection.createStatement();
+                String sql = "SELECT CONCAT('Game ID:: ', Game_ID),\n" +
+                        "CONCAT('Start Time: ', Start_time),\n" +
+                        "CONCAT('End Time: ', End_time),\n" +
+                        "CONCAT('Field Number: ', field_no),\n" +
+                        "CONCAT('Location: ', location),\n" +
+                        "CONCAT('Home Team: ', home_team),\n" +
+                        "CONCAT('Away Team: ', away_team),\n" +
+                        "CONCAT('Tournament:: ', tournament)\n" +
+                        "FROM game WHERE game_id = "+selectedInfo.getGame()+";";
+                ResultSet rs = statement.executeQuery(sql);
+                while (rs.next()){
+                    for (int i = 1; i < 9; i++){
+                        System.out.println(rs.getString(i));
+                    }
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
             System.out.println("try 'h' for help");
             input = scanner.nextLine();
 

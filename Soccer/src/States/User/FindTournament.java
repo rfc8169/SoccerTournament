@@ -35,44 +35,34 @@ public class FindTournament extends States.State {
                 while(rs.next()){
                     System.out.println(rs.getString(1));
                 }
-                statement.close();
             }
             catch(Exception e){
                 e.printStackTrace();
             }
-
-
-            System.out.print("\nEnter the name of a specific tournament for more information: ");
-            name = scanner.nextLine();
-
-
-            try{
-                statement = connection.createStatement();
-                String sql = "SELECT CONCAT(NAME,', ', LOCATION,', ', START_DATE,', ', END_DATE) " +
-                        "FROM TOURNAMENT WHERE \'"+name+"\' = NAME";
-                ResultSet rs = statement.executeQuery(sql);
-                while(rs.next()){
-                    System.out.println(rs.getString(1));
-                }
-                statement.close();
-            }
-            catch(Exception e){
-                e.printStackTrace();
-            }
-            //potentially do some work or actions:
-            //todo
 
             System.out.println("try 'h' for help, 'e' to end or another command");
+            System.out.print("\nEnter the name of a specific tournament for more information: ");
             input = scanner.nextLine();
             //determine appropriate return type:
             if (input.equals("")) return null;
             else if(input.equals("h")) help();
             else if(input.equals("e"))return StateType.END;
-            else if(input.equals("details")){
-                input = "<"+input+">/";
-                pathAppend.append(input);
-                modifiableData.append(input);
-                return StateType.SELECTEDTOURNAMENT;
+            else {
+                try{
+                    statement = connection.createStatement();
+                    String sql = "SELECT '"+input+"' IN (SELECT Name FROM Tournament)";
+                    ResultSet rs = statement.executeQuery(sql);
+                    rs.next();
+                    if(rs.getString(1).equals("TRUE")){
+                        selectedInfo.setTournament(input);
+                        input = "<"+input+">/";
+                        pathAppend.append(input);
+                        modifiableData.append(input);
+                        return StateType.SELECTEDTOURNAMENT;
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             }
         }
     }
