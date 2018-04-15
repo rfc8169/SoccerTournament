@@ -7,6 +7,7 @@ import States.StateType;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -22,57 +23,48 @@ public class Login extends States.State {
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String inputName;
-        String inputRole;
-        //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
-
+            System.out.println("Login");
+            System.out.print("Proceed with login? (y/n): ");
+            String proceed = scanner.nextLine();
+            if(proceed.equals("n")) return null;
             System.out.print("Login name: ");
             inputName = scanner.nextLine();
-            System.out.println("{enter role for testing (u/c/r)");
-            inputRole = scanner.nextLine();
 
             try{
                 statement = connection.createStatement();
-                String sql = "SELECT UID FROM USER WHERE UID = \'"+inputName+"\'";
+                String sql = "SELECT ROLE FROM USER WHERE UID = '"+inputName+"'";
                 ResultSet resultSet = statement.executeQuery(sql);
                 if(resultSet.next()){
-                    System.out.println("Hello "+inputName+" you are in the system!");
+                    System.out.println("Hello "+inputName+", you are in the system!");
+                }else{
+                    System.out.println("User "+inputName+" could not be found in out system.");
                 }
-                else{
-                    while(true) {
-                        System.out.println("The name, " + inputName + ", is not in the system. " +
-                                "If you would like to try again type \'l' and if you would like to create an account type 'c'");
-                        String state = scanner.nextLine();
-                        if (state.equals("l")) {
-                            return StateType.LOGIN;
-                        } else if (state.equals("c")) {
-                            return StateType.CREATEUSER;
-                        }
-                    }
+                if(Integer.parseInt(resultSet.getString(1)) == 1) super.setRole(Role.COACH);
+                else if(Integer.parseInt(resultSet.getString(1)) == 2) super.setRole(Role.REFEREE);
+                else super.setRole(Role.USER);
+            }
+            catch (SQLException e){
+                int errorInt = e.getErrorCode();
+                if(errorInt == 90039 || errorInt == 90067 || errorInt == 90098) {
+                    System.out.println("Your connection to our database has been close, please restart the program.");
+                    return StateType.END;
+                }else{
+                    System.out.println("Invalid input, try again");
+                    continue;
                 }
-
             }
             catch(Exception e){
-                e.printStackTrace();
+                continue;
             }
-
-
-            //potentially do some work or actions:
-            //todo
 
             //determine appropriate return type:
-            if (inputName.equals("") || inputRole.equals("")) return null;
-            else{
-                String appendName = "<"+inputName+">/";
-                pathAppend.append(appendName);
-                modifiableData.append(appendName);
-                if(inputRole.equals("c")) super.setRole(Role.COACH);
-                else if(inputRole.equals("r")) super.setRole(Role.REFEREE);
-                else super.setRole(Role.USER);
-                selectedInfo.setUser(inputName);
-                return StateType.LOGGEDIN;
-            }
+            String appendName = "<"+inputName+">/";
+            pathAppend.append(appendName);
+            modifiableData.append(appendName);
+            selectedInfo.setUser(inputName);
+            return StateType.LOGGEDIN;
         }
     }
 

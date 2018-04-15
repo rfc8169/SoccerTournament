@@ -5,6 +5,7 @@ import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -23,20 +24,15 @@ public class CreateTournament extends States.State {
         String location;
         String startDate;
         String endDate;
-        //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help, 'c' to create a tournament' or hit enter to go back");
+            System.out.println("try '/e' to end, '/b' to go back or enter to continue");
             //determine appropriate return type:
             String input = scanner.nextLine();
-            if(input.equals("h")){
-                help();
-                continue;
-            }
-            else if(input.equals("e"))return StateType.END;
-            else if (!input.equals("c")) return null;
+            if(input.equals("/e"))return StateType.END;
+            else if (input.equals("/b")) return null;
 
             System.out.print("Enter tournament name: ");
             name = scanner.nextLine();
@@ -55,8 +51,18 @@ public class CreateTournament extends States.State {
                 statement.executeUpdate(sql);
                 statement.close();
             }
+            catch (SQLException e){
+                int errorInt = e.getErrorCode();
+                if(errorInt == 90039 || errorInt == 90067 || errorInt == 90098) {
+                    System.out.println("Your connection to our database has been close, please restart the program.");
+                    return StateType.END;
+                }else{
+                    System.out.println("Invalid input, try again");
+                    continue;
+                }
+            }
             catch(Exception e){
-                e.printStackTrace();
+                continue;
             }
 
         }
@@ -69,7 +75,6 @@ public class CreateTournament extends States.State {
 
     @Override
     public void help() {
-        System.out.println("use 'e' to exit");
 
     }
 }

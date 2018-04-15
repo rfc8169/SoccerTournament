@@ -22,22 +22,17 @@ public class LoggedIn extends States.State{
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input;
-        //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("\n--Logged In--");
+            System.out.println("--Logged In--");
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help");
+            help();
             input = scanner.nextLine();
 
-            //potentially do some work or actions:
-            //todo
-
             //determine appropriate return type:
-            if (input.equals("")) return null;
-            else if(input.equals("h")) help();
-            else if(input.equals("e"))return StateType.END;
+            if (input.equals("/b")) return null;
+            else if(input.equals("/e"))return StateType.END;
             else if(input.equals("find tournament")) return StateType.FINDTOURNAMENT;
             else if(input.equals("find team")) return StateType.FINDTEAM;
             else if(input.equals("find player")) return StateType.FINDPLAYER;
@@ -58,7 +53,7 @@ public class LoggedIn extends States.State{
     @Override
     public void help() {
         System.out.println("try using:\n'find tournament'\n'find team'\n'find player'\n'find game'");
-        System.out.println("'create tournament'\n'create team'\n'e' - to exit");
+        System.out.println("'create tournament'\n'create team'\n'/e' - to exit\n '/b' - to go back");
 
     }
 }

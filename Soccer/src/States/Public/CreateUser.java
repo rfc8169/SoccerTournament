@@ -5,6 +5,7 @@ import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -27,10 +28,11 @@ public class CreateUser extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("CreateUser: ");
+            System.out.println("Create User");
+            System.out.print("Proceed with user creation? (y/n): ");
+            String proceed = scanner.nextLine();
+            if(proceed.equals("n")) return null;
 
-            //potentially do some work or actions:
-            //todo
             System.out.println("Make an Account\n\tUsername: ");
             String username = scanner.next();
             System.out.println("\tFirst Name: ");
@@ -55,8 +57,19 @@ public class CreateUser extends States.State {
                 statement.executeUpdate(sql);
                 statement.close();
             }
+            catch (SQLException e){
+                int errorInt = e.getErrorCode();
+                if(errorInt == 90039 || errorInt == 90067 || errorInt == 90098) {
+                    System.out.println("Your connection to our database has been close, please restart the program.");
+                    return StateType.END;
+                }else{
+                    System.out.println("Invalid input, try again");
+                    continue;
+                }
+            }
             catch(Exception e){
-                e.printStackTrace();
+                System.out.println("Invalid input, try again");
+                continue;
             }
 
             //determine appropriate return type:

@@ -24,76 +24,72 @@ public class SelectedTeam extends States.State {
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input;
-        //temporarily using to track state path as example
         modifiableData.append(pathAppend);
+
+        try{
+            statement = connection.createStatement();
+            String sql = "SELECT CONCAT('Team: ',name),\n" +
+                    "CONCAT('Coach: ',first_name,' ',last_name),\n" +
+                    "CONCAT('Location: ',location),\n" +
+                    "CONCAT('Mascot: ',mascot) \n" +
+                    "FROM Team JOIN user on coach=uid WHERE name = '"+selectedInfo.getTeam()+"';";
+            ResultSet rs = statement.executeQuery(sql);
+            System.out.println("Team Info:");
+            while(rs.next()){
+                for(int i = 1; i < 5 ; i++){
+                    System.out.println("\t"+rs.getString(i));
+                }
+            }
+            statement = connection.createStatement();
+            sql = "SELECT \n" +
+                    "CONCAT(First_name, ' ', Last_name, ' Number: ', Number, ' Position(s): '),\n" +
+                    "player.uid\n" +
+                    " FROM player JOIN User on player.uid = user.uid WHERE team = '"+selectedInfo.getTeam()+"'";
+            rs = statement.executeQuery(sql);
+            ArrayList<String> roster = new ArrayList<String>();
+            ArrayList<String> uids = new ArrayList<String>();
+            String temp;
+            int c;
+            while(rs.next()) {
+                roster.add(rs.getString(1));
+                uids.add(rs.getString(2));
+            }
+            for (int i = 0; i < roster.size(); i++) {
+                temp = roster.get(0);
+                sql = "SELECT position FROM positions WHERE uid = '"+ uids.get(roster.indexOf(temp))+"';";
+                roster.remove(0);
+                rs = statement.executeQuery(sql);
+                c = 0;
+                while(rs.next()){
+                    if (c==0){
+                        temp += " "+rs.getString(1);
+                    }else{
+                        temp += ", "+rs.getString(1);
+                    }
+                    c++;
+                }
+                if (c == 0){
+                    temp += " None";
+                }
+                roster.add(temp);
+            }
+            System.out.println("Player Roster:");
+            for (String s:roster) {
+                System.out.println("\t"+s);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         while (true) {
 
             System.out.println(modifiableData);
-            try{
-                 statement = connection.createStatement();
-                 String sql = "SELECT CONCAT('Team: ',name),\n" +
-                         "CONCAT('Coach: ',first_name,' ',last_name),\n" +
-                         "CONCAT('Location: ',location),\n" +
-                         "CONCAT('Mascot: ',mascot) \n" +
-                         "FROM Team JOIN user on coach=uid WHERE name = '"+selectedInfo.getTeam()+"';";
-                ResultSet rs = statement.executeQuery(sql);
-                System.out.println("Team Info:");
-                while(rs.next()){
-                    for(int i = 1; i < 5 ; i++){
-                        System.out.println("\t"+rs.getString(i));
-                    }
-                }
-                statement = connection.createStatement();
-                sql = "SELECT \n" +
-                        "CONCAT(First_name, ' ', Last_name, ' Number: ', Number, ' Position(s): '),\n" +
-                        "player.uid\n" +
-                        " FROM player JOIN User on player.uid = user.uid WHERE team = '"+selectedInfo.getTeam()+"'";
-                rs = statement.executeQuery(sql);
-                ArrayList<String> roster = new ArrayList<String>();
-                ArrayList<String> uids = new ArrayList<String>();
-                String temp;
-                int c;
-                while(rs.next()) {
-                    roster.add(rs.getString(1));
-                    uids.add(rs.getString(2));
-                }
-                for (int i = 0; i < roster.size(); i++) {
-                    temp = roster.get(0);
-                    sql = "SELECT position FROM positions WHERE uid = '"+ uids.get(roster.indexOf(temp))+"';";
-                    roster.remove(0);
-                    rs = statement.executeQuery(sql);
-                    c = 0;
-                    while(rs.next()){
-                        if (c==0){
-                            temp += " "+rs.getString(1);
-                        }else{
-                            temp += ", "+rs.getString(1);
-                        }
-                        c++;
-                    }
-                    if (c == 0){
-                        temp += " None";
-                    }
-                    roster.add(temp);
-                }
-                System.out.println("Player Roster:");
-                for (String s:roster) {
-                    System.out.println("\t"+s);
-                }
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-            System.out.println("try 'h' for help");
+            help();
             input = scanner.nextLine();
 
-
-            //potentially do some work or actions:
-            //todo
-
             //determine appropriate return type:
-            if (input.equals("")) return null;
-            else if(input.equals("h")) help();
-            else if(input.equals("e"))return StateType.END;
+            if (input.equals("/b")) return null;
+            else if(input.equals("/e"))return StateType.END;
             else if(input.equals("player roster")){
                 try{
 
@@ -102,8 +98,6 @@ public class SelectedTeam extends States.State {
                     e.printStackTrace();
                 }
             }
-            else if(input.equals("new coach") && super.getRole() == Role.COACH)
-                return StateType.REASSIGNCOACH;
         }
     }
 
@@ -114,7 +108,7 @@ public class SelectedTeam extends States.State {
 
     @Override
     public void help() {
-        System.out.println("try:\n'new coach'\n'e' - to exit");
+        System.out.println("try:\n'new coach'\n'/e' - to exit\n'/b' - to go back");
 
     }
 }

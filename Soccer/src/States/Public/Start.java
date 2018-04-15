@@ -18,23 +18,19 @@ public class Start extends States.State {
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input;
-        //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
             //retrieve input from user:
             System.out.println("Welcome to the Soccer Tournament DB.");
-            System.out.print("\nEnter 'l' for login or 'c' to create a new profile, hit Enter to exit the program: ");
+            System.out.print("Enter 'l' for login, 'c' to create a new profile or 'e' to exit the program: ");
             input = scanner.nextLine();
-
-            //potentially do some work or actions:
-            //todo
 
             //determine appropriate return type:
             if (input.equals("l")) return StateType.LOGIN;
             else if (input.equals("c")) return StateType.CREATEUSER;
-            else if (input.equals("")) return StateType.END;
-            else System.out.println("Please enter valid input.\n\n");
+            else if (input.equals("e")) return StateType.END;
+            else System.out.println("Please enter valid input.\n");
         }
     }
 
