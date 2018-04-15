@@ -22,25 +22,27 @@ public class SelectedTournament extends States.State {
     public StateType exec(StringBuilder modifiableData) {
         String input;
         modifiableData.append(pathAppend);
+
+        try{
+            statement = connection.createStatement();
+            String sql = "SELECT CONCAT('Tournament: ',name),CONCAT('Location: ',Location),CONCAT('Start Date: ',start_date),\n" +
+                    "CONCAT('End Date: ',end_date) FROM tournament WHERE name = '"+selectedInfo.getTournament()+"'";
+            ResultSet rs = statement.executeQuery(sql);
+            while(rs.next()){
+                for (int i = 1; i < 5; i++){
+                    System.out.println(rs.getString(i));
+                }
+            }
+            statement.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
         while (true) {
 
             System.out.println(modifiableData);
             help();
-            try{
-                statement = connection.createStatement();
-                String sql = "SELECT CONCAT('Tournament: ',name),CONCAT('Location: ',Location),CONCAT('Start Date: ',start_date),\n" +
-                        "CONCAT('End Date: ',end_date) FROM tournament WHERE name = '"+selectedInfo.getTournament()+"'";
-                ResultSet rs = statement.executeQuery(sql);
-                while(rs.next()){
-                    for (int i = 1; i < 5; i++){
-                        System.out.println(rs.getString(i));
-                    }
-                }
-                statement.close();
-            }
-            catch(Exception e){
-                e.printStackTrace();
-            }
             input = scanner.nextLine();
 
             //determine appropriate return type:
@@ -58,7 +60,7 @@ public class SelectedTournament extends States.State {
 
     @Override
     public void help() {
-        System.out.println("try:\n'add game'\n'find game'\n'/e' - to exit\n '/b' - to go back");
+        System.out.println("try:\n'add game'\n'find game'\n'/e' - to exit\n'/b' - to go back");
 
     }
 }

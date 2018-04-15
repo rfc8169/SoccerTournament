@@ -53,7 +53,7 @@ public class LoggedIn extends States.State{
     @Override
     public void help() {
         System.out.println("try using:\n'find tournament'\n'find team'\n'find player'\n'find game'");
-        System.out.println("'create tournament'\n'create team'\n'/e' - to exit\n '/b' - to go back");
+        System.out.println("'create tournament'\n'create team'\n'/e' - to exit\n'/b' - to go back");
 
     }
 }

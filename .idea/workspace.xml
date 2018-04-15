@@ -2,32 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a19d1655-7613-4e6b-b209-481ae6796f04" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateAssignPlayer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/ReAssignCoach.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/CreateUser.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/CreateUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Login.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Login.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Start.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Start.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator$1.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/AssignPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/AssignPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateTeam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/AddGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/AddGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/CreateTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/CreateTournament.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/EnterStats.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/EnterStats.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/StateType.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/StateType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTeam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTournament.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/LoggedIn.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/LoggedIn.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTeam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTournament.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/StateGenerator.java" afterPath="$PROJECT_DIR$/Soccer/src/StateGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Public/Login.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Public/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Public/Start.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Public/Start.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/StateType.java" afterPath="$PROJECT_DIR$/Soccer/src/States/StateType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" />
     </list>
     <ignored path="$PROJECT_DIR$/Soccer/out/" />
@@ -47,11 +41,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AssignPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java">
+      <file leaf-file-name="FindTournament.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="80" column="13" lean-forward="true" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectedTournament.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -77,11 +81,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateTournament.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateTournament.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+            <state relative-caret-position="281">
+              <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoggedIn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -107,31 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Public/Start.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StateType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Soccer/src/States/StateType.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="77">
               <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SelectedPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="85" column="9" lean-forward="true" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -170,9 +164,6 @@
         <option value="$PROJECT_DIR$/Soccer/src/States/Public/Start.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Public/Login.java" />
-        <option value="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" />
-        <option value="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" />
-        <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/User/FindGame.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java" />
@@ -186,12 +177,15 @@
         <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java" />
+        <option value="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" />
+        <option value="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" />
+        <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="110" />
-    <option name="y" value="162" />
+    <option name="x" value="143" />
+    <option name="y" value="25" />
     <option name="width" value="1252" />
     <option name="height" value="733" />
   </component>
@@ -675,12 +669,19 @@
       <option name="project" value="LOCAL" />
       <updated>1523803718171</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="cleaned up a bunch of stuff in the UI">
+      <created>1523819279638</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1523819279638</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="110" y="162" width="1252" height="733" extended-state="0" />
-    <editor active="true" />
+    <frame x="143" y="25" width="1252" height="733" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -691,7 +692,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32833335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32833335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -756,7 +757,8 @@
     <MESSAGE value="Updating user states SQL" />
     <MESSAGE value="Completed EnterStats with player verification.  Also a few fixes and additions here and there.  Find game now only shows you games from the tournament you selected." />
     <MESSAGE value="completed assign player" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed assign player" />
+    <MESSAGE value="cleaned up a bunch of stuff in the UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaned up a bunch of stuff in the UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -976,10 +978,10 @@
         <state relative-caret-position="238">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
-            <element signature="e#1083#1084#0" expanded="true" />
-            <element signature="e#1115#1116#0" expanded="true" />
-            <element signature="e#1166#1167#0" expanded="true" />
-            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1083#1084#0" expanded="false" />
+            <element signature="e#1115#1116#0" expanded="false" />
+            <element signature="e#1166#1167#0" expanded="false" />
+            <element signature="e#1210#1211#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1012,30 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="43" column="60" lean-forward="false" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-331">
-          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1157,8 +1135,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+        <state relative-caret-position="281">
+          <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="80" column="13" lean-forward="true" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
           <folding />
         </state>
       </provider>

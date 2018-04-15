@@ -24,22 +24,22 @@ public class FindTournament extends States.State {
         String input;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
+
+        try{
+            statement = connection.createStatement();
+            String sql = "SELECT CONCAT(NAME,', ', LOCATION) FROM TOURNAMENT";
+            ResultSet rs = statement.executeQuery(sql);
+            while(rs.next()){
+                System.out.println(rs.getString(1));
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
         while (true) {
 
             System.out.println(modifiableData);
-
-
-            try{
-                statement = connection.createStatement();
-                String sql = "SELECT CONCAT(NAME,', ', LOCATION) FROM TOURNAMENT";
-                ResultSet rs = statement.executeQuery(sql);
-                while(rs.next()){
-                    System.out.println(rs.getString(1));
-                }
-            }
-            catch(Exception e){
-                e.printStackTrace();
-            }
 
             System.out.println("'/e' to end or '/b' for back");
             System.out.print("Enter the name of a specific tournament for more information: ");
