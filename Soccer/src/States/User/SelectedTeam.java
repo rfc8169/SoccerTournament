@@ -37,10 +37,48 @@ public class SelectedTeam extends States.State {
                          "CONCAT('Mascot: ',mascot) \n" +
                          "FROM Team JOIN user on coach=uid WHERE name = '"+selectedInfo.getTeam()+"';";
                 ResultSet rs = statement.executeQuery(sql);
+                System.out.println("Team Info:");
                 while(rs.next()){
                     for(int i = 1; i < 5 ; i++){
-                        System.out.println(rs.getString(i));
+                        System.out.println("\t"+rs.getString(i));
                     }
+                }
+                statement = connection.createStatement();
+                sql = "SELECT \n" +
+                        "CONCAT(First_name, ' ', Last_name, ' Number: ', Number, ' Position(s): '),\n" +
+                        "player.uid\n" +
+                        " FROM player JOIN User on player.uid = user.uid WHERE team = '"+selectedInfo.getTeam()+"'";
+                rs = statement.executeQuery(sql);
+                ArrayList<String> roster = new ArrayList<String>();
+                ArrayList<String> uids = new ArrayList<String>();
+                String temp;
+                int c;
+                while(rs.next()) {
+                    roster.add(rs.getString(1));
+                    uids.add(rs.getString(2));
+                }
+                for (int i = 0; i < roster.size(); i++) {
+                    temp = roster.get(0);
+                    sql = "SELECT position FROM positions WHERE uid = '"+ uids.get(roster.indexOf(temp))+"';";
+                    roster.remove(0);
+                    rs = statement.executeQuery(sql);
+                    c = 0;
+                    while(rs.next()){
+                        if (c==0){
+                            temp += " "+rs.getString(1);
+                        }else{
+                            temp += ", "+rs.getString(1);
+                        }
+                        c++;
+                    }
+                    if (c == 0){
+                        temp += " None";
+                    }
+                    roster.add(temp);
+                }
+                System.out.println("Player Roster:");
+                for (String s:roster) {
+                    System.out.println("\t"+s);
                 }
             }catch (Exception e){
                 e.printStackTrace();
@@ -58,42 +96,7 @@ public class SelectedTeam extends States.State {
             else if(input.equals("e"))return StateType.END;
             else if(input.equals("player roster")){
                 try{
-                    statement = connection.createStatement();
-                    String sql = "SELECT \n" +
-                            "CONCAT(First_name, ' ', Last_name, ' Number: ', Number, ' Position(s): '),\n" +
-                            "player.uid\n" +
-                            " FROM player JOIN User on player.uid = user.uid WHERE team = '"+selectedInfo.getTeam()+"'";
-                    ResultSet rs = statement.executeQuery(sql);
-                    ArrayList<String> roster = new ArrayList<String>();
-                    ArrayList<String> uids = new ArrayList<String>();
-                    String temp;
-                    int c;
-                    while(rs.next()) {
-                        roster.add(rs.getString(1));
-                        uids.add(rs.getString(2));
-                    }
-                    for (int i = 0; i < roster.size(); i++) {
-                        temp = roster.get(0);
-                        sql = "SELECT position FROM positions WHERE uid = '"+ uids.get(roster.indexOf(temp))+"';";
-                        roster.remove(0);
-                        rs = statement.executeQuery(sql);
-                        c = 0;
-                        while(rs.next()){
-                            if (c==0){
-                                temp += " "+rs.getString(1);
-                            }else{
-                                temp += ", "+rs.getString(1);
-                            }
-                            c++;
-                        }
-                        if (c == 0){
-                            temp += " None";
-                        }
-                        roster.add(temp);
-                    }
-                    for (String s:roster) {
-                        System.out.println(s);
-                    }
+
 
                 }catch (Exception e){
                     e.printStackTrace();
