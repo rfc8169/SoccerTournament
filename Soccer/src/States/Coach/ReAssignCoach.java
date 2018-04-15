@@ -1,4 +1,4 @@
-package States.Referee;
+package States.Coach;
 
 import States.Role;
 import States.SQLstateInfo;
@@ -7,11 +7,14 @@ import States.StateType;
 import java.sql.Connection;
 import java.util.Scanner;
 
-public class SetTeam extends States.State {
-    final String pathAppend = "SetTeam/";
+/**
+ * Created by User on 3/27/2018.
+ */
+public class ReAssignCoach extends States.State {
+    final String pathAppend = "CreateAssignPlayer/";
     Scanner scanner = new Scanner(System.in);
 
-    public SetTeam(Role role, Connection connection, SQLstateInfo selectedInfo) {
+    public ReAssignCoach(Role role, Connection connection, SQLstateInfo selectedInfo) {
         super(role, connection, selectedInfo);
     }
 
@@ -24,12 +27,10 @@ public class SetTeam extends States.State {
 
             System.out.println(modifiableData);
             System.out.println("try 'h' for help");
-            System.out.print("enter team: ");
+            System.out.print("Assign a new coach to this team (enter to cancel or 'UID' of a coach to re-assign): ");
             input = scanner.nextLine();
 
 
-            //potentially do some work or actions:
-            //todo
 
             //determine appropriate return type:
             if (input.equals("")) return null;
@@ -45,7 +46,6 @@ public class SetTeam extends States.State {
 
     @Override
     public void help() {
-        System.out.println("use 'e' to exit");
 
     }
 }

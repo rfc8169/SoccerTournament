@@ -60,13 +60,13 @@ public class CreateUser extends States.State {
             }
 
             //determine appropriate return type:
-            input = username;
-            input = "<"+input+">/";
+            input = "<"+username+">/";
             pathAppend.append(input);
             modifiableData.append(input);
             if(role.equals("1")) super.setRole(Role.COACH);
             else if(role.equals("2")) super.setRole(Role.REFEREE);
             else super.setRole(Role.USER);
+            selectedInfo.setUser(username);
             return StateType.LOGGEDIN;
         }
     }

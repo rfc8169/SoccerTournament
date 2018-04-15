@@ -6,22 +6,19 @@ package States;
 public enum StateType {
     //Coach:
     ASSIGNPLAYER,
-    CREATEASSIGNPLAYER,
+    REASSIGNCOACH,
     CREATETEAM,
 
     //Public:
     CREATEUSER,
     END,
     LOGIN,
-    ROLE,
     START,
 
     //Referee:
     ADDGAME,
-    ADDTEAM,
     CREATETOURNAMENT,
     ENTERSTATS,
-    SETTEAM,
 
     //User:
     FINDGAME,

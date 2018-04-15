@@ -5,11 +5,14 @@ import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class EnterStats extends States.State {
     final String pathAppend = "EnterStats/";
     Scanner scanner = new Scanner(System.in);
+    Statement statement;
 
     public EnterStats(Role role, Connection connection, SQLstateInfo selectedInfo) {
         super(role, connection, selectedInfo);
@@ -17,23 +20,54 @@ public class EnterStats extends States.State {
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
-        String input;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
             System.out.println(modifiableData);
             System.out.println("try 'h' for help");
-            System.out.print("enter statistics: ");
-            input = scanner.nextLine();
-
-            //potentially do some work or actions:
-            //todo
-
-            //determine appropriate return type:
-            if (input.equals("")) return null;
-            else if(input.equals("h")) help();
-            else if(input.equals("e"))return StateType.END;
+            System.out.println("Enter Statistics");
+            System.out.println("Enter a statistic? (y/n): ");
+            String ans = scanner.nextLine();
+            if(ans.equals("n")) return null;
+            System.out.println("Game ID: "+selectedInfo.getGame());
+            System.out.print("Is this the correct game id? (y/n): ");
+            String response = scanner.nextLine();
+            if (response.equals("n")) return null;
+            System.out.print("Time (HH.MM): ");
+            String time = scanner.nextLine();
+            System.out.print("UID: ");
+            String uid = scanner.nextLine();
+            ResultSet rs;
+            String team = null;
+            try {
+                statement = connection.createStatement();
+                rs = statement.executeQuery("SELECT TEAM FROM PLAYER WHERE UID = '" + uid+"'");
+                rs.next();
+                System.out.println("Team: "+ rs.getString(1));
+                System.out.print("Is this team correct? (y/n): ");
+                String ans2 = scanner.nextLine();
+                if(ans2.equals("n")) return null;
+                team = rs.getString(1);
+            }catch (Exception e){}
+            System.out.print("Event (Goal, Assist, Save, Penalty, Yellow Card, Red Card): ");
+            String event = scanner.nextLine();
+            try{
+                statement = connection.createStatement();
+                ResultSet rs2 = statement.executeQuery("SELECT '"+uid+"' IN (SELECT UID FROM PLAYER)");
+                rs2.next();
+                if(rs2.getString(1).equals("FALSE")){
+                    System.out.println("--the UID you entered is not registered as a player--");
+                    continue;
+                }
+                String sql = "INSERT INTO STATISTICS VALUES (\'"+selectedInfo.getGame()+"\', "+time+", \'"+uid+"\', \'"+team+"\', \'"+
+                        event+"\')";
+                statement.executeUpdate(sql);
+                statement.close();
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
         }
     }
 

@@ -31,7 +31,7 @@ public class FindGame extends States.State {
             try{
                 statement = connection.createStatement();
                 String sql = "SELECT CONCAT('Game ID: ',GAME_ID,', Location: ', LOCATION,', ', HOME_TEAM,' vs. '," +
-                        " AWAY_TEAM, ' Tournament: ', TOURNAMENT) FROM GAME";
+                        " AWAY_TEAM, ' Tournament: ', TOURNAMENT) FROM GAME WHERE TOURNAMENT = '"+selectedInfo.getTournament()+"'";
                 ResultSet rs = statement.executeQuery(sql);
                 while(rs.next()){
                     System.out.println(rs.getString(1));
@@ -42,7 +42,7 @@ public class FindGame extends States.State {
                 e.printStackTrace();
             }
 
-            System.out.println("\n Select Game ID: ");
+            System.out.print("\nSelect Game ID: ");
             input = scanner.nextLine();
 
 

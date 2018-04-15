@@ -18,7 +18,7 @@ public class StateGenerator {
         switch (type) {
             //Coach:
             case ASSIGNPLAYER: return new AssignPlayer(role, connection, info);
-            case CREATEASSIGNPLAYER: return new CreateAssignPlayer(role, connection, info);
+            case REASSIGNCOACH: return new ReAssignCoach(role, connection, info);
             case CREATETEAM: return new CreateTeam(role, connection, info);
 
             //Public:
@@ -31,7 +31,6 @@ public class StateGenerator {
             case ADDGAME: return new AddGame(role, connection, info);
             case CREATETOURNAMENT: return new CreateTournament(role, connection, info);
             case ENTERSTATS: return new EnterStats(role, connection, info);
-            case SETTEAM: return new SetTeam(role, connection, info);
 
             //User:
             case FINDGAME: return new FindGame(role, connection, info);

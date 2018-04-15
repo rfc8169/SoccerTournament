@@ -64,12 +64,13 @@ public class Login extends States.State {
             //determine appropriate return type:
             if (inputName.equals("") || inputRole.equals("")) return null;
             else{
-                inputName = "<"+inputName+">/";
-                pathAppend.append(inputName);
-                modifiableData.append(inputName);
+                String appendName = "<"+inputName+">/";
+                pathAppend.append(appendName);
+                modifiableData.append(appendName);
                 if(inputRole.equals("c")) super.setRole(Role.COACH);
                 else if(inputRole.equals("r")) super.setRole(Role.REFEREE);
                 else super.setRole(Role.USER);
+                selectedInfo.setUser(inputName);
                 return StateType.LOGGEDIN;
             }
         }
