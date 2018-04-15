@@ -102,8 +102,8 @@ public class SelectedTeam extends States.State {
                     e.printStackTrace();
                 }
             }
-            else if(input.equals("add player") && super.getRole() == Role.COACH)
-                return StateType.CREATEASSIGNPLAYER;
+            else if(input.equals("new coach") && super.getRole() == Role.COACH)
+                return StateType.REASSIGNCOACH;
         }
     }
 
@@ -114,7 +114,7 @@ public class SelectedTeam extends States.State {
 
     @Override
     public void help() {
-        System.out.println("try:\n'add player'\n'e' - to exit");
+        System.out.println("try:\n'new coach'\n'e' - to exit");
 
     }
 }

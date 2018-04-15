@@ -1358,3 +1358,53 @@ INSERT[*] INTO STATISTICS VALUES ('2', 06.12, 'samybags', 'Manchester United', '
 INSERT INTO PLAYER VALUES ('samybags', 'Manchester United', '9')
 
 INSERT INTO STATISTICS VALUES ('2', 06.12, 'samybags', 'Manchester United', 'Goal') [42000-197]
+2018-04-15 08:14:37 jdbc[17]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-197]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:197)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:137)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:733)
+	at org.h2.server.web.WebApp.login(WebApp.java:954)
+	at org.h2.server.web.WebApp.process(WebApp.java:211)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
+	at org.h2.server.web.WebThread.process(WebThread.java:134)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 14 more
+2018-04-15 09:31:01 jdbc[18]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-197]
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:197)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:137)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:103)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:733)
+	at org.h2.server.web.WebApp.login(WebApp.java:954)
+	at org.h2.server.web.WebApp.process(WebApp.java:211)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
+	at org.h2.server.web.WebThread.process(WebThread.java:134)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	... 14 more
+2018-04-15 09:38:11 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE USER ROLE =[*] 'c' WHERE UID = 'sjb' "; expected "SET"; SQL statement:
+update user role = 'c' where uid = 'sjb' [42001-197]
+2018-04-15 09:38:31 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE USER ROLE =[*] 'c' WHERE UID = 'sjb' "; expected "SET"; SQL statement:
+update user role = 'c' where uid = 'sjb' [42001-197]
+2018-04-15 09:38:34 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE USER ROLE =[*] 'c' WHERE UID = 'sjb' "; expected "SET"; SQL statement:
+update user role = 'c' where uid = 'sjb' [42001-197]
+2018-04-15 09:38:38 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE USER ROLE =[*] '1' WHERE UID = 'sjb' "; expected "SET"; SQL statement:
+update user role = '1' where uid = 'sjb' [42001-197]

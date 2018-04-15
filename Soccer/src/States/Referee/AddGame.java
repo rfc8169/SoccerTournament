@@ -26,7 +26,9 @@ public class AddGame extends States.State {
 
             System.out.println(modifiableData);
             //System.out.println("try 'h' for help");
-            //input = scanner.nextLine();
+            System.out.print("add a game to "+selectedInfo.getTournament()+"? (y/n): ");
+            input = scanner.nextLine();
+            if (input.equals("n")) return null;
             System.out.print("Add game to tournament");
             System.out.println("Game ID: ");
             id = scanner.nextLine();

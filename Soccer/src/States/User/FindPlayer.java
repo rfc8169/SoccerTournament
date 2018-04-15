@@ -53,13 +53,22 @@ public class FindPlayer extends States.State {
                             "' AND Last_Name='"+input.split(" ")[1]+"';";
                     ResultSet rs = statement.executeQuery(sql);
                     int c = 0;
+                    String uid = null;
                     while(rs.next()){
+                        uid = rs.getString(1);
                         input = rs.getString(1);
                         c++;
                     }
                     if (c < 1){
-                        System.out.println("Player not found\n");
-                        return StateType.FINDPLAYER;
+                        System.out.println("User not found\n");
+                        continue;
+                    }
+                    statement = connection.createStatement();
+                    ResultSet rs2 = statement.executeQuery("SELECT '"+uid+"' IN (SELECT UID FROM PLAYER)");
+                    rs2.next();
+                    if(rs2.getString(1).equals("FALSE")){
+                        System.out.println("--the UID you entered is not registered as a player--");
+                        continue;
                     }
                     pathAppend.append("<"+input+">/");
                     modifiableData.append("<"+input+">/");
@@ -68,7 +77,6 @@ public class FindPlayer extends States.State {
                 }
                 catch(Exception e){
                     e.printStackTrace();
-                    return StateType.FINDPLAYER;
                 }
 
             }

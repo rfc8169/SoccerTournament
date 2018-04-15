@@ -89,7 +89,6 @@ public class SelectedGame extends States.State {
             else if(input.equals("find player")) return StateType.FINDPLAYER;
             else if(input.equals("find team")) return StateType.FINDTEAM;
             else if(input.equals("enter stats") && super.getRole() == Role.REFEREE) return StateType.ENTERSTATS;
-            else if (input.equals("enter team") && super.getRole() == Role.REFEREE) return  StateType.SETTEAM;
         }
     }
 
@@ -100,7 +99,7 @@ public class SelectedGame extends States.State {
 
     @Override
     public void help() {
-        System.out.println("try:\n'find player'\n'find team'\n'enter stats'\n'enter team'\n'e' - to exit");
+        System.out.println("try:\n'find player'\n'find team'\n'enter stats'\n'e' - to exit");
 
     }
 }

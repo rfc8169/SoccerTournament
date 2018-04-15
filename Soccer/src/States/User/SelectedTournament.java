@@ -28,7 +28,7 @@ public class SelectedTournament extends States.State {
             System.out.println(modifiableData);
             try{
                 statement = connection.createStatement();
-                String sql = "SELECT CONCAT('Tournament: ',name),CONCAT('Location=: ',Location),CONCAT('Start Date: ',start_date),\n" +
+                String sql = "SELECT CONCAT('Tournament: ',name),CONCAT('Location: ',Location),CONCAT('Start Date: ',start_date),\n" +
                         "CONCAT('End Date: ',end_date) FROM tournament WHERE name = '"+selectedInfo.getTournament()+"'";
                 ResultSet rs = statement.executeQuery(sql);
                 while(rs.next()){

@@ -41,7 +41,7 @@ public class SelectedPlayer extends States.State {
                 }
                 sql = "SELECT position FROM positions WHERE uid = '"+selectedInfo.getPlayer()+"';";
                 rs = statement.executeQuery(sql);
-                System.out.println("\tPsotions:");
+                System.out.println("\tPositions:");
                 while(rs.next()){
                     System.out.println("\t\t"+rs.getString(1));
                 }
