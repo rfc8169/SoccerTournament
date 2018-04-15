@@ -1,6 +1,7 @@
 package States.Coach;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
@@ -12,8 +13,8 @@ public class CreateTeam extends States.State {
     Scanner scanner = new Scanner(System.in);
     Statement statement;
 
-    public CreateTeam(Role role, Connection connection) {
-        super(role, connection);
+    public CreateTeam(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package States.User;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
@@ -13,8 +14,9 @@ public class FindTeam extends States.State {
     Scanner scanner = new Scanner(System.in);
     Statement statement;
 
-    public FindTeam(Role role, Connection connection) {
-        super(role, connection);
+    public FindTeam(Role role, Connection connection, SQLstateInfo selectedInfo)
+    {
+        super(role, connection, selectedInfo);
     }
 
     @Override
@@ -29,7 +31,7 @@ public class FindTeam extends States.State {
                 statement = connection.createStatement();
                 String sql = "SELECT NAME FROM TEAM;";
                 ResultSet rs = statement.executeQuery(sql);
-                System.out.println("Teams");
+                System.out.println("Teams:");
                 while(rs.next()){
                     System.out.println(rs.getString(1));
                 }
@@ -49,10 +51,21 @@ public class FindTeam extends States.State {
             else if(input.equals("h")) help();
             else if(input.equals("e"))return StateType.END;
             else {
-                input = "<"+input+">/";
-                pathAppend.append(input);
-                modifiableData.append(input);
-                return StateType.SELECTEDTEAM;
+                try{
+                    statement = connection.createStatement();
+                    String sql = "SELECT '"+input+"' IN (SELECT Name FROM Team)";
+                    ResultSet rs = statement.executeQuery(sql);
+                    rs.next();
+                    if(rs.getString(1).equals("TRUE")){
+                        selectedInfo.setTeam(input);
+                        input = "<"+input+">/";
+                        pathAppend.append(input);
+                        modifiableData.append(input);
+                        return StateType.SELECTEDTEAM;
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
             }
         }
     }

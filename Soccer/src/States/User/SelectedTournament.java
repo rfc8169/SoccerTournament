@@ -1,17 +1,21 @@
 package States.User;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class SelectedTournament extends States.State {
     final String pathAppend = "";
     Scanner scanner = new Scanner(System.in);
+    Statement statement;
 
-    public SelectedTournament(Role role, Connection connection) {
-        super(role, connection);
+    public SelectedTournament(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
 
     @Override
@@ -22,7 +26,21 @@ public class SelectedTournament extends States.State {
         while (true) {
 
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help");
+            try{
+                statement = connection.createStatement();
+                String sql = "SELECT CONCAT('Tournament: ',name),CONCAT('Location=: ',Location),CONCAT('Start Date: ',start_date),\n" +
+                        "CONCAT('End Date: ',end_date) FROM tournament WHERE name = '"+selectedInfo.getTournament()+"'";
+                ResultSet rs = statement.executeQuery(sql);
+                while(rs.next()){
+                    for (int i = 1; i < 5; i++){
+                        System.out.println(rs.getString(i));
+                    }
+                }
+                statement.close();
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
             input = scanner.nextLine();
 
             //potentially do some work or actions:

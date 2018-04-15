@@ -1,6 +1,7 @@
 package States.Public;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.State;
 import States.StateType;
 
@@ -14,8 +15,8 @@ public class Login extends States.State {
     Scanner scanner = new Scanner(System.in);
     Statement statement;
 
-    public Login(Role role, Connection connection) {
-        super(role, connection);
+    public Login(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
 
     @Override

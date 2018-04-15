@@ -1,6 +1,7 @@
 package States.User;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
@@ -13,8 +14,9 @@ public class LoggedIn extends States.State{
     final String pathAppend = "";
     Scanner scanner = new Scanner(System.in);
 
-    public LoggedIn(Role role, Connection connection) {
-        super(role, connection);
+    public LoggedIn(Role role, Connection connection, SQLstateInfo selectedInfo)
+    {
+        super(role, connection, selectedInfo);
     }
 
     @Override

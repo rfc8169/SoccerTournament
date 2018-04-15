@@ -1219,3 +1219,142 @@ SELECT CONCAT(GAME_ID, ', ' LOCATION, ', ' HOME_TEAM, ', ' AWAY_TEAM, ', ' TOURN
 2018-04-13 12:23:42 jdbc[37]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CONCAT(GAME_ID ', '[*], LOCATION ', ', HOME_TEAM ', ', AWAY_TEAM ', ', TOURNAMENT) FROM GAME"; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, ILIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
 SELECT CONCAT(GAME_ID ', ', LOCATION ', ', HOME_TEAM ', ', AWAY_TEAM ', ', TOURNAMENT) FROM GAME [42001-197]
+2018-04-15 04:45:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "GAME" not found; SQL statement:
+SELECT game IN (SELECT Game_ID FROM Game) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.ConditionInSelect.optimize(ConditionInSelect.java:114)
+	at org.h2.command.dml.Select.prepare(Select.java:858)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2018-04-15 04:46:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * IN[*] (SELECT GAME_ID FROM GAME) "; SQL statement:
+SELECT * IN (SELECT Game_ID FROM Game) [42000-197]
+2018-04-15 04:47:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Function "IN" not found; SQL statement:
+SELECT ALL IN (SELECT Game_ID FROM Game) [90022-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2699)
+	at org.h2.command.Parser.readFunction(Parser.java:2756)
+	at org.h2.command.Parser.readTerm(Parser.java:3102)
+	at org.h2.command.Parser.readFactor(Parser.java:2587)
+	at org.h2.command.Parser.readSum(Parser.java:2574)
+	at org.h2.command.Parser.readConcat(Parser.java:2544)
+	at org.h2.command.Parser.readCondition(Parser.java:2370)
+	at org.h2.command.Parser.readAnd(Parser.java:2342)
+	at org.h2.command.Parser.readExpression(Parser.java:2334)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:2245)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:2277)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:2133)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1946)
+	at org.h2.command.Parser.parseSelect(Parser.java:1919)
+	at org.h2.command.Parser.parsePrepared(Parser.java:463)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2018-04-15 04:47:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT 1:[*]3 IN (SELECT GAME_ID FROM GAME) "; SQL statement:
+SELECT 1:3 IN (SELECT Game_ID FROM Game) [42000-197]
+2018-04-15 04:47:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT 1 THROUGH 3[*] IN (SELECT GAME_ID FROM GAME) "; SQL statement:
+SELECT 1 through 3 IN (SELECT Game_ID FROM Game) [42000-197]
+2018-04-15 04:48:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT 1 BETWEEN 5 IN[*] (SELECT GAME_ID FROM GAME) "; expected "[, ::, *, /, %, +, -, ||, ~, !~, AND"; SQL statement:
+SELECT 1 between 5 IN (SELECT Game_ID FROM Game) [42001-197]
+2018-04-15 06:18:13 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'06:12' (STATISTICS: TIME FLOAT NOT NULL)"; SQL statement:
+INSERT INTO STATISTICS VALUES ('3', '06:12', 'samybags', 'Manchester United', 'goal') -- ('3', '06:12', 'samybags', 'Manchester United', 'goal') [22018-197]
+2018-04-15 06:19:06 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'06:12:14' (STATISTICS: TIME FLOAT NOT NULL)"; SQL statement:
+INSERT INTO STATISTICS VALUES ('3', '06:12:14', 'samybags', 'Manchester United', 'goal') -- ('3', '06:12:14', 'samybags', 'Manchester United', 'goal') [22018-197]
+2018-04-15 06:21:49 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'06:12:14' (STATISTICS: TIME FLOAT NOT NULL)"; SQL statement:
+INSERT INTO STATISTICS VALUES ('3', '06:12:14', 'samybags', 'Manchester United', '0') -- ('3', '06:12:14', 'samybags', 'Manchester United', '0') [22018-197]
+2018-04-15 06:21:53 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'06:12:14' (STATISTICS: TIME FLOAT NOT NULL)"; SQL statement:
+INSERT INTO STATISTICS VALUES ('3', '06:12:14', 'samybags', 'Manchester United', 'Goal') -- ('3', '06:12:14', 'samybags', 'Manchester United', 'Goal') [22018-197]
+2018-04-15 06:22:08 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'06-12-14' (STATISTICS: TIME FLOAT NOT NULL)"; SQL statement:
+INSERT INTO STATISTICS VALUES ('3', '06-12-14', 'samybags', 'Manchester United', 'Goal') -- ('3', '06-12-14', 'samybags', 'Manchester United', 'Goal') [22018-197]
+2018-04-15 06:22:32 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'06.12.14' (STATISTICS: TIME FLOAT NOT NULL)"; SQL statement:
+INSERT INTO STATISTICS VALUES ('3', '06.12.14', 'samybags', 'Manchester United', 'goal') -- ('3', '06.12.14', 'samybags', 'Manchester United', 'goal') [22018-197]
+2018-04-15 06:40:28 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Column "SAMYBAGS" not found; SQL statement:
+SELECT UID FROM PLAYER WHERE UID IS samybags [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2018-04-15 06:40:39 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Column "SAMYBAGS" not found; SQL statement:
+SELECT UID FROM PLAYER WHERE UID = samybags [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:150)
+	at org.h2.expression.Comparison.optimize(Comparison.java:179)
+	at org.h2.command.dml.Select.prepare(Select.java:861)
+	at org.h2.command.Parser.prepareCommand(Parser.java:283)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1077)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1386)
+	at org.h2.server.web.WebApp.query(WebApp.java:1060)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1022)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1009)
+	at org.h2.server.web.WebThread.process(WebThread.java:165)
+	at org.h2.server.web.WebThread.run(WebThread.java:90)
+	at java.lang.Thread.run(Unknown Source)
+2018-04-15 06:43:58 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO PLAYER VALUES ('samybags', 'Manchester United', '9')
+
+INSERT[*] INTO STATISTICS VALUES ('2', 06.12, 'samybags', 'Manchester United', 'Goal')"; SQL statement:
+INSERT INTO PLAYER VALUES ('samybags', 'Manchester United', '9')
+
+INSERT INTO STATISTICS VALUES ('2', 06.12, 'samybags', 'Manchester United', 'Goal') [42000-197]

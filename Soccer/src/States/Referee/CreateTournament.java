@@ -1,6 +1,7 @@
 package States.Referee;
 
 import States.Role;
+import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
@@ -12,8 +13,8 @@ public class CreateTournament extends States.State {
     Scanner scanner = new Scanner(System.in);
     Statement statement;
 
-    public CreateTournament(Role role, Connection connection) {
-        super(role, connection);
+    public CreateTournament(Role role, Connection connection, SQLstateInfo selectedInfo) {
+        super(role, connection, selectedInfo);
     }
 
     @Override

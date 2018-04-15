@@ -17,32 +17,32 @@ public class StateGenerator {
     public State makeState(StateType type, Role role, Connection connection, SQLstateInfo info){
         switch (type) {
             //Coach:
-            case ASSIGNPLAYER: return new AssignPlayer(role, connection);
-            case CREATEASSIGNPLAYER: return new CreateAssignPlayer(role, connection);
-            case CREATETEAM: return new CreateTeam(role, connection);
+            case ASSIGNPLAYER: return new AssignPlayer(role, connection, info);
+            case CREATEASSIGNPLAYER: return new CreateAssignPlayer(role, connection, info);
+            case CREATETEAM: return new CreateTeam(role, connection, info);
 
             //Public:
-            case CREATEUSER: return new CreateUser(role, connection);
-            case END: return new End(role, connection);
-            case LOGIN: return new Login(role, connection);
-            case START: return new Start(role, connection);
+            case CREATEUSER: return new CreateUser(role, connection, info);
+            case END: return new End(role, connection, info);
+            case LOGIN: return new Login(role, connection, info);
+            case START: return new Start(role, connection, info);
 
             //Referee:
-            case ADDGAME: return new AddGame(role, connection);
-            case CREATETOURNAMENT: return new CreateTournament(role, connection);
-            case ENTERSTATS: return new EnterStats(role, connection);
-            case SETTEAM: return new SetTeam(role, connection);
+            case ADDGAME: return new AddGame(role, connection, info);
+            case CREATETOURNAMENT: return new CreateTournament(role, connection, info);
+            case ENTERSTATS: return new EnterStats(role, connection, info);
+            case SETTEAM: return new SetTeam(role, connection, info);
 
             //User:
-            case FINDGAME: return new FindGame(role, connection);
-            case FINDPLAYER: return new FindPlayer(role, connection);
-            case FINDTEAM: return new FindTeam(role, connection);
-            case FINDTOURNAMENT: return new FindTournament(role, connection);
-            case LOGGEDIN: return new LoggedIn(role, connection);
-            case SELECTEDGAME: return new SelectedGame(role, connection);
-            case SELECTEDPLAYER: return new SelectedPlayer(role, connection);
-            case SELECTEDTEAM: return new SelectedTeam(role, connection);
-            case SELECTEDTOURNAMENT: return new SelectedTournament(role, connection);
+            case FINDGAME: return new FindGame(role, connection, info);
+            case FINDPLAYER: return new FindPlayer(role, connection, info);
+            case FINDTEAM: return new FindTeam(role, connection, info);
+            case FINDTOURNAMENT: return new FindTournament(role, connection, info);
+            case LOGGEDIN: return new LoggedIn(role, connection, info);
+            case SELECTEDGAME: return new SelectedGame(role, connection, info);
+            case SELECTEDPLAYER: return new SelectedPlayer(role, connection, info);
+            case SELECTEDTEAM: return new SelectedTeam(role, connection, info);
+            case SELECTEDTOURNAMENT: return new SelectedTournament(role, connection, info);
 
             default: throw new RuntimeException("Bad state passed to generator");
         }
