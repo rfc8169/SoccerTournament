@@ -6,6 +6,7 @@ import States.StateType;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -25,7 +26,6 @@ public class EnterStats extends States.State {
         while (true) {
 
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help");
             System.out.println("Enter Statistics");
             System.out.println("Enter a statistic? (y/n): ");
             String ans = scanner.nextLine();
@@ -65,8 +65,18 @@ public class EnterStats extends States.State {
                 statement.executeUpdate(sql);
                 statement.close();
             }
+            catch (SQLException e){
+                int errorInt = e.getErrorCode();
+                if(errorInt == 90039 || errorInt == 90067 || errorInt == 90098) {
+                    System.out.println("Your connection to our database has been close, please restart the program.");
+                    return StateType.END;
+                }else{
+                    System.out.println("Invalid input, try again");
+                    continue;
+                }
+            }
             catch(Exception e){
-                e.printStackTrace();
+                continue;
             }
         }
     }
@@ -78,7 +88,6 @@ public class EnterStats extends States.State {
 
     @Override
     public void help() {
-        System.out.println("use 'e' to exit");
 
     }
 }

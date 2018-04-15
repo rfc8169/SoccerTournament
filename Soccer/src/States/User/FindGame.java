@@ -7,6 +7,7 @@ import States.StateType;
 import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -21,34 +22,33 @@ public class FindGame extends States.State {
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
-        String id, input;
-        //temporarily using to track state path as example
+        String input;
         modifiableData.append(pathAppend);
+
+        try{
+            statement = connection.createStatement();
+            String sql = "SELECT CONCAT('Game ID: ',GAME_ID,', Location: ', LOCATION,', ', HOME_TEAM,' vs. '," +
+                    " AWAY_TEAM, ' Tournament: ', TOURNAMENT) FROM GAME WHERE TOURNAMENT = '"+selectedInfo.getTournament()+"'";
+            ResultSet rs = statement.executeQuery(sql);
+            while(rs.next()){
+                System.out.println(rs.getString(1));
+            }
+            statement.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
         while (true) {
 
             System.out.println(modifiableData);
 
-            try{
-                statement = connection.createStatement();
-                String sql = "SELECT CONCAT('Game ID: ',GAME_ID,', Location: ', LOCATION,', ', HOME_TEAM,' vs. '," +
-                        " AWAY_TEAM, ' Tournament: ', TOURNAMENT) FROM GAME WHERE TOURNAMENT = '"+selectedInfo.getTournament()+"'";
-                ResultSet rs = statement.executeQuery(sql);
-                while(rs.next()){
-                    System.out.println(rs.getString(1));
-                }
-                statement.close();
-            }
-            catch(Exception e){
-                e.printStackTrace();
-            }
-
-            System.out.print("\nSelect Game ID: ");
+            help();
+            System.out.print("Select Game ID: ");
             input = scanner.nextLine();
 
-
-            if (input.equals("")) return null;
-            else if(input.equals("h")) help();
-            else if(input.equals("e"))return StateType.END;
+            if (input.equals("/b")) return null;
+            else if(input.equals("/e"))return StateType.END;
             else{
                 try{
                     statement = connection.createStatement();
@@ -63,8 +63,19 @@ public class FindGame extends States.State {
                         return StateType.SELECTEDGAME;
                     }
                 }
+                catch (SQLException e){
+                    int errorInt = e.getErrorCode();
+                    if(errorInt == 90039 || errorInt == 90067 || errorInt == 90098) {
+                        System.out.println("Your connection to our database has been close, please restart the program.");
+                        return StateType.END;
+                    }else{
+                        System.out.println("Invalid input, try again");
+                        continue;
+                    }
+                }
                 catch(Exception e){
-                    e.printStackTrace();
+                    System.out.println("Invalid input, try again");
+                    continue;
                 }
             }
         }
@@ -79,5 +90,6 @@ public class FindGame extends States.State {
 
     @Override
     public void help() {
+        System.out.println("use '/e' to end or '/b' to go back");
     }
 }

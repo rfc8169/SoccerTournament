@@ -21,12 +21,11 @@ public class AssignPlayer extends States.State {
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input;
-        //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
 
             System.out.println(modifiableData);
-            String team = null;
+            String team;
             try {
                 statement = connection.createStatement();
                 ResultSet rs = statement.executeQuery("SELECT NAME FROM TEAM WHERE COACH = '"+selectedInfo.getUser()+"'");

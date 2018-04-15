@@ -5,6 +5,7 @@ import States.SQLstateInfo;
 import States.StateType;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -25,14 +26,13 @@ public class CreateTeam extends States.State {
         while (true) {
 
             System.out.println(modifiableData);
-            System.out.println("try 'h' for help");
             System.out.println("Create team");
+            System.out.println("use '/e' for to end or '/b' to go back or enter to continue");
             System.out.println("Team name: ");
             teamName = scanner.nextLine();
 
-            if (teamName.equals("")) return null;
-            else if(teamName.equals("h")) help();
-            else if(teamName.equals("e"))return StateType.END;
+            if (teamName.equals("/b")) return null;
+            else if(teamName.equals("/e"))return StateType.END;
 
             System.out.println("Mascot: ");
             mascot = scanner.nextLine();
@@ -48,14 +48,19 @@ public class CreateTeam extends States.State {
                 statement.close();
                 return StateType.LOGGEDIN;
             }
-            catch(Exception e){
-                e.printStackTrace();
+            catch (SQLException e){
+                int errorInt = e.getErrorCode();
+                if(errorInt == 90039 || errorInt == 90067 || errorInt == 90098) {
+                    System.out.println("Your connection to our database has been close, please restart the program.");
+                    return StateType.END;
+                }else{
+                    System.out.println("Invalid input, try again");
+                    continue;
+                }
             }
-            //potentially do some work or actions:
-            //todo
-
-            //determine appropriate return type:
-
+            catch(Exception e){
+                continue;
+            }
         }
     }
 

@@ -20,12 +20,11 @@ public class AddGame extends States.State {
     @Override
     public StateType exec(StringBuilder modifiableData) {
         String input, id, loc, start, end, fieldNo, home, away, tournament;
-        //temporarily using to track state path as example
         modifiableData.append(pathAppend);
-        while (true) {
 
+        while (true) {
             System.out.println(modifiableData);
-            //System.out.println("try 'h' for help");
+
             System.out.print("add a game to "+selectedInfo.getTournament()+"? (y/n): ");
             input = scanner.nextLine();
             if (input.equals("n")) return null;
@@ -57,13 +56,6 @@ public class AddGame extends States.State {
             catch(Exception e){
 
             }
-            //potentially do some work or actions:
-            //todo
-
-            //determine appropriate return type:
-//            if (input.equals("")) return null;
-//            else if(input.equals("h")) help();
-//            else if(input.equals("e"))return StateType.END;
         }
     }
 
@@ -74,7 +66,6 @@ public class AddGame extends States.State {
 
     @Override
     public void help() {
-        System.out.println("use 'e' to exit");
 
     }
 }

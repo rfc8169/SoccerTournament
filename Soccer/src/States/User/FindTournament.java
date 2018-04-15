@@ -6,6 +6,7 @@ import States.StateType;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
@@ -20,7 +21,7 @@ public class FindTournament extends States.State {
 
     @Override
     public StateType exec(StringBuilder modifiableData) {
-        String input, name;
+        String input;
         //temporarily using to track state path as example
         modifiableData.append(pathAppend);
         while (true) {
@@ -40,13 +41,12 @@ public class FindTournament extends States.State {
                 e.printStackTrace();
             }
 
-            System.out.println("try 'h' for help, 'e' to end or another command");
-            System.out.print("\nEnter the name of a specific tournament for more information: ");
+            System.out.println("'/e' to end or '/b' for back");
+            System.out.print("Enter the name of a specific tournament for more information: ");
             input = scanner.nextLine();
             //determine appropriate return type:
-            if (input.equals("")) return null;
-            else if(input.equals("h")) help();
-            else if(input.equals("e"))return StateType.END;
+            if (input.equals("/b")) return null;
+            else if(input.equals("/e"))return StateType.END;
             else {
                 try{
                     statement = connection.createStatement();
@@ -60,8 +60,19 @@ public class FindTournament extends States.State {
                         modifiableData.append(input);
                         return StateType.SELECTEDTOURNAMENT;
                     }
-                }catch (Exception e){
-                    e.printStackTrace();
+                }catch (SQLException e){
+                    int errorInt = e.getErrorCode();
+                    if(errorInt == 90039 || errorInt == 90067 || errorInt == 90098) {
+                        System.out.println("Your connection to our database has been close, please restart the program.");
+                        return StateType.END;
+                    }else{
+                        System.out.println("Invalid input, try again");
+                        continue;
+                    }
+                }
+                catch(Exception e){
+                    System.out.println("Invalid input, try again");
+                    continue;
                 }
             }
         }

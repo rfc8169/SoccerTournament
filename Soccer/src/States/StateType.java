@@ -6,7 +6,6 @@ package States;
 public enum StateType {
     //Coach:
     ASSIGNPLAYER,
-    REASSIGNCOACH,
     CREATETEAM,
 
     //Public:

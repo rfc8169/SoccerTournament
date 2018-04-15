@@ -18,7 +18,6 @@ public class StateGenerator {
         switch (type) {
             //Coach:
             case ASSIGNPLAYER: return new AssignPlayer(role, connection, info);
-            case REASSIGNCOACH: return new ReAssignCoach(role, connection, info);
             case CREATETEAM: return new CreateTeam(role, connection, info);
 
             //Public:
