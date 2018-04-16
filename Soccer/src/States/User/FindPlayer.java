@@ -39,7 +39,8 @@ public class FindPlayer extends States.State {
                 rs.next();
                 away = rs.getString(1);
                 sql = "SELECT CONCAT(LAST_NAME,', ',First_name,', ',TEAM) " +
-                        "FROM USER JOIN PLAYER WHERE TEAM = '" + home + "' OR TEAM = '" + away + "' ORDER BY Last_Name";
+                        "FROM USER JOIN PLAYER  on user.uid = player.uid WHERE TEAM = '" + home + "' OR TEAM = '" +
+                        away + "' ORDER BY Last_Name";
                 rs = statement.executeQuery(sql);
                 System.out.println("Players: Lname, Fname, Team");
                 while (rs.next()) {
@@ -53,7 +54,7 @@ public class FindPlayer extends States.State {
             try{
                 statement = connection.createStatement();
                 String sql = "SELECT CONCAT(LAST_NAME,', ',First_name,', ',TEAM) " +
-                        "FROM USER JOIN PLAYER ORDER BY Last_Name";
+                        "FROM USER JOIN PLAYER ON user.uid = player.uid ORDER BY Last_Name";
                 ResultSet rs = statement.executeQuery(sql);
                 System.out.println("Players: Lname, Fname, Team");
                 while (rs.next()) {
