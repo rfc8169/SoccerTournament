@@ -5,9 +5,7 @@ import java.sql.Connection;
 public abstract class State {
 
     public static String pathAppend;
-
-    public final static String HELP_MSG = "";
-
+    
     protected Role userRole;
     protected Connection connection;
     protected SQLstateInfo selectedInfo;
