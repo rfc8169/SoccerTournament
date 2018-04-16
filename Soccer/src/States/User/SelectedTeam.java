@@ -83,7 +83,7 @@ public class SelectedTeam extends States.State {
 
         while (true) {
 
-            System.out.println(modifiableData);
+            System.out.println("\n"+modifiableData);
             help();
             input = scanner.nextLine();
 
@@ -108,7 +108,7 @@ public class SelectedTeam extends States.State {
 
     @Override
     public void help() {
-        System.out.println("try:\n'new coach'\n'/e' - to exit\n'/b' - to go back");
+        System.out.println("try:\n'/e' - to exit\n'/b' - to go back");
 
     }
 }

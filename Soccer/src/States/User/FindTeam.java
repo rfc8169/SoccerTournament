@@ -25,22 +25,41 @@ public class FindTeam extends States.State {
         String input;
         modifiableData.append(pathAppend);
 
-        try{
-            statement = connection.createStatement();
-            String sql = "SELECT NAME FROM TEAM;";
-            ResultSet rs = statement.executeQuery(sql);
-            System.out.println("Teams:");
-            while(rs.next()){
-                System.out.println(rs.getString(1));
+        if(selectedInfo.getGame() != null){
+            try{
+                String home;
+                String away;
+                statement = connection.createStatement();
+                String sql = "SELECT HOME_TEAM FROM GAME WHERE GAME_ID ='" + selectedInfo.getGame() + "'";
+                ResultSet rs = statement.executeQuery(sql);
+                rs.next();
+                away = rs.getString(1);
+                sql = "SELECT AWAY_TEAM FROM GAME WHERE GAME_ID ='" + selectedInfo.getGame() + "'";
+                rs = statement.executeQuery(sql);
+                rs.next();
+                home = rs.getString(1);
+                System.out.println("Teams:");
+                System.out.println(home);
+                System.out.println(away);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                statement = connection.createStatement();
+                String sql = "SELECT NAME FROM TEAM";
+                ResultSet rs = statement.executeQuery(sql);
+                System.out.println("Teams:");
+                while (rs.next()) {
+                    System.out.println(rs.getString(1));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-
         while (true) {
 
-            System.out.println(modifiableData);
+            System.out.println("\n"+modifiableData);
             System.out.println("use '/e' to exit or '/b' to go back");
             System.out.print("enter team: ");
             input = scanner.nextLine();

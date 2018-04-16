@@ -25,7 +25,7 @@ public class LoggedIn extends States.State{
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println("--Logged In--");
+            System.out.println("\n--Logged In--");
             System.out.println(modifiableData);
             help();
             input = scanner.nextLine();

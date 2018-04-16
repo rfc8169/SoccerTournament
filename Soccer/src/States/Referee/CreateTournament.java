@@ -27,7 +27,7 @@ public class CreateTournament extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println(modifiableData);
+            System.out.println("\n"+modifiableData);
             System.out.println("try '/e' to end, '/b' to go back or enter to continue");
             //determine appropriate return type:
             String input = scanner.nextLine();

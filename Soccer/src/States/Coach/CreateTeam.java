@@ -25,7 +25,7 @@ public class CreateTeam extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println(modifiableData);
+            System.out.println("\n"+modifiableData);
             System.out.println("Create team");
             System.out.println("use '/e' for to end or '/b' to go back or enter to continue");
             System.out.println("Team name: ");

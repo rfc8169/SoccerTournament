@@ -25,7 +25,7 @@ public class EnterStats extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println(modifiableData);
+            System.out.println("\n"+modifiableData);
             System.out.println("Enter Statistics");
             System.out.println("Enter a statistic? (y/n): ");
             String ans = scanner.nextLine();

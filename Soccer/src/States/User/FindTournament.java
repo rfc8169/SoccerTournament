@@ -39,7 +39,7 @@ public class FindTournament extends States.State {
 
         while (true) {
 
-            System.out.println(modifiableData);
+            System.out.println("\n"+modifiableData);
 
             System.out.println("'/e' to end or '/b' for back");
             System.out.print("Enter the name of a specific tournament for more information: ");

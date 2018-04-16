@@ -23,21 +23,51 @@ public class FindPlayer extends States.State {
     public StateType exec(StringBuilder modifiableData) {
         String input;
         modifiableData.append(pathAppend);
-        while (true) {
 
-            System.out.println(modifiableData);
-            try{
+        if(selectedInfo.getGame() != null) {
+            try {
+                String home;
+                String away;
                 statement = connection.createStatement();
-                String sql = "SELECT CONCAT(LAST_NAME,', ',First_name,', ',TEAM) FROM USER JOIN PLAYER ORDER BY Last_Name;";
+                String sql = "SELECT HOME_TEAM FROM GAME WHERE GAME_ID ='" + selectedInfo.getGame() + "'";
                 ResultSet rs = statement.executeQuery(sql);
-                System.out.println("PLayers: Lname, Fname, Team");
-                while(rs.next()){
+                rs.next();
+                home = rs.getString(1);
+                statement = connection.createStatement();
+                sql = "SELECT AWAY_TEAM FROM GAME WHERE GAME_ID ='" + selectedInfo.getGame() + "'";
+                rs = statement.executeQuery(sql);
+                rs.next();
+                away = rs.getString(1);
+                sql = "SELECT CONCAT(LAST_NAME,', ',First_name,', ',TEAM) " +
+                        "FROM USER JOIN PLAYER WHERE TEAM = '" + home + "' OR TEAM = '" + away + "' ORDER BY Last_Name";
+                rs = statement.executeQuery(sql);
+                System.out.println("Players: Lname, Fname, Team");
+                while (rs.next()) {
                     System.out.println(rs.getString(1));
                 }
-            }
-            catch(Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
+        else{
+            try{
+                statement = connection.createStatement();
+                String sql = "SELECT CONCAT(LAST_NAME,', ',First_name,', ',TEAM) " +
+                        "FROM USER JOIN PLAYER ORDER BY Last_Name";
+                ResultSet rs = statement.executeQuery(sql);
+                System.out.println("Players: Lname, Fname, Team");
+                while (rs.next()) {
+                    System.out.println(rs.getString(1));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        while (true) {
+
+            System.out.println("\n"+modifiableData);
+
             System.out.println("enter '/e' to exit or '/b' to go back");
             System.out.print("enter player (FirstName LastName): ");
             input = scanner.nextLine();

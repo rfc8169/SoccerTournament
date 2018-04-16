@@ -41,7 +41,7 @@ public class FindGame extends States.State {
 
         while (true) {
 
-            System.out.println(modifiableData);
+            System.out.println("\n"+modifiableData);
 
             help();
             System.out.print("Select Game ID: ");

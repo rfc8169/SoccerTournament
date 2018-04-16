@@ -24,7 +24,7 @@ public class AssignPlayer extends States.State {
         modifiableData.append(pathAppend);
         while (true) {
 
-            System.out.println(modifiableData);
+            System.out.println("\n"+modifiableData);
             String team;
             try {
                 statement = connection.createStatement();

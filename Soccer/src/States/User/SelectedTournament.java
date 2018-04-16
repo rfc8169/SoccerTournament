@@ -41,7 +41,7 @@ public class SelectedTournament extends States.State {
 
         while (true) {
 
-            System.out.println(modifiableData);
+            System.out.println("\n"+modifiableData);
             help();
             input = scanner.nextLine();
 

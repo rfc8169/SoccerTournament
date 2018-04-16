@@ -46,7 +46,6 @@ public class main{
             connection = DriverManager.getConnection(DB_URL, USER, PASS);
             currentState = stateGenerator.makeState(response, currentRole, connection, selected);
 
-
             while (!(currentState instanceof End)){
                 //set response (the next states type) after having executed the current state
                 response = currentState.exec(modifiableData);
@@ -68,22 +67,12 @@ public class main{
                     currentState = stateGenerator.makeState(response, currentRole, connection, selected.deepCopy());
                 }
             }
-
-
-
-
-
-//            statement = connection.createStatement();
-//            String sql = "";
-//            statement.executeUpdate(sql);
-//            statement.close();
             connection.close();
         }
         catch(SQLException e){e.printStackTrace();}
         catch (Exception e){e.printStackTrace();}
 
-
         //while we have not been returned an end state:
-        System.out.println("Exiting...");
+        System.out.println("\nExiting...");
     }
 }
