@@ -1408,3 +1408,15 @@ update user role = 'c' where uid = 'sjb' [42001-197]
 2018-04-15 09:38:38 jdbc[18]: exception
 org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE USER ROLE =[*] '1' WHERE UID = 'sjb' "; expected "SET"; SQL statement:
 update user role = '1' where uid = 'sjb' [42001-197]
+2018-04-15 15:31:43 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CONCAT(LAST_NAME,', ',FIRST_NAME,', ',TEAM) FROM USER JOIN PLAYER ORDER BY LAST_NAME WHERE[*] TEAM = 'Manchester United' "; SQL statement:
+SELECT CONCAT(LAST_NAME,', ',First_name,', ',TEAM) FROM USER JOIN PLAYER ORDER BY Last_Name WHERE TEAM = 'Manchester United' [42000-197]
+2018-04-15 15:33:11 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT CONCAT(LAST_NAME,', ',FIRST_NAME,', ',TEAM) FROM USER  WHERE TEAM = 'Manchester United' JOIN[*] PLAYER ORDER BY LAST_NAME "; SQL statement:
+SELECT CONCAT(LAST_NAME,', ',First_name,', ',TEAM) FROM USER  WHERE TEAM = 'Manchester United' JOIN PLAYER ORDER BY Last_Name [42000-197]
+2018-04-15 22:25:39 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "ELECT[*] NAME FROM TEAM WHERE NAME = 'arsenal' OR NAME = 'Manchester united' "; expected "EXPLAIN, EXECUTE, {"; SQL statement:
+ELECT NAME FROM TEAM WHERE NAME = 'arsenal' or name = 'Manchester united' [42001-197]
+2018-04-15 22:25:50 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "ELECT[*] NAME FROM TEAM WHERE NAME = 'arsenal' OR NAME = 'Manchester united' "; expected "EXPLAIN, EXECUTE, {"; SQL statement:
+ELECT NAME FROM TEAM WHERE NAME = 'arsenal' or NAME = 'Manchester united' [42001-197]

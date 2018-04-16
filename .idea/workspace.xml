@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a19d1655-7613-4e6b-b209-481ae6796f04" name="Default" comment="cleaned up more stuff">
+    <list default="true" id="a19d1655-7613-4e6b-b209-481ae6796f04" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/AssignPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/AssignPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateTeam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/AddGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/AddGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/CreateTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/CreateTournament.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/EnterStats.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/EnterStats.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTeam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTournament.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/LoggedIn.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/LoggedIn.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTeam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTournament.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/main.java" afterPath="$PROJECT_DIR$/Soccer/src/main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soccer_tournament.trace.db" afterPath="$PROJECT_DIR$/soccer_tournament.trace.db" />
     </list>
     <ignored path="$PROJECT_DIR$/Soccer/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,8 +89,8 @@
       <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Soccer/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+            <state relative-caret-position="162">
+              <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -678,12 +678,19 @@
       <option name="project" value="LOCAL" />
       <updated>1523820190353</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="finshed cleanup and added last bit to sql">
+      <created>1523847339570</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1523847339570</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="134" y="29" width="1252" height="733" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -761,7 +768,8 @@
     <MESSAGE value="completed assign player" />
     <MESSAGE value="cleaned up a bunch of stuff in the UI" />
     <MESSAGE value="cleaned up more stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up more stuff" />
+    <MESSAGE value="finshed cleanup and added last bit to sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="finshed cleanup and added last bit to sql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1159,8 +1167,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Soccer/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+        <state relative-caret-position="162">
+          <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
           <folding />
         </state>
       </provider>
