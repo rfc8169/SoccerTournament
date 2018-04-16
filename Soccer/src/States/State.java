@@ -5,7 +5,7 @@ import java.sql.Connection;
 public abstract class State {
 
     public static String pathAppend;
-    
+
     protected Role userRole;
     protected Connection connection;
     protected SQLstateInfo selectedInfo;
