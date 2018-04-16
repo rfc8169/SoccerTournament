@@ -133,7 +133,7 @@ public class SelectedTeam extends States.State {
                             "ON X.game_id = Y.game_id",selectedInfo.getTeam(),selectedInfo.getTeam(),selectedInfo.getTeam(),
                     selectedInfo.getTeam(),selectedInfo.getTeam(),selectedInfo.getTeam());
             rs = statement.executeQuery(sql);
-            System.out.println("Game Results: ");
+            System.out.println("Team Results: ");
             while(rs.next()){
                 System.out.println("\t"+rs.getString(1));
             }
