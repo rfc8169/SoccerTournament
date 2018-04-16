@@ -21,7 +21,6 @@ public class main{
     public static void main(String args[]){
         //initialize:
         Connection connection = null;
-        Statement statement = null;
         final int MAX_STATE_DEPTH = 10;
         int depth = 0;
         //holds the current path of states:

@@ -2,27 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a19d1655-7613-4e6b-b209-481ae6796f04" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator$1.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/AssignPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/AssignPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateTeam.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/AddGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/AddGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/CreateTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/CreateTournament.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/EnterStats.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/EnterStats.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/StateType.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/StateType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTeam.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTournament.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/LoggedIn.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/LoggedIn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedGame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedPlayer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTeam.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTournament.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/main.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/h2_1_4_197.xml" afterPath="$PROJECT_DIR$/.idea/libraries/h2_1_4_197.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/main.java" afterPath="$PROJECT_DIR$/Soccer/src/main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/Soccer/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,11 +26,41 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SelectedTeam.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SelectedTeam.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/State.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SelectedPlayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1292">
+              <caret line="85" column="9" lean-forward="false" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -65,7 +80,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Soccer/src/States/State.java" />
-        <option value="$PROJECT_DIR$/Soccer/src/main.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Public/End.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Referee/SetTeam.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/SQLstateInfo.java" />
@@ -90,13 +104,15 @@
         <option value="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" />
+        <option value="$PROJECT_DIR$/Soccer/src/main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="922" />
-    <option name="width" value="943" />
-    <option name="height" value="1087" />
+    <option name="x" value="434" />
+    <option name="y" value="9" />
+    <option name="width" value="1252" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -114,6 +130,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,154 +267,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="C:/Program Files (x86)/H2/bin/h2-1.4.196.jar!/" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/CreateUser.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Login.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Start.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/StateType.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/LoggedIn.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/StateGenerator.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Public/Login.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Public/Start.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/StateType.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/FindGame.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateAssignPlayer.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Coach/ReAssignCoach.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -701,63 +581,49 @@
       <option name="project" value="LOCAL" />
       <updated>1523803718171</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Merge branch 'master' of https://github.com/rfc8169/SoccerTournament&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Soccer/out/production/Soccer/States/Coach/AssignPlayer.class&#10;#&#9;Soccer/out/production/Soccer/States/Coach/CreateTeam.class&#10;#&#9;Soccer/out/production/Soccer/States/Referee/AddGame.class&#10;#&#9;Soccer/out/production/Soccer/States/Referee/CreateTournament.class&#10;#&#9;Soccer/out/production/Soccer/States/Referee/EnterStats.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindGame.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindPlayer.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindTeam.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindTournament.class&#10;#&#9;Soccer/out/production/Soccer/States/User/LoggedIn.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedGame.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedPlayer.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedTeam.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedTournament.class&#10;">
+      <created>1523848232114</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1523848232114</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="922" y="0" width="943" height="1087" extended-state="0" />
+    <frame x="434" y="9" width="1252" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32753327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21467099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22231543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918116" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918116" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32833335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21560402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.59" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -803,7 +669,8 @@
     <MESSAGE value="Updating user states SQL" />
     <MESSAGE value="Completed EnterStats with player verification.  Also a few fixes and additions here and there.  Find game now only shows you games from the tournament you selected." />
     <MESSAGE value="completed assign player" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed assign player" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/rfc8169/SoccerTournament&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Soccer/out/production/Soccer/States/Coach/AssignPlayer.class&#10;#&#9;Soccer/out/production/Soccer/States/Coach/CreateTeam.class&#10;#&#9;Soccer/out/production/Soccer/States/Referee/AddGame.class&#10;#&#9;Soccer/out/production/Soccer/States/Referee/CreateTournament.class&#10;#&#9;Soccer/out/production/Soccer/States/Referee/EnterStats.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindGame.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindPlayer.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindTeam.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindTournament.class&#10;#&#9;Soccer/out/production/Soccer/States/User/LoggedIn.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedGame.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedPlayer.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedTeam.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedTournament.class&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/rfc8169/SoccerTournament&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Soccer/out/production/Soccer/States/Coach/AssignPlayer.class&#10;#&#9;Soccer/out/production/Soccer/States/Coach/CreateTeam.class&#10;#&#9;Soccer/out/production/Soccer/States/Referee/AddGame.class&#10;#&#9;Soccer/out/production/Soccer/States/Referee/CreateTournament.class&#10;#&#9;Soccer/out/production/Soccer/States/Referee/EnterStats.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindGame.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindPlayer.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindTeam.class&#10;#&#9;Soccer/out/production/Soccer/States/User/FindTournament.class&#10;#&#9;Soccer/out/production/Soccer/States/User/LoggedIn.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedGame.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedPlayer.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedTeam.class&#10;#&#9;Soccer/out/production/Soccer/States/User/SelectedTournament.class&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -948,10 +815,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#3181#3182#0" expanded="true" />
-            <element signature="e#3253#3254#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1001,14 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="56" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/Public/End.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -1034,14 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="76" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="76" />
           <folding />
         </state>
       </provider>
@@ -1083,10 +931,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-396">
           <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
-          <folding>
-            <element signature="e#3181#3182#0" expanded="true" />
-            <element signature="e#3253#3254#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,14 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="85" column="9" lean-forward="true" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1193,10 +1030,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="85" column="9" lean-forward="false" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1241,7 +1102,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8 (1)</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1258,7 +1119,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
