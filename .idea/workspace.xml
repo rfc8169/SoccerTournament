@@ -2,33 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a19d1655-7613-4e6b-b209-481ae6796f04" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateAssignPlayer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/ReAssignCoach.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/CreateUser.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/CreateUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Login.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Login.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Start.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Start.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator$1.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/StateGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/AssignPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/AssignPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateTeam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/AddGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/AddGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/CreateTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/CreateTournament.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/EnterStats.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/Referee/EnterStats.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/StateType.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/StateType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTeam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/FindTournament.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/LoggedIn.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/LoggedIn.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedGame.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedGame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedPlayer.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTeam.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTeam.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTournament.class" afterPath="$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/SelectedTournament.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/h2_1_4_197.xml" afterPath="$PROJECT_DIR$/.idea/libraries/h2_1_4_197.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/StateGenerator.java" afterPath="$PROJECT_DIR$/Soccer/src/StateGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Public/Login.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Public/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Public/Start.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Public/Start.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java" afterPath="$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/StateType.java" afterPath="$PROJECT_DIR$/Soccer/src/States/StateType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" afterPath="$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java" />
     </list>
     <ignored path="$PROJECT_DIR$/Soccer/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,101 +41,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AssignPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FindTeam.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-144">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SelectedTeam.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SelectedTeam.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="99" column="13" lean-forward="false" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateTournament.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateTeam.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/StateGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Public/Start.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/StateType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SelectedPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="85" column="9" lean-forward="true" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Soccer/src/States/Public/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="59" selection-end-column="13" />
+            <state relative-caret-position="218">
+              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -183,17 +87,16 @@
         <option value="$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java" />
         <option value="$PROJECT_DIR$/Soccer/src/StateGenerator.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/StateType.java" />
-        <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java" />
         <option value="$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java" />
+        <option value="$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="110" />
-    <option name="y" value="162" />
-    <option name="width" value="1252" />
-    <option name="height" value="733" />
+    <option name="x" value="922" />
+    <option name="width" value="943" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -211,9 +114,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -348,15 +248,154 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/H2/bin/h2-1.4.196.jar!/" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/CreateUser.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Login.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/Public/Start.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/StateType.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/User/LoggedIn.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/StateGenerator.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Coach/AssignPlayer.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Public/Login.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Public/Start.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Referee/AddGame.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Referee/CreateTournament.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Referee/EnterStats.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/StateType.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/FindGame.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/FindPlayer.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/FindTeam.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/FindTournament.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/LoggedIn.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/SelectedGame.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/SelectedPlayer.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/out/production/Soccer/States/Coach/CreateAssignPlayer.class</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Soccer/src/States/Coach/ReAssignCoach.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -590,19 +629,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
-      <setting name="environment" value="" />
-      <setting name="specsToExecute" value="" />
-      <setting name="tags" value="" />
-      <setting name="parallelNodes" value="" />
-      <setting name="execInParallel" value="false" />
-      <setting name="programParameters" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="moduleName" value="" />
-      <envMap />
-      <setting name="rowsRange" value="" />
-      <method />
-    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.main" />
     </list>
@@ -679,7 +705,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="110" y="162" width="1252" height="733" extended-state="0" />
+    <frame x="922" y="0" width="943" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -691,26 +717,47 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32833335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32753327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21560402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21467099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918116" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918116" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39918116" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32833335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21560402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.59" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -760,7 +807,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -901,7 +948,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3181#3182#0" expanded="true" />
+            <element signature="e#3253#3254#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -963,10 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding>
-            <element signature="e#306#307#0" expanded="false" />
-            <element signature="e#359#360#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1000,14 +1046,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Coach/ReAssignCoach.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/Coach/ReAssignCoach.java" />
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/Public/CreateUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1028,14 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-178">
           <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-331">
-          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1131,26 +1162,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="99" column="13" lean-forward="false" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/Public/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="59" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Soccer/src/States/Coach/CreateTeam.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="62" column="13" lean-forward="false" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+        <state relative-caret-position="408">
+          <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1159,6 +1181,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="41" column="36" lean-forward="true" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTournament.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="35" column="60" lean-forward="true" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soccer/src/States/User/SelectedTeam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1203,7 +1241,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.8 (1)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

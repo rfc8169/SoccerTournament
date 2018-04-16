@@ -77,6 +77,66 @@ public class SelectedTeam extends States.State {
             for (String s:roster) {
                 System.out.println("\t"+s);
             }
+            sql = String.format("\n" +
+                            "SELECT CONCAT('Game: ',X.Game_ID,' Result: ', \n" +
+                            "CASE WHEN ISNULL(A, 0) > ISNULL(B,0) THEN 'W' \n" +
+                            "WHEN ISNULL(A, 0) = ISNULL(B,0) THEN 'T' \n" +
+                            "ELSE 'L' END) as Result FROM\n" +
+                            "\n" +
+                            "(SELECT game_id,score as a FROM\n" +
+                            "(\n" +
+                            "SELECT game.game_id, tab.team, score\n" +
+                            "FROM game JOIN\n" +
+                            "(\n" +
+                            "SELECT A.game_id, A.team, score FROM \n" +
+                            "(\n" +
+                            "SELECT game_id, home_team as team, 0 as o FROM game \n" +
+                            "UNION\n" +
+                            "SELECT game_id, away_team as team, 1 as o FROM game ORDER BY game_id,o\n" +
+                            ") A\n" +
+                            "LEFT JOIN \n" +
+                            "(\n" +
+                            "SELECT game_id, team, COUNT(game_id) as score FROM Statistics WHERE event = 'Goal' GROUP BY game_ID,team\n" +
+                            ") B\n" +
+                            "ON A.game_id = B.game_id AND A.team = B.team\n" +
+                            "ORDER BY game_id\n" +
+                            ") tab\n" +
+                            "ON game.game_id = tab.game_id\n" +
+                            "WHERE game.away_team = '%s' OR game.home_team = '%s'\n" +
+                            ")\n" +
+                            "WHERE team = '%s') X\n" +
+                            "\n" +
+                            "JOIN\n" +
+                            "\n" +
+                            "(SELECT game_id,score as b FROM\n" +
+                            "(\n" +
+                            "SELECT game.game_id, tab.team, score\n" +
+                            "FROM game JOIN\n" +
+                            "(\n" +
+                            "SELECT A.game_id, A.team, score FROM \n" +
+                            "(\n" +
+                            "SELECT game_id, home_team as team, 0 as o FROM game \n" +
+                            "UNION\n" +
+                            "SELECT game_id, away_team as team, 1 as o FROM game ORDER BY game_id,o\n" +
+                            ") A\n" +
+                            "LEFT JOIN \n" +
+                            "(\n" +
+                            "SELECT game_id, team, COUNT(game_id) as score FROM Statistics WHERE event = 'Goal' GROUP BY game_ID,team\n" +
+                            ") B\n" +
+                            "ON A.game_id = B.game_id AND A.team = B.team\n" +
+                            "ORDER BY game_id\n" +
+                            ") tab\n" +
+                            "ON game.game_id = tab.game_id\n" +
+                            "WHERE game.away_team = '%s' OR game.home_team = '%s'\n" +
+                            ")\n" +
+                            "WHERE team != '%s') Y\n" +
+                            "ON X.game_id = Y.game_id",selectedInfo.getTeam(),selectedInfo.getTeam(),selectedInfo.getTeam(),
+                    selectedInfo.getTeam(),selectedInfo.getTeam(),selectedInfo.getTeam());
+            rs = statement.executeQuery(sql);
+            System.out.println("Game Results: ");
+            while(rs.next()){
+                System.out.println("\t"+rs.getString(1));
+            }
         }catch (Exception e){
             e.printStackTrace();
         }
