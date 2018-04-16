@@ -108,7 +108,8 @@ public class FindPlayer extends States.State {
                 catch (SQLException e){
                     int errorInt = e.getErrorCode();
                     if(errorInt == 90039 || errorInt == 90067 || errorInt == 90098) {
-                        System.out.println("Your connection to our database has been close, please restart the program.");
+                        System.out.println("Your connection to our database has been close, " +
+                                "please restart the program.");
                         return StateType.END;
                     }else{
                         System.out.println("Invalid input, try again");
